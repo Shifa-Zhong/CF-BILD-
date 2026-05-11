@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# venv
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local data / outputs (NOT in this repo by design)
+data/
+output/
+manuscript/
+_audit/
+_github_repo/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
