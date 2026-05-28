@@ -33,6 +33,10 @@ CF-BILD/
 │       ├── run_reviewer_experiments.py    # Scaffold / two-objective / threshold sensitivity / structure-level R²
 │       ├── run_exact_ehvi.py              # Exact Monte-Carlo EHVI (BoTorch) benchmark
 │       ├── run_stability_screening.py     # SMARTS three-tier stability filter
+│       ├── run_drop_cross_ablation.py     # Drop-k_cross ablation (product / additive, no cross term)
+│       ├── cache_predictions.py           # Cache GP predictions on full 87,365-candidate pool
+│       ├── recompute_acq_comparison.py    # Consistent re-comparison of C-EHVI / MC EHVI / Add EI / Random
+│       ├── run_multiseed_mc_ehvi.py       # 5-seed MC EHVI (HV mean ± SE; statistical-significance test)
 │       └── run_xtb_cosmo.py               # GFN2-xTB + COSMO-RS oracle (independent verification)
 │
 └── VAE/                              # Generative-model baseline (Ablation D only)
@@ -98,8 +102,14 @@ python scripts/pipeline/plot_ablation.py     # Ablation figures + final composit
 python scripts/reviewer/run_exact_ehvi.py            # Exact MC-EHVI vs C-EHVI
 python scripts/reviewer/run_reviewer_experiments.py  # Scaffold / two-obj / threshold-sensitivity / structure-level R²
 python scripts/reviewer/run_stability_screening.py   # SMARTS three-tier filter on top-100
+python scripts/reviewer/run_drop_cross_ablation.py   # Drop-k_cross ablation (product/additive, no cross term)
+python scripts/reviewer/cache_predictions.py         # Cache GP predictions on 87,365 candidates (skips TPE)
+python scripts/reviewer/recompute_acq_comparison.py  # Consistent C-EHVI/MC EHVI/Add EI/Random comparison
+python scripts/reviewer/run_multiseed_mc_ehvi.py     # 5-seed MC EHVI (HV ± SE for significance test)
 python scripts/reviewer/run_xtb_cosmo.py             # xTB + COSMO-RS oracle (slow)
 ```
+
+The four newer scripts (`run_drop_cross_ablation.py`, `cache_predictions.py`, `recompute_acq_comparison.py`, `run_multiseed_mc_ehvi.py`) implement the additional analyses requested during peer review: the drop-k_cross architectural ablation, a fast prediction cache that skips TPE re-optimization, a consistent calibrated-σ re-comparison of all four acquisition methods, and a multi-seed MC EHVI sweep that quantifies Monte-Carlo standard error on the headline 17% C-EHVI vs MC EHVI hypervolume gap.
 
 ## Key Design Decisions
 
@@ -119,17 +129,19 @@ python scripts/reviewer/run_xtb_cosmo.py             # xTB + COSMO-RS oracle (sl
 
 | Property | R² | RMSE | 95% CI Coverage | NLPD |
 |----------|-----|------|-----------------|------|
-| CO₂ capacity | 0.889 | 0.072 | 97.4% | −1.22 |
-| Viscosity | 0.853 | 0.617 | 95.8% | 0.76 |
+| CO₂ capacity | 0.889 | 0.072 | 97.5% | −1.22 |
+| Viscosity | 0.853 | 0.617 | 95.7% | 0.76 |
 | Toxicity (logEC₅₀) | 0.537 | 0.612 | 100% | 1.41 |
 
-Ablation summaries:
-- **Kernel form**: compositional (product / additive) R² ≈ 0.85-0.89 vs single-RBF R² < 0.26 for CO₂.
-- **Surrogate**: GP-BT R² = 0.89 vs default-hyperparameter standard GP R² = 0.39 (CO₂).
-- **Acquisition**: C-EHVI HV = 36.39 vs exact MC-EHVI HV = 43.72 vs additive-EI HV = 29.53 vs random HV = 24.30; C-EHVI mean predictive σ = 1.28 vs MC-EHVI 1.33.
-- **Search space**: 100% of CF-BILD candidates have both ions in training data; 0% for an unconstrained GRU SMILES generator.
+Bootstrap 95% CIs (paired 10,000-resample): CO₂ structure-level R² = 0.754 [0.38, 0.91] (N = 21 unique IL species); toxicity R² = 0.537 [0.23, 0.80] (N = 32 test records).
 
-Stability filter on top-100 C-EHVI candidates: 37 Pass / 9 Caution / 54 Fail; the pre-filter top-1 (trimethylammonium glycinate, `C[NH+](C)C` + `NCC(=O)[O-]`) is rejected by Tier I (proton transfer), and the post-filter top-1 becomes 1-ethyl-3-methylimidazolium prolinate (`CCn1ccc[n+]1C` + `O=C([O-])C1CCCN1`, original C-EHVI rank 3).
+Ablation summaries:
+- **Kernel form**: compositional (product / additive) R² ≈ 0.85–0.89 vs single-RBF R² < 0.26 for CO₂; the drop-k_cross variant (`k_cat · k_an` alone, no cross term) retains test-set R² of 0.869 / 0.854 / 0.549 (ΔR² ≤ 0.020 vs full compositional kernel across all three properties), establishing `k_cat · k_an` as the empirically-validated minimum-parameter architecture.
+- **Surrogate**: GP-BT R² = 0.89 vs default-hyperparameter standard GP R² = 0.39 (CO₂).
+- **Acquisition (consistent calibrated-σ recomputation)**: C-EHVI HV = 40.79 vs exact MC-EHVI HV = 49.16 ± 0.25 (5 seeds) vs additive-EI HV = 31.17 vs random HV = 27.34 ± 1.22 (5 seeds); 17% C-EHVI vs MC-EHVI gap is > 30× the MC standard error → highly statistically significant. C-EHVI mean predictive σ = 1.28 vs MC-EHVI 1.32.
+- **Search space**: 100% of CF-BILD candidates have both ions in training-data-related vocabulary; 0% for an unconstrained GRU SMILES generator. SMARTS stability filter rejects 68.6% of the GRU subsample as Fail vs 54.0% of the C-EHVI-ranked CF-BILD top-100.
+
+Stability filter on top-100 C-EHVI candidates: 37 Pass / 9 Caution / 54 Fail; the pre-filter top-1 (trimethylammonium glycinate, `C[NH+](C)C` + `NCC(=O)[O-]`) is rejected by Tier I (proton transfer), and the post-filter top-1 becomes 1-ethyl-3-methylimidazolium prolinate (`CCn1cc[n+](C)c1` + `O=C([O-])C1CCCN1`, original C-EHVI rank 3) — a novel cation-anion combination not in the training set but belonging to the experimentally well-studied family of imidazolium-amino-acid ILs for CO₂ capture.
 
 ## Citation
 
