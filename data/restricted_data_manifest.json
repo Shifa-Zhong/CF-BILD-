@@ -1,0 +1,479 @@
+{
+  "manifest_version": 1,
+  "contains_experimental_values": false,
+  "redistribution_note": "Record-level tables are intentionally absent. Obtain them from the original providers under their applicable terms.",
+  "sources": {
+    "co2_and_viscosity": {
+      "name": "NIST ILThermo (SRD 147)",
+      "url": "https://ilthermo.boulder.nist.gov/"
+    },
+    "toxicity": {
+      "citation": "Zhao et al., Journal of Hazardous Materials 278 (2014) 320-329",
+      "doi": "10.1016/j.jhazmat.2014.06.018"
+    }
+  },
+  "files": {
+    "test_group_co2.csv": {
+      "bytes": 187527,
+      "rows": 1306,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "49d3d05aa11ab515a3fa562b2abedef92c64473d1b7b6289dacd7eaaa08df118"
+    },
+    "test_group_tox.csv": {
+      "bytes": 3211,
+      "rows": 32,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "039219af39baf0201200f23e9e189fcd304d99a9f215298369356b8463295470"
+    },
+    "test_group_vis.csv": {
+      "bytes": 259382,
+      "rows": 1465,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "90fbdc3ef36a4c12d54d112b3cd99a96a9a82b2f23969c6b05f7fd70eb18242d"
+    },
+    "train_1_group_co2.csv": {
+      "bytes": 1542302,
+      "rows": 9610,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "9ae12098c53dd1b37d8755f2f5a9cfef1651111bc1faf49ca2388b7270161fa3"
+    },
+    "train_1_group_tox.csv": {
+      "bytes": 21209,
+      "rows": 242,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "6b46f9abc5cc3df2b4f3c42dd7644dc17a05847760e9791a9fe887340cfabdd9"
+    },
+    "train_1_group_vis.csv": {
+      "bytes": 1715224,
+      "rows": 10223,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "d3fe2540a3cc4e2ec165e8f06fbd1e793c9712f50e05179258db92c6aabba8d0"
+    },
+    "train_2_group_co2.csv": {
+      "bytes": 1715910,
+      "rows": 10501,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "33b7bda59918505da07be866d883b0c3e34a7b131336ff5cb72d8af20336bf2e"
+    },
+    "train_2_group_tox.csv": {
+      "bytes": 21097,
+      "rows": 242,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "174d726ee799dbe76690d6ab89d5576dbe1b12782da6a9012c613998dda9d487"
+    },
+    "train_2_group_vis.csv": {
+      "bytes": 1673392,
+      "rows": 9916,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "7ed714faa4e8e017c290225700d25eb46da07e7ca821a9841ae755c0459db7a9"
+    },
+    "train_3_group_co2.csv": {
+      "bytes": 1738180,
+      "rows": 10499,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "6c14a8c675da1a5cc58b77a838a3cf8c664b4beed2fe8cc0c9445e81f16aac86"
+    },
+    "train_3_group_tox.csv": {
+      "bytes": 21124,
+      "rows": 241,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "01b0bcefad4b7babe4a208a971ab4ff67746423cda713b181e16e5f61ccffbbb"
+    },
+    "train_3_group_vis.csv": {
+      "bytes": 1719129,
+      "rows": 10017,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "08d98f320be164ed4419af9f248bfb6dc5064948884aae5802f31b2cb452417d"
+    },
+    "train_4_group_co2.csv": {
+      "bytes": 1717507,
+      "rows": 10289,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "b81cfc0779095805c9675c3d9592291b9cb4d11e9589366ca5e94556c11eb190"
+    },
+    "train_4_group_tox.csv": {
+      "bytes": 21334,
+      "rows": 244,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "df92834034349291e8f5c480ee61231dc7926203231f71fe3224d43f14ba670f"
+    },
+    "train_4_group_vis.csv": {
+      "bytes": 1638062,
+      "rows": 9676,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "ea40600099274ab05a03916c86eb270d53e67725cff02c292afd356e5120c021"
+    },
+    "train_5_group_co2.csv": {
+      "bytes": 1509984,
+      "rows": 9113,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "66cb1f2dffc72f607db63000fb49a3d755c73cc6072a48c0c9431861a9e02d0b"
+    },
+    "train_5_group_tox.csv": {
+      "bytes": 21113,
+      "rows": 239,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "80ec1d0f68e4140cf40c296a92bca6fef89ee9647c0d95d8f37b056322ae5c36"
+    },
+    "train_5_group_vis.csv": {
+      "bytes": 1651016,
+      "rows": 9664,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "9fdb8ab624f01eefbaf2f9255c63538faade804dec019476745ab4ba774ce1ba"
+    },
+    "val_1_group_co2.csv": {
+      "bytes": 513707,
+      "rows": 2893,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "110e68af28610f4b908c8bb3d7660fa341bbfbdd64f8368b665a789b0093d42c"
+    },
+    "val_1_group_tox.csv": {
+      "bytes": 5300,
+      "rows": 60,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3"
+    },
+    "val_1_group_vis.csv": {
+      "bytes": 384017,
+      "rows": 2151,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "24f6fee9f0a54ec6fd361eba3347ec7f613ac083281ba042463bc8fd45f6738f"
+    },
+    "val_2_group_co2.csv": {
+      "bytes": 340099,
+      "rows": 2002,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "669bfd97246d94f03880e94967ef13bbfef6f5cc0b4bcd00c4eca109923be7c5"
+    },
+    "val_2_group_tox.csv": {
+      "bytes": 5412,
+      "rows": 60,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74"
+    },
+    "val_2_group_vis.csv": {
+      "bytes": 425849,
+      "rows": 2458,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "62211d9c749854afd7ab5197ca150b55fa44907827630a8102ac9dbc9c65fd6b"
+    },
+    "val_3_group_co2.csv": {
+      "bytes": 317829,
+      "rows": 2004,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "72e40b2069f49235bc325f3109679aba546bbeb818a25fa040774dde91ec79ad"
+    },
+    "val_3_group_tox.csv": {
+      "bytes": 5385,
+      "rows": 61,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "dfdf846c128e288c01903092221ff40cae38ef1ba97037966f53b82108c2539b"
+    },
+    "val_3_group_vis.csv": {
+      "bytes": 380112,
+      "rows": 2357,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "7c8266e8a11aa857c00b0d72c2370826024353edff9450fb95997506b029452d"
+    },
+    "val_4_group_co2.csv": {
+      "bytes": 338502,
+      "rows": 2214,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "e742f5f30d57ca043ca2e1a9977710c1886458b5a3413b82fe5bc3d903478474"
+    },
+    "val_4_group_tox.csv": {
+      "bytes": 5175,
+      "rows": 58,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "c8d64d2af7e7c43547270cff5463e5f604bc6f78f25f2478055c52118202d49e"
+    },
+    "val_4_group_vis.csv": {
+      "bytes": 461179,
+      "rows": 2698,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "d408ec44b747654c0a40c446e252dc7d1629c51e7dd36a1f73da7831ccea0b90"
+    },
+    "val_5_group_co2.csv": {
+      "bytes": 546025,
+      "rows": 3390,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "SMILES",
+        "CO2-exp",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "30a1396964f53f367dfa664fee1ed586e5b27157306aec2f32b201e4009cbeea"
+    },
+    "val_5_group_tox.csv": {
+      "bytes": 5396,
+      "rows": 63,
+      "columns": [
+        "ind",
+        "new_cation",
+        "new_anion",
+        "Experimental logEC50",
+        "group"
+      ],
+      "sha256": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef"
+    },
+    "val_5_group_vis.csv": {
+      "bytes": 448225,
+      "rows": 2710,
+      "columns": [
+        "ind",
+        "T",
+        "P",
+        "vis",
+        "SMILES",
+        "new_cation",
+        "new_anion",
+        "group"
+      ],
+      "sha256": "1ddfadbca7d9c5b9e6e3a2bbb660eb30f5b3e60b8560aeb2157eaec5c5126696"
+    }
+  }
+}

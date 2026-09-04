@@ -1,34 +1,30 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 *.so
 *.egg-info/
 build/
 dist/
 
-# venv
+# Environments and editors
+.venv/
 venv/
 env/
-.venv/
-
-# OS
+.idea/
+.vscode/
+.ipynb_checkpoints/
 .DS_Store
 Thumbs.db
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*~
+# Restricted source-derived records and artifacts embedding target values
+data/*_group_*.csv
+data/Pubchem dataset.txt
+output/revision_2026/models/
+output/revision_2026/test_predictions_*.csv
+output/revision_2026/data_sha256.json
 
-# Local data / outputs (NOT in this repo by design)
-data/
-output/
+# Manuscript working files and local audit directories
 manuscript/
+legacy_invalidated/
 _audit/
-_github_repo/
-
-# Notebook checkpoints
-.ipynb_checkpoints/
+release/

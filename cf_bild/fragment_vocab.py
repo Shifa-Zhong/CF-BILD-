@@ -15,6 +15,13 @@ import pickle
 from bit_collision_free_MF.fingerprint import CollisionFreeMorganFP
 
 
+TARGET_COLUMNS = {
+    'co2': 'CO2-exp',
+    'vis': 'vis',
+    'tox': 'Experimental logEC50',
+}
+
+
 def canonicalize_smiles(smi):
     """Canonicalize a SMILES string."""
     mol = Chem.MolFromSmiles(smi)
@@ -189,12 +196,7 @@ def df_to_features(df, vocab, property_name):
         X: feature array, shape (N, dim_cat+dim_an [+2 for T,P])
         y: target values, shape (N,)
     """
-    target_cols = {
-        'co2': 'CO2-exp',
-        'vis': 'vis',
-        'tox': 'Experimental logEC50',
-    }
-    target_col = target_cols[property_name]
+    target_col = TARGET_COLUMNS[property_name]
     has_env = property_name in ['co2', 'vis']
 
     X_list, y_list = [], []
@@ -220,19 +222,52 @@ def df_to_features(df, vocab, property_name):
     return np.array(X_list, dtype=np.float64), np.array(y_list, dtype=np.float64)
 
 
+def get_non_test_dataframe(datasets, property_name, verify_folds=True):
+    '''Return the complete train+validation pool for final model refitting.
+
+    Each predefined fold partitions the same non-test pool. Fold 1 is used as
+    the canonical serialization of that pool; the optional check prevents a
+    silently inconsistent set of split files from changing the refit data.
+    '''
+    folds = datasets[property_name]['folds']
+    if not folds:
+        raise ValueError(f'No cross-validation folds found for {property_name!r}.')
+
+    complete = pd.concat([folds[0][0], folds[0][1]], ignore_index=True)
+    if verify_folds:
+        target_col = TARGET_COLUMNS[property_name]
+        id_cols = ['ind', 'new_cation', 'new_anion', target_col]
+        if property_name in ('co2', 'vis'):
+            id_cols.extend(['T', 'P'])
+
+        def signatures(frame):
+            available = [column for column in id_cols if column in frame.columns]
+            return set(map(tuple, frame[available].astype(str).to_numpy()))
+
+        expected = signatures(complete)
+        for fold_i, (train_df, val_df) in enumerate(folds[1:], start=2):
+            observed = signatures(pd.concat([train_df, val_df], ignore_index=True))
+            if observed != expected:
+                raise ValueError(
+                    f'Fold {fold_i} does not contain the same non-test records '
+                    f'as fold 1 for {property_name!r}.'
+                )
+    return complete
+
+
 def prepare_cv_splits(datasets, vocab, property_name):
     """Prepare predefined CV splits for GP-BT optimizer.
 
     Applies StandardScaler fitted on each fold's training data to ensure
-    proper scaling for GP. The scaler for the largest fold is returned
-    for use during screening.
+    proper scaling for GP. After hyperparameter selection, the final scaler
+    and GP conditioning set use the complete train+validation (non-test) pool.
 
     Returns:
         cv_splits: list of (X_train, y_train, X_val, y_val) tuples (all scaled)
-        X_all_train: largest fold's training data (scaled)
-        y_all_train: largest fold's training targets
-        X_test, y_test: test set (scaled with largest fold's scaler)
-        scaler: fitted StandardScaler from largest fold
+        X_all_train: complete non-test pool (scaled)
+        y_all_train: complete non-test targets
+        X_test, y_test: held-out test set (scaled with the refit scaler)
+        scaler: fitted StandardScaler from the complete non-test pool
     """
     from sklearn.preprocessing import StandardScaler
 
@@ -255,12 +290,11 @@ def prepare_cv_splits(datasets, vocab, property_name):
         X_val_s = scaler.transform(X_val)
         cv_splits.append((X_train_s, y_train, X_val_s, y_val))
 
-    # Use the largest fold for final refit
-    largest_fold = max(range(len(raw_folds)), key=lambda i: len(raw_folds[i][1]))
-    X_refit_raw = raw_folds[largest_fold][0]
-    y_refit = raw_folds[largest_fold][1]
+    # Refit on every non-test record after hyperparameter selection.
+    non_test_df = get_non_test_dataframe(datasets, property_name)
+    X_refit_raw, y_refit = df_to_features(non_test_df, vocab, property_name)
 
-    # Fit the refit scaler on the largest fold's training data
+    # Fit the screening/test scaler on the complete non-test pool.
     refit_scaler = StandardScaler()
     X_refit = refit_scaler.fit_transform(X_refit_raw)
 

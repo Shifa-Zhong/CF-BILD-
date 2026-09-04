@@ -1,0 +1,11 @@
+name: cf-bild-dd-revision
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.8
+  - pip
+  - pip:
+      - -r requirements-revision-lock.txt
+

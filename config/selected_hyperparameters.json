@@ -1,0 +1,41 @@
+{
+  "selection_protocol": "five predefined species-grouped cross-validation folds; values frozen before the full non-test refit",
+  "co2": {
+    "best_params": {
+      "kernel_name": "RationalQuadratic",
+      "kernel_variance": 4.204999047089667e-06,
+      "likelihood_noise_variance": 9.88457138549088e-06,
+      "ls_an": 5.081303919064843,
+      "ls_cat": 0.16831566979128923,
+      "ls_cross": 96.41648064861906,
+      "ls_env_0": 2.098433718529898,
+      "ls_env_1": 0.5068147902056699
+    },
+    "variance_scale": 5.636229993807345
+  },
+  "vis": {
+    "best_params": {
+      "kernel_name": "RationalQuadratic",
+      "kernel_variance": 0.0067269145275594905,
+      "likelihood_noise_variance": 0.005964254434837214,
+      "ls_an": 7.223834427489306,
+      "ls_cat": 29.09462761087385,
+      "ls_cross": 65.64934868135587,
+      "ls_env_0": 5.229987089974978,
+      "ls_env_1": 0.7928071584183018
+    },
+    "variance_scale": 9.854635341292466
+  },
+  "tox": {
+    "best_params": {
+      "kernel_name": "Matern52",
+      "kernel_variance": 0.0376275677320558,
+      "likelihood_noise_variance": 0.0006294775155259394,
+      "ls_an": 4.30779609908945,
+      "ls_cat": 30.50871143317095,
+      "ls_cross": 47.01222835111023
+    },
+    "variance_scale": 40.579170318965396
+  }
+}
+

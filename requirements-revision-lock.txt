@@ -1,0 +1,14 @@
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+torch==2.10.0
+gpytorch==1.15.2
+botorch==0.16.1
+hyperopt==0.2.7
+rdkit-pypi==2022.9.5
+matplotlib==3.10.8
+python-docx==1.2.0
+Pillow==12.1.1
+bit-collision-free-mf @ git+https://github.com/Shifa-Zhong/bit_collision_free_MF.git@698c31559e71f9cb14fd58e56562511ae644fc40
+
