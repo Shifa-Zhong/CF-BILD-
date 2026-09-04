@@ -65,6 +65,12 @@ require record-level experimental tables:
     python scripts/revision/run_stability_screening.py
     python scripts/revision/build_revision_figures.py
 
+The figure command rebuilds Figures 1, 2, 4, S1–S5, and the TOC graphic from
+public derived artifacts. Figure 3 is supplied as a 600 dpi PNG and vector PDF,
+but regenerating its experimental-versus-predicted panels requires the
+restricted held-out target tables; the script detects their absence and skips
+that figure with an explicit message.
+
 The acquisition script consumes the full-pool posterior cache, aggregated
 training-derived operating definitions, and model-derived incumbent Pareto
 coordinates. It never substitutes candidate extrema for the stated training

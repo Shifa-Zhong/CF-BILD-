@@ -23,7 +23,7 @@ from cf_bild.predictive import zero_truncated_normal_quantile  # noqa: E402
 
 
 RESULTS = ROOT / 'output' / 'revision_2026'
-FIGURE_DIR = ROOT / 'manuscript' / 'revision_2026' / 'figures'
+FIGURE_DIR = ROOT / 'figures'
 BLUE = '#2F6690'
 TEAL = '#3A7D8C'
 ORANGE = '#E07A5F'
@@ -128,10 +128,9 @@ def figure_1_workflow():
 
 
 def figure_2_vocabulary():
-    source = ROOT / 'manuscript' / 'figures' / 'fig2_fragment_vocabulary' / 'data'
-    cations = pd.read_csv(source / 'cation_families.csv')
-    anions = pd.read_csv(source / 'anion_types.csv')
-    tsne = pd.read_csv(source / 'tsne_coordinates.csv')
+    cations = pd.read_csv(RESULTS / 'vocabulary_cation_families.csv')
+    anions = pd.read_csv(RESULTS / 'vocabulary_anion_families.csv')
+    tsne = pd.read_csv(RESULTS / 'vocabulary_tsne_coordinates.csv')
     figure, axes = plt.subplots(1, 3, figsize=(12.0, 3.8))
     for axis, table, color, title in (
         (axes[0], cations, BLUE, 'Cation families (n = 505)'),
@@ -345,10 +344,7 @@ def figure_4_screening():
 
 
 def figure_s1_vocabulary_mw():
-    table = pd.read_csv(
-        ROOT / 'manuscript' / 'figures' /
-        'figS1_fragment_vocab_extended' / 'data' / 'ions_with_mw.csv'
-    )
+    table = pd.read_csv(RESULTS / 'vocabulary_ions_with_mw.csv')
     figure, axes = plt.subplots(1, 2, figsize=(10.5, 4.0))
     for axis, ion_type, color in (
         (axes[0], 'cation', BLUE),
@@ -568,7 +564,18 @@ def toc_graphic():
 def main():
     figure_1_workflow()
     figure_2_vocabulary()
-    figure_3_surrogates()
+    restricted_predictions = [
+        RESULTS / f'test_predictions_{name}.csv'
+        for name in ('co2', 'vis', 'tox')
+    ]
+    if all(path.exists() for path in restricted_predictions):
+        figure_3_surrogates()
+    else:
+        print(
+            'Skipping Figure 3: regeneration requires the three restricted '
+            'held-out target/prediction tables. The submitted 600 dpi PNG '
+            'and vector PDF remain in figures/.'
+        )
     figure_4_screening()
     figure_s1_vocabulary_mw()
     figure_s2_model_comparison()
