@@ -109,7 +109,7 @@ Full-precision aggregate values are in `output/revision_2026/`.
 ## Citation, archive, and license
 
 - Canonical repository: https://github.com/Shifa-Zhong/CF-BILD-
-- Release tag: `v0.2.0`
+- Release tag: `v0.2.2`
 - Archived software version DOI: `[ZENODO_VERSION_DOI]`
 - Software concept/latest DOI: `[ZENODO_CONCEPT_DOI]`
 
