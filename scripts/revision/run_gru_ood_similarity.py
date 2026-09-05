@@ -48,7 +48,7 @@ def non_test_ions(property_name, column):
     })
 
 
-def restricted_tables_available():
+def property_tables_available():
     return all(
         (DATA_DIR / f'{role}_1_group_{property_name}.csv').exists()
         for property_name in ('co2', 'vis', 'tox')
@@ -58,7 +58,7 @@ def restricted_tables_available():
 
 def load_or_build_references():
     '''Return derived non-test ion sets without exposing source records.'''
-    if restricted_tables_available():
+    if property_tables_available():
         reference = {}
         for property_name in ('co2', 'vis', 'tox'):
             reference[(property_name, 'cation')] = non_test_ions(

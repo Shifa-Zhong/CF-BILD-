@@ -12,11 +12,7 @@ from rdkit import Chem
 from rdkit.Chem import SDMolSupplier
 from tqdm import tqdm
 
-# set working directory
-git_dir = os.path.expanduser("~/git/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
-sys.path.append(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # import functions
 from functions import clean_mols, remove_salts_solvents, read_smiles, \

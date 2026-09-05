@@ -1,4 +1,4 @@
-'''Direct public-release test runner (restricted-data check omitted).'''
+'''Public-release numerical and input-pool test runner (no pickle loading).'''
 
 from __future__ import annotations
 
@@ -21,12 +21,12 @@ def main():
         MODULE.test_analytic_ehvi_matches_vectorized_monte_carlo,
         MODULE.test_fw_aei_is_finite_and_nonnegative,
         MODULE.test_revision_cache_contract,
+        MODULE.test_complete_non_test_pool_counts_and_fold_identity,
     ]
     for test in tests:
         test()
         print(f'PASS {test.__name__}')
-    print('SKIP test_complete_non_test_pool_counts_and_fold_identity: '
-          'restricted source-derived tables are not publicly distributed.')
+    print('For the separate species-boundary audit, run scripts/revision/verify_public_data.py --strict-splits.')
 
 
 if __name__ == '__main__':

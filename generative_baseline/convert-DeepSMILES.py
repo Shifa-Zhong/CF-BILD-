@@ -9,10 +9,7 @@ import deepsmiles
 from tqdm import tqdm
 print("DeepSMILES version: %s" % deepsmiles.__version__)
 
-# set working directory
-git_dir = os.path.expanduser("~/git/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # parse arguments
 smiles_file = sys.argv[1]

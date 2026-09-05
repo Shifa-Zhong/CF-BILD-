@@ -31,10 +31,7 @@ import sascorer
 sys.path.append(os.path.join(RDConfig.RDContribDir, 'NP_Score'))
 import npscorer
 
-# set working directory
-git_dir = os.path.expanduser("~/git/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # import functions
 from functions import clean_mols, read_smiles, \

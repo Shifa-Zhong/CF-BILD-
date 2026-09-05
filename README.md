@@ -1,118 +1,117 @@
-# CF-BILD — Digital Discovery major-revision compendium
+# CF-BILD — public data and analysis compendium
 
-This repository contains the reproducible software and author-generated
-artifacts for:
+For *Fragment-Constrained Ionic Liquid Screening with a Compositional Gaussian
+Process Surrogate and an Uncertainty-Aware Multi-Objective Acquisition Function*
+(Digital Discovery manuscript DD-ART-06-2026-000373).
 
-> Fragment-Constrained Ionic Liquid Screening with a Compositional Gaussian
-> Process Surrogate and an Uncertainty-Penalized Multi-Objective Acquisition
-> Function (Digital Discovery, DD-ART-06-2026-000373).
+## Data release and scientific status
 
-The September 2026 revision supersedes the earlier code-only snapshot.
+The authors authorized public data release on 5 September 2026. This checkout
+now includes the exact 33 property input CSVs (five training/validation folds
+and one test for each property), test-prediction tables, saved GP parameter/
+scaler states, vocabulary, screening caches, and the PubChem GRU corpus.
 
-## What is implemented
+This deposit preserves the supplied SMILES, target values, partitions, and
+numerical outputs. It does **not** certify all encoded combinations as
+charge-balanced salts. Formal-charge/stoichiometry review remains open, and
+existing screening classifications are provisional pending that review.
 
-1. A deterministic 505-cation x 173-anion vocabulary extracted from the three
-   property datasets; PubChem is not part of the CF-BILD vocabulary.
-2. The paper-specific GPyTorch compositional-GP implementation with predefined
-   species-level splits and product/additive/no-cross kernels.
-3. Final refitting on every non-test record after cross-validation selects
-   hyperparameters.
-4. A zero-truncated Gaussian predictive distribution for non-negative CO2
-   capacity.
-5. Feasibility-weighted additive expected improvement (FW-AEI), explicitly not
-   EHVI, plus analytical q=1 EHVI against a non-empty incumbent Pareto front.
-6. Corrected independent two- and three-objective screens, a median-distance
-   baseline, GRU similarity audit, and SMARTS stability triage.
+The split audit also identifies one viscosity group crossing training and
+validation in folds 3 and 5 (19 records). No non-test/test encoded-group overlap
+was found. This limitation is disclosed rather than silently changing the
+partitions or claiming strictly species-disjoint CV in every fold.
 
-## Authoritative layout
+## Data provenance
 
-    cf_bild/
-      fragment_vocab.py       vocabulary, features, predefined splits
-      gp_cvloss.py            paper-specific compositional GP
-      predictive.py           calibrated physical predictions
-      acquisition.py          FW-AEI, q=1 EHVI, hypervolume
-    scripts/revision/          authoritative analysis and figure scripts
-    data/                      provenance and restricted-data hash manifest
-    output/revision_2026/      public prediction caches and result tables
-    figures/                   600 dpi PNG and vector PDF figures
-    tests/test_revision_methods.py
+The three property datasets are reused from:
 
-Legacy scripts with invalid acquisition labels are absent from this release.
+Shifa Zhong et al., *Screening Environmentally Benign Ionic Liquids for CO2
+Absorption Using Representation Uncertainty-Based Machine Learning*,
+Environmental Science & Technology Letters **2024**, 11, 1193–1199.
+https://doi.org/10.1021/acs.estlett.4c00524
+
+That study collected CO2 and viscosity records from NIST ILThermo and obtained
+IPC-81 cytotoxicity data from Wang, Song, and Zhou, Processes **2021**, 9, 65,
+https://doi.org/10.3390/pr9010065. Toxicity is **not** a Vibrio fischeri
+bioluminescence endpoint. The supplied logEC50 numbers are unchanged. The
+concentration unit and logarithm base require source confirmation; do not
+exponentiate or relabel them as ln values without that evidence.
+
+PubChem is the source of the separate GRU corpus, not of the CF-BILD ion
+vocabulary and not a dataset attributed to the EST Letters study.
+
+See [data/DATA_ACCESS.md](data/DATA_ACCESS.md) and
+[data/PUBLIC_DATA_RELEASE.json](data/PUBLIC_DATA_RELEASE.json).
 
 ## Environment
 
-The validated environment is Python 3.10.8 with versions in
-`requirements-revision-lock.txt`. CF-MF is pinned to commit
-`698c31559e71f9cb14fd58e56562511ae644fc40`.
-
-Windows PowerShell:
+The reported calculations used Python 3.10.8 and the versions in
+requirements-revision-lock.txt. CF-MF is pinned to commit
+698c31559e71f9cb14fd58e56562511ae644fc40.
 
     py -3.10 -m venv .venv
     .\.venv\Scripts\Activate.ps1
-    python -m pip install --upgrade pip
     pip install --extra-index-url https://download.pytorch.org/whl/cu128 -r requirements-revision-lock.txt
 
-CPU-only PyTorch may be substituted for tests and cached-result analyses.
+CPU PyTorch is sufficient for integrity tests and cached-result plotting.
 
-## Public reproduction path
+## Verify the exact public inputs
 
-These commands use only distributed author-generated artifacts and do not
-require record-level experimental tables:
-
+    python scripts/revision/verify_public_data.py
+    python scripts/revision/restore_pubchem_corpus.py --verify-only
     python tests/test_revision_methods.py
+
+The first command checks hashes, pool identity across folds, and group overlap.
+It explicitly reports the known viscosity CV warning. Use --strict-splits to
+make any training/validation overlap a failure. Passing byte-integrity tests
+does not certify chemical identity or remove the CV warning.
+
+## Reproduce figures and downstream analyses
+
+    python scripts/revision/build_revision_figures.py
     python scripts/revision/run_acquisition_analysis.py
     python scripts/revision/run_gru_ood_similarity.py
     python scripts/revision/run_stability_screening.py
-    python scripts/revision/build_revision_figures.py
 
-The figure command rebuilds Figures 1, 2, 4, S1–S5, and the TOC graphic from
-public derived artifacts. Figure 3 is supplied as a 600 dpi PNG and vector PDF,
-but regenerating its experimental-versus-predicted panels requires the
-restricted held-out target tables; the script detects their absence and skips
-that figure with an explicit message.
+Figure 3 can now be rebuilt from the distributed test-prediction/experimental
+tables; no private inputs are needed for the figure command. Figure 4b shows
+each property's uncertainty as a ratio to the corresponding EHVI mean,
+without averaging quantities on different target scales.
 
-The acquisition script consumes the full-pool posterior cache, aggregated
-training-derived operating definitions, and model-derived incumbent Pareto
-coordinates. It never substitutes candidate extrema for the stated training
-definitions.
+The downstream commands reproduce the archived encoded-input analysis.
+They are not a new chemical validation. Existing numerical headline values
+remain in output/revision_2026/ and are provisional under the issues above.
 
-## Full-refit path with authorized local data
+## Refit and GRU training inputs
 
-The record-level property tables originate from NIST ILThermo and the cited
-toxicity literature. The authors do not have permission to redistribute them.
-Obtain the records from the original providers under their terms, place the 33
-expected split files in `data/`, and verify the local copy:
-
-    python scripts/revision/verify_restricted_data.py --data-dir data
     python scripts/revision/run_revision_models.py
     python scripts/revision/run_median_baseline.py
+    python scripts/revision/restore_pubchem_corpus.py
 
-`data/restricted_data_manifest.json` contains no experimental values; it gives
-filenames, schemas, row counts, sizes, and SHA-256 digests. Checkpoints and test
-prediction files embedding source-derived targets are also excluded. See
-`data/DATA_ACCESS.md` for provenance and the public/restricted boundary.
+The first two commands are computationally intensive and overwrite generated
+analysis outputs in the checkout; use a separate clone for new runs. They
+were **not rerun** as part of the public-data/editorial update. Fixed selected
+hyperparameters remain in config/selected_hyperparameters.json.
 
-## Expected headline outputs
+Saved model_*.pkl files contain parameter/scaler states and test arrays; they
+are not standalone GPs without conditioning data. The exact conditioning
+records and vocabulary are supplied. Pickle files can execute code: load only
+trusted artifacts after checking their published hashes. Integrity tests use
+CSV, JSON and NPZ and do not execute pickle.
 
-| Item | Revised value |
-|---|---:|
-| Candidate pool | 87,365 |
-| Final CO2 test R2 / RMSE | 0.909 / 0.066 |
-| Final viscosity test R2 / RMSE (ln space) | 0.855 / 0.614 |
-| Final toxicity test R2 / RMSE | 0.755 / 0.445 |
-| FW-AEI top-100 hypervolume / mean sigma | 34.041 / 1.334 |
-| Analytical q=1 EHVI hypervolume / mean sigma | 38.453 / 1.401 |
-| Corrected stability classes (Pass/Caution/Fail) | 36 / 5 / 59 |
-
-Full-precision aggregate values are in `output/revision_2026/`.
+The restored PubChem corpus is byte-identical to the archived 453,620,552-byte
+source. See generative_baseline/README.md for the training interface. The fixed
+95,285-pair generated sample defines the reported 20,000-pair similarity audit;
+fresh stochastic training is not claimed to reproduce identical strings.
 
 ## Citation, archive, and license
 
-- Canonical repository: https://github.com/Shifa-Zhong/CF-BILD-
-- Release tag: `v0.2.2`
-- Archived software version DOI: `[ZENODO_VERSION_DOI]`
-- Software concept/latest DOI: `[ZENODO_CONCEPT_DOI]`
+Canonical repository: https://github.com/Shifa-Zhong/CF-BILD-
 
-No source-derived dataset is redistributed. Replace the DOI placeholders after
-Zenodo archival. The software is released under the MIT License; upstream data
-remain governed by their providers' terms.
+The v0.2.2 tag remains immutable historical material. Cite the commit of this
+public-data release when using these newly deposited inputs. Persistent
+archival software-version, concept, and dataset DOIs are pending and will be
+supplied by acceptance.
+
+Software is MIT-licensed. Cite the direct and upstream dataset sources above;
+software licensing does not replace applicable data-provider terms.

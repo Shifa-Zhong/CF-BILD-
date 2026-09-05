@@ -4,7 +4,10 @@ Datasets used by PyTorch for language modelling of chemical structures.
 
 import numpy as np
 import re
-#import selfies as sf
+try:
+    import selfies as sf
+except ImportError:
+    sf = None
 import torch
 import torch.nn.utils.rnn as rnn_utils
 from itertools import chain
@@ -321,6 +324,8 @@ class SelfiesVocabulary(object):
                 raise ValueError("must provide SELFIES list or file to" + \
                                  " instantiate Vocabulary")
             # tokenize all SMILES in the input and add all tokens to vocabulary
+            if sf is None:
+                raise ImportError('SELFIES mode requires the optional selfies package.')
             alphabet = sorted(list(sf.get_alphabet_from_selfies(self.selfies)))
             self.characters = alphabet
 

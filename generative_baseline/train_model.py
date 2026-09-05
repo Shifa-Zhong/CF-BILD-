@@ -18,10 +18,7 @@ from tqdm import tqdm
 from rdkit import rdBase
 rdBase.DisableLog('rdApp.error')
 
-# set working directory
-git_dir = os.path.expanduser("~/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # import classes
 from models import RNN, OneHotRNN, EarlyStopping

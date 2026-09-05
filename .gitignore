@@ -16,12 +16,10 @@ env/
 .DS_Store
 Thumbs.db
 
-# Restricted source-derived records and artifacts embedding target values
-data/*_group_*.csv
+# Restored large corpus (lossless compressed parts are versioned)
 data/Pubchem dataset.txt
-output/revision_2026/models/
-output/revision_2026/test_predictions_*.csv
-output/revision_2026/data_sha256.json
+# Superseded large-transfer package retained only as a local backup.
+data/gru/pubchem_corpus/
 
 # Manuscript working files and local audit directories
 manuscript/

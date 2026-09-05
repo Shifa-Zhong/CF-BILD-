@@ -54,7 +54,7 @@ def non_test_frame(property_name):
     return pd.concat([train, validation], ignore_index=True)
 
 
-def operating_points_from_restricted_data(percentile=75):
+def operating_points_from_property_data(percentile=75):
     targets = {
         name: non_test_frame(name)[TARGET_COLUMNS[name]].to_numpy()
         for name in PROPERTIES
@@ -72,7 +72,7 @@ def operating_points_from_restricted_data(percentile=75):
     return reference, thresholds
 
 
-def restricted_tables_available():
+def property_tables_available():
     return all(
         (DATA_DIR / f'{role}_1_group_{property_name}.csv').exists()
         for property_name in PROPERTIES
@@ -109,14 +109,14 @@ def incumbent_indices(cache):
 
 
 def load_or_build_public_inputs(cache):
-    '''Load aggregated inputs, or rebuild them when restricted data are local.
+    '''Load aggregated inputs, or rebuild them from the public property inputs.
 
     The public artifact contains only operating summaries and the model-derived
     incumbent Pareto coordinates. It contains no source experimental record.
     '''
-    if restricted_tables_available():
+    if property_tables_available():
         physical_mu = to_maximization(cache['physical_mu'])
-        reference, _ = operating_points_from_restricted_data(75)
+        reference, _ = operating_points_from_property_data(75)
         incumbent_ids = incumbent_indices(cache)
         front = incumbent_front(physical_mu, reference, incumbent_ids)
         payload = {
@@ -127,7 +127,7 @@ def load_or_build_public_inputs(cache):
             ),
             'reference_point_maximization_frame': reference.tolist(),
             'feasibility_thresholds_by_percentile': {
-                str(percentile): operating_points_from_restricted_data(
+                str(percentile): operating_points_from_property_data(
                     percentile
                 )[1].tolist()
                 for percentile in (50, 60, 70, 75, 80, 90)

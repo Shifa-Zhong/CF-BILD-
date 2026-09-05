@@ -80,7 +80,7 @@ def figure_1_workflow():
     axis.axis('off')
     boxes = [
         (0.02, 0.22, 0.20, 0.60, BLUE, '1  Ion vocabulary',
-         '505 cations x 173 anions\n87,365 formal, charge-balanced\ncandidate ion pairs'),
+         '505 x 173 labelled components\n87,365 encoded candidate pairs\nCharge / stoichiometry audit open'),
         (0.275, 0.22, 0.20, 0.60, TEAL, '2  Probabilistic surrogate',
          'Collision-free Morgan features\nCompositional GP kernel\nFull non-test refit + uncertainty'),
         (0.53, 0.22, 0.20, 0.60, ORANGE, '3  Multi-objective ranking',
@@ -143,14 +143,20 @@ def figure_2_vocabulary():
         axis.set_xlabel('Number of unique ions')
         axis.set_title(title)
         axis.spines[['top', 'right']].set_visible(False)
-    family_codes = pd.Categorical(tsne['family'])
-    axes[2].scatter(
-        tsne['tsne_1'], tsne['tsne_2'],
-        c=family_codes.codes,
-        cmap='tab20',
-        s=11,
-        alpha=0.75,
-        linewidths=0,
+    families = sorted(tsne['family'].unique())
+    palette = mpl.colormaps['tab20']
+    for index, family in enumerate(families):
+        subset = tsne[tsne['family'] == family]
+        axes[2].scatter(
+            subset['tsne_1'], subset['tsne_2'],
+            color=palette(index / max(len(families) - 1, 1)),
+            s=11, alpha=0.75, linewidths=0, label=family,
+        )
+    handles, labels = axes[2].get_legend_handles_labels()
+    figure.legend(
+        handles, labels, loc='upper center', bbox_to_anchor=(0.5, -0.01),
+        ncol=4, fontsize=13, frameon=False, columnspacing=1.5,
+        handletextpad=0.35, markerscale=1.8,
     )
     axes[2].set_xlabel('t-SNE coordinate 1')
     axes[2].set_ylabel('t-SNE coordinate 2')
@@ -189,7 +195,7 @@ def figure_3_surrogates():
     labels = {
         'co2': ('CO2 capacity (mol mol$^{-1}$)', BLUE),
         'vis': ('ln viscosity (Pa s)', ORANGE),
-        'tox': ('ln EC50', GREEN),
+        'tox': ('log EC50 (IPC-81)', GREEN),
     }
     figure, axes = plt.subplots(2, 3, figsize=(11.4, 7.0))
     levels = np.linspace(0.1, 0.95, 18)
@@ -237,6 +243,30 @@ def figure_3_surrogates():
     save_figure(figure, 'Figure_3_revision')
 
 
+def objective_uncertainty_summary():
+    """Re-express archived selections; no model fitting or acquisition rerun."""
+    analysis = json.loads((RESULTS / 'acquisition_analysis_revision.json').read_text(encoding='utf-8'))['acquisition_comparison']
+    columns = []
+    for prop in ('co2', 'vis', 'tox'):
+        with np.load(RESULTS / f'candidate_predictions_{prop}.npz', allow_pickle=False) as cache:
+            columns.append(cache['physical_sigma'])
+    sigma = np.column_stack(columns)
+    values = []
+    for name in ('FW-AEI', 'Additive EI', 'Analytical q=1 EHVI'):
+        mean = sigma[np.asarray(analysis[name]['top_indices'], dtype=int)].mean(axis=0)
+        np.testing.assert_allclose(mean.mean(), analysis[name]['mean_sigma'], rtol=1e-10)
+        values.append(mean)
+    random = analysis['Random (5 seeds)']
+    means = []
+    for run in random['runs']:
+        indices = np.random.default_rng(run['seed']).choice(len(sigma), size=100, replace=False)
+        mean = sigma[indices].mean(axis=0)
+        np.testing.assert_allclose(mean.mean(), run['mean_sigma'], rtol=1e-10)
+        means.append(mean)
+    values.append(np.mean(means, axis=0))
+    return np.asarray(values)
+
+
 def figure_4_screening():
     comparison = pd.read_csv(RESULTS / 'acquisition_comparison_revision.csv')
     top = pd.read_csv(RESULTS / 'top_candidates_revision.csv')
@@ -256,17 +286,22 @@ def figure_4_screening():
     axes[0, 0].set_ylabel('Top-100 dominated hypervolume')
     axes[0, 0].spines[['top', 'right']].set_visible(False)
 
-    axes[0, 1].bar(
-        x, comparison['mean_sigma'], color=method_colors
-    )
+    components = objective_uncertainty_summary()
+    ratios = components / components[2]
+    for column, (label, color) in enumerate(zip(
+            ('CO2', 'ln viscosity', 'log EC50'), (BLUE, ORANGE, GREEN))):
+        axes[0, 1].bar(x + (column - 1) * 0.24, ratios[:, column],
+                       width=0.23, color=color, label=label)
+    axes[0, 1].axhline(1, color=GRAY, linestyle='--', linewidth=0.8)
+    axes[0, 1].legend(fontsize=7, ncol=1, loc='lower left', frameon=False)
     axes[0, 1].set_xticks(x, names)
-    axes[0, 1].set_ylabel('Mean predictive standard deviation')
+    axes[0, 1].set_ylabel('Mean uncertainty / EHVI (by property)')
     axes[0, 1].spines[['top', 'right']].set_visible(False)
 
     score_color = np.log10(np.maximum(top['fw_aei_score'], 1e-12))
     for axis, x_column, x_label in (
         (axes[0, 2], 'vis_pred', 'Predicted ln viscosity (Pa s)'),
-        (axes[1, 0], 'tox_pred', 'Predicted ln EC50'),
+        (axes[1, 0], 'tox_pred', 'Predicted log EC50 (IPC-81)'),
     ):
         scatter = axis.scatter(
             top[x_column], top['co2_pred'],
@@ -317,7 +352,7 @@ def figure_4_screening():
         normalized, aspect='auto', cmap='Blues', vmin=0, vmax=1
     )
     axes[1, 2].set_xticks(
-        range(3), ['CO2', '-ln(viscosity)', 'ln(EC50)']
+        range(3), ['CO2', '-ln(viscosity)', 'log EC50']
     )
     axes[1, 2].set_yticks(
         range(len(post_filter)),
@@ -344,7 +379,9 @@ def figure_4_screening():
 
 
 def figure_s1_vocabulary_mw():
-    table = pd.read_csv(RESULTS / 'vocabulary_ions_with_mw.csv')
+    table = pd.read_csv(
+        RESULTS / 'vocabulary_ions_with_mw.csv'
+    )
     figure, axes = plt.subplots(1, 2, figsize=(10.5, 4.0))
     for axis, ion_type, color in (
         (axes[0], 'cation', BLUE),
@@ -434,7 +471,7 @@ def figure_s3_pareto_projection():
         label='Pareto within top 100',
     )
     axis.set_xlabel('Predicted ln viscosity (Pa s)')
-    axis.set_ylabel('Predicted ln EC50')
+    axis.set_ylabel('Predicted log EC50 (IPC-81)')
     axis.legend(frameon=False)
     axis.spines[['top', 'right']].set_visible(False)
     colorbar = figure.colorbar(scatter, ax=axis)
@@ -528,9 +565,9 @@ def toc_graphic():
     axis.set_ylim(0, 1)
     axis.axis('off')
     items = [
-        (0.02, BLUE, '505 x 173\nion pairs'),
-        (0.36, ORANGE, 'GP uncertainty\n+ FW-AEI'),
-        (0.70, GREEN, 'transparent\nstability triage'),
+        (0.02, BLUE, 'Ion-pair\nspace'),
+        (0.36, ORANGE, 'GP +\nFW-AEI'),
+        (0.70, GREEN, 'Stability\ntriage'),
     ]
     for x, color, label in items:
         axis.add_patch(FancyBboxPatch(
@@ -541,7 +578,7 @@ def toc_graphic():
         axis.text(
             x + 0.135, 0.50, label,
             color='white', ha='center', va='center',
-            fontsize=8, fontweight='bold',
+            fontsize=7.5, fontweight='bold',
         )
     for start, end in ((0.29, 0.35), (0.63, 0.69)):
         axis.add_patch(FancyArrowPatch(
@@ -554,7 +591,7 @@ def toc_graphic():
         'CF-BILD combines fragment-constrained ion-pair enumeration, '
         'compositional Gaussian-process uncertainty, feasibility-weighted '
         'multiobjective ranking and transparent stability triage for '
-        'reproducible ionic-liquid screening.'
+        'ionic-liquid screening.'
     )
     (FIGURE_DIR.parent / 'TOC_text_revision.txt').write_text(
         text, encoding='utf-8'
@@ -564,18 +601,7 @@ def toc_graphic():
 def main():
     figure_1_workflow()
     figure_2_vocabulary()
-    restricted_predictions = [
-        RESULTS / f'test_predictions_{name}.csv'
-        for name in ('co2', 'vis', 'tox')
-    ]
-    if all(path.exists() for path in restricted_predictions):
-        figure_3_surrogates()
-    else:
-        print(
-            'Skipping Figure 3: regeneration requires the three restricted '
-            'held-out target/prediction tables. The submitted 600 dpi PNG '
-            'and vector PDF remain in figures/.'
-        )
+    figure_3_surrogates()
     figure_4_screening()
     figure_s1_vocabulary_mw()
     figure_s2_model_comparison()

@@ -1,4 +1,4 @@
-'''Verify author-local source-derived data without redistributing records.'''
+'''Verify exact public property records (legacy command name retained).'''
 
 from __future__ import annotations
 
@@ -49,26 +49,30 @@ def build_manifest(data_dir):
     missing = [str(path) for path in files if not path.exists()]
     if missing:
         raise FileNotFoundError(
-            'Missing restricted files:\n' + '\n'.join(missing)
+            'Missing property files:\n' + '\n'.join(missing)
         )
     return {
-        'manifest_version': 1,
+        'manifest_version': 2,
         'contains_experimental_values': False,
         'redistribution_note': (
-            'Record-level tables are intentionally absent. Obtain them from '
-            'the original providers under their applicable terms.'
+            'Exact record-level inputs are publicly distributed with author authorization. '
+            'The legacy filename is retained for compatibility; upstream attribution and terms apply.'
         ),
         'sources': {
+            'direct_property_dataset_source': {
+                'citation': 'Zhong et al., Environmental Science & Technology Letters 2024, 11, 1193-1199',
+                'doi': '10.1021/acs.estlett.4c00524',
+            },
             'co2_and_viscosity': {
                 'name': 'NIST ILThermo (SRD 147)',
                 'url': 'https://ilthermo.boulder.nist.gov/',
             },
             'toxicity': {
                 'citation': (
-                    'Zhao et al., Journal of Hazardous Materials 278 (2014) '
-                    '320-329'
+                    'Wang, Song and Zhou, Machine Learning for Ionic Liquid '
+                    'Toxicity Prediction, Processes 2021, 9, 65; IPC-81 subset'
                 ),
-                'doi': '10.1016/j.jhazmat.2014.06.018',
+                'doi': '10.3390/pr9010065',
             },
         },
         'files': {path.name: metadata(path) for path in files},
@@ -91,9 +95,9 @@ def verify(data_dir, manifest):
                 )
     if failures:
         raise ValueError(
-            'Restricted-data verification failed:\n' + '\n'.join(failures)
+            'Property-data verification failed:\n' + '\n'.join(failures)
         )
-    print(f'PASS: {len(manifest["files"])} restricted files verified.')
+    print(f'PASS: {len(manifest["files"])} public property files verified.')
 
 
 def main():
@@ -102,7 +106,7 @@ def main():
     parser.add_argument('--manifest', type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument(
         '--write-manifest', action='store_true',
-        help='Maintainer-only: build metadata from an authorized local copy.',
+        help='Maintainer-only: build metadata from the exact public inputs.',
     )
     args = parser.parse_args()
     if args.write_manifest:

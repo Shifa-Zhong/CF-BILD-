@@ -1,4 +1,5 @@
 import pickle
+import torch  # Load before RDKit on Windows.
 import sys
 import unittest
 from pathlib import Path
@@ -95,11 +96,11 @@ def test_fw_aei_is_finite_and_nonnegative():
 
 
 def test_complete_non_test_pool_counts_and_fold_identity():
-    if not Path('data/train_1_group_co2.csv').exists():
+    if not (ROOT / 'data/train_1_group_co2.csv').exists():
         raise unittest.SkipTest(
-            'Restricted source-derived tables are not distributed publicly.'
+            'Public input CSVs are missing from this checkout.'
         )
-    datasets = load_property_datasets('data', n_folds=5)
+    datasets = load_property_datasets(ROOT / 'data', n_folds=5)
     expected = {'co2': 12503, 'vis': 12374, 'tox': 302}
     for property_name, count in expected.items():
         frame = get_non_test_dataframe(datasets, property_name)
@@ -107,15 +108,13 @@ def test_complete_non_test_pool_counts_and_fold_identity():
 
 
 def test_revision_cache_contract():
-    with open(
-        'output/revision_2026/predictions_87365_revision.pkl', 'rb'
-    ) as handle:
-        cache = pickle.load(handle)
-    assert cache['property_order'] == ['co2', 'vis', 'tox']
-    assert cache['physical_mu'].shape == (87365, 3)
-    assert cache['physical_sigma'].shape == (87365, 3)
-    assert np.all(cache['physical_mu'][:, 0] >= 0.0)
-    assert np.all(cache['physical_sigma'] >= 0.0)
+    for prop in ('co2', 'vis', 'tox'):
+        with np.load(ROOT / f'output/revision_2026/candidate_predictions_{prop}.npz', allow_pickle=False) as cache:
+            assert cache['physical_mu'].shape == (87365,)
+            assert cache['physical_sigma'].shape == (87365,)
+            assert np.all(cache['physical_sigma'] >= 0.0)
+            if prop == 'co2':
+                assert np.all(cache['physical_mu'] >= 0.0)
 
 
 def main():

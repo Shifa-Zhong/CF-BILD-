@@ -1,0 +1,7 @@
+# Preserve the exact published artifact bytes across platforms.
+/data/** -text
+/output/** -text
+/figures/** -text
+*.pkl -text
+*.npz -text
+*.gz -text

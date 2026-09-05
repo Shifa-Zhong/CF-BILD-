@@ -76,8 +76,8 @@ def main():
         ls_cross, n_pair = median_positive_pairwise(
             x_train[:, :dim_cat + dim_an], seed=44
         )
-        with (ROOT / 'output' / f'model_{property_name}.pkl').open('rb') as h:
-            selected = pickle.load(h)['best_params']
+        with (ROOT / 'config/selected_hyperparameters.json').open(encoding='utf-8') as h:
+            selected = json.load(h)[property_name]['best_params']
         params = {
             'kernel_name': selected['kernel_name'],
             'ls_cat': ls_cat,

@@ -9,10 +9,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-# set working directory
-git_dir = os.path.expanduser("~/git/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # import SmilesEnumerator
 from util.SmilesEnumerator import SmilesEnumerator

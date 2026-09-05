@@ -1,15 +1,19 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
   "contains_experimental_values": false,
-  "redistribution_note": "Record-level tables are intentionally absent. Obtain them from the original providers under their applicable terms.",
+  "redistribution_note": "Exact record-level inputs are publicly distributed with author authorization. The legacy filename is retained for compatibility; upstream attribution and terms apply.",
   "sources": {
+    "direct_property_dataset_source": {
+      "citation": "Zhong et al., Environmental Science & Technology Letters 2024, 11, 1193-1199",
+      "doi": "10.1021/acs.estlett.4c00524"
+    },
     "co2_and_viscosity": {
       "name": "NIST ILThermo (SRD 147)",
       "url": "https://ilthermo.boulder.nist.gov/"
     },
     "toxicity": {
-      "citation": "Zhao et al., Journal of Hazardous Materials 278 (2014) 320-329",
-      "doi": "10.1016/j.jhazmat.2014.06.018"
+      "citation": "Wang, Song and Zhou, Machine Learning for Ionic Liquid Toxicity Prediction, Processes 2021, 9, 65; IPC-81 subset",
+      "doi": "10.3390/pr9010065"
     }
   },
   "files": {

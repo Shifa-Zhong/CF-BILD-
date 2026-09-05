@@ -1,20 +1,31 @@
-import deepsmiles
 import numpy as np
 import os
 import pandas as pd
 import random
 import re
 import warnings
-#from selfies import decoder
 from tqdm import tqdm
 from rdkit import Chem
 from rdkit.Chem import AllChem, rdmolops
 from rdkit.DataStructs import FingerprintSimilarity
-from scipy import histogram
+from numpy import histogram
 from scipy.stats import entropy, gaussian_kde, wasserstein_distance
 from scipy.spatial.distance import jensenshannon
 
-converter = deepsmiles.Converter(rings=True, branches=True)
+def decoder(value):
+    try:
+        from selfies import decoder as decode_selfies
+    except ImportError as exc:
+        raise ImportError('SELFIES mode requires the optional selfies package.') from exc
+    return decode_selfies(value)
+
+
+def decode_deepsmiles(value):
+    try:
+        from deepsmiles import Converter
+    except ImportError as exc:
+        raise ImportError('DeepSMILES mode requires the optional deepsmiles package.') from exc
+    return Converter(rings=True, branches=True).decode(value)
 
 def clean_mol(smiles, stereochem=False, selfies=False, deepsmiles=False):
     """
@@ -23,11 +34,11 @@ def clean_mol(smiles, stereochem=False, selfies=False, deepsmiles=False):
     """
     if selfies:
         selfies = smiles
-        smiles = decoder(selfies)
+        smiles = decoder(smiles)
     elif deepsmiles:
         deepsmiles = smiles
         try:
-            smiles = converter.decode(deepsmiles)
+            smiles = decode_deepsmiles(deepsmiles)
         except:
             raise ValueError("invalid DeepSMILES: " + str(deepsmiles))
     mol = Chem.MolFromSmiles(str(smiles))

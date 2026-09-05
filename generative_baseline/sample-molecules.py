@@ -9,10 +9,7 @@ import re
 import sys
 from itertools import chain
 
-# set working directory
-git_dir = os.path.expanduser("~/git/low-data-generative-models")
-python_dir = git_dir + "/python"
-os.chdir(python_dir)
+# Paths are resolved from the caller; sibling imports use the script directory.
 
 # import functions
 from functions import write_smiles

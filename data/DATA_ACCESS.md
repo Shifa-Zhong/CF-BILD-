@@ -1,37 +1,59 @@
-# Data provenance, access, and redistribution
+# Public data access and provenance
 
-The CO2-equilibrium and viscosity records used in this study were curated from
-NIST ILThermo (SRD 147): <https://ilthermo.boulder.nist.gov/>. The toxicity
-records were curated from the *Vibrio fischeri* subset reported by Zhao et al.,
-*Journal of Hazardous Materials* 278 (2014) 320-329,
-<https://doi.org/10.1016/j.jhazmat.2014.06.018>.
+The exact model inputs are now publicly deposited with author authorization.
+The former no-redistribution description applies only to the historical v0.2.2
+snapshot, not this data release.
 
-The authors do **not** have permission to redistribute the source-derived
-record-level tables. The public GitHub/Zenodo software release therefore
-intentionally excludes all train, validation, and test CSV files. Researchers
-must obtain the underlying records from the original providers under their
-applicable terms.
+## Property data
 
-`restricted_data_manifest.json` publishes no experimental values. It records
-the expected filenames, column schemas, row counts, byte sizes, and SHA-256
-digests so an authorized local copy can be checked exactly:
+Direct source: Zhong et al., Environmental Science & Technology Letters 2024,
+11, 1193–1199, https://doi.org/10.1021/acs.estlett.4c00524.
 
-    python scripts/revision/verify_restricted_data.py --data-dir data
+Upstream: NIST ILThermo (SRD 147), https://ilthermo.boulder.nist.gov/, for CO2
+and viscosity; Wang et al., Processes 2021, 9, 65,
+https://doi.org/10.3390/pr9010065, for IPC-81 cytotoxicity.
 
-The complete species-grouped split handling, final-refit, and prediction code
-is public. Model refitting and the median-distance baseline require a verified
-local copy of the restricted tables. Fixed hyperparameters and aggregated
-metrics are public; checkpoints and test-prediction files containing
-source-derived target values are excluded.
+All 33 train/validation/test CSVs are supplied unchanged. Fold-1 train plus
+validation defines the complete non-test pool; the other four fold pairs
+contain the same records. The files retain local record indices and encoded
+species groups. Original raw-database extraction/curation is not recreated:
+these exact deposited inputs are the reproducible starting point.
 
-The public archive includes author-generated artifacts that do not contain
-record-level experimental values: the 505-cation x 173-anion vocabulary and
-CF-MF representation, full-pool posterior prediction cache, acquisition and
-stability outputs, aggregated model metrics, figures, tests, and environment
-files.
+| Property | Non-test records | Test records | Target |
+|---|---:|---:|---|
+| CO2 | 12503 | 1306 | dissolved CO2 mole fraction |
+| Viscosity | 12374 | 1465 | ln(viscosity / (Pa s)) |
+| Toxicity | 302 | 32 | supplied IPC-81 logEC50 |
 
-PubChem contributed only to the separate GRU training corpus, not to the
-CF-BILD vocabulary. The approximately 454 MB corpus is also excluded because
-the authors do not have permission to redistribute it. The fixed generated
-sample and its similarity output are included, so retraining the GRU is not
-required to reproduce the reported comparison.
+The toxicity base/unit have not been independently confirmed. Values are
+preserved without applying another logarithm or concentration conversion.
+
+## Exact-input and split checks
+
+Run python scripts/revision/verify_public_data.py. PUBLIC_DATA_RELEASE.json
+contains SHA-256 hashes for data and source-bearing model/test artifacts.
+
+Known limitation: viscosity group CC[n+]1ccccc1.CCOS(=O)(=O)[O-] crosses the
+train/validation boundary in folds 3 and 5 (19 records). There is no observed
+non-test/test encoded-group overlap. The audit and release preserve this
+limitation rather than changing historical partitions. Charge and
+stoichiometry checks are separate from these encoded-group checks.
+
+The three output/revision_2026/models/model_*.pkl files contain model parameter
+and scaler states, with test arrays. Reconstructing a GP posterior also
+requires the provided conditioning records and vocabulary. Do not load pickle
+from untrusted sources; the verification program does not unpickle anything.
+
+## PubChem GRU corpus
+
+The separate corpus is stored in data/gru/pubchem_corpus_portable as 109 gzip parts.
+python scripts/revision/restore_pubchem_corpus.py restores the exact source
+to data/Pubchem dataset.txt. --verify-only checks restoration without writing.
+The manifest specifies part order, compressed hashes, restored size and hash.
+
+PubChem corpus and GRU source/sample are separate from the three property
+datasets reused from Zhong et al. The fixed sample in data/gru/generate_result.csv
+is the reproducible input to the reported support comparison.
+
+Software is MIT-licensed; retain source attribution and applicable provider
+terms for reused data. Public access does not imply chemical validation.
