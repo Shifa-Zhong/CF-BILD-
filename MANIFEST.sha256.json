@@ -6,8 +6,8 @@
   },
   {
     "path": ".gitignore",
-    "bytes": 785,
-    "sha256": "7e7d0044275b0736d448b6980ec63ec4da0e0b7e8f7ca5206979958c7a767186"
+    "bytes": 807,
+    "sha256": "c3c323338af13eae23cbfcd6cafdf7f8bf6a158f51996dad6fc91a6a1b34ddfa"
   },
   {
     "path": "cf_bild/__init__.py",
