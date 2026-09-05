@@ -1,0 +1,37 @@
+{
+  "property_order": [
+    "co2",
+    "vis",
+    "tox"
+  ],
+  "n_candidates": 67488,
+  "screen_temperature_k": 298.15,
+  "screen_pressure_kpa": 101.325,
+  "co2_distribution": "Gaussian conditioned on capacity >= 0",
+  "source_fit_artifacts_sha256": {
+    "metrics_co2.json": "a0f9d6a2608786ff2aaa0f2d54e779dc1114eae0a02ba0d4b3945fcab2c3b586",
+    "test_predictions_co2.csv": "664765f0b3c7be98a4f385acf2cc7b15e75adf4ce5d8e0f0ce460f5e9e5eef0a",
+    "calibration_co2.npz": "da7f78287a3bd4be004dbcec516998417116a1fa32407e86fedc2acadbfd7d00",
+    "calibration_co2.json": "3cde529d7415a47d04737c14a3ac91815fffcb767c431c895cbe36383210839c",
+    "selected_hyperparameters_co2.json": "9a943e741ad68e2f8803dd051ea1ca1d7e52c267415d995d76127ca8208689ad",
+    "models/model_co2.pkl": "f41051c308882b1c28c031fae545caf9ba667ae1d9e6e2fb3fdd535906845d73",
+    "candidate_predictions_co2.npz": "028ef039aaf93c5e2168a410958ea28cb349a96717bb39b1b6079bbfb25e5e4b",
+    "metrics_vis.json": "94eb39e2f8f6f4ff1a45fd9d77f342aa89a6e24643e91071c71af76c8b350f05",
+    "test_predictions_vis.csv": "35aeee86821094bac7f1d403a131f72bdfe30d4a6d40020b76c1ed3a4da1afa6",
+    "calibration_vis.npz": "41869a0ec52c506d0e92c7a0ba8ad4ebbc395b0ce445f4def14934f66a3c5318",
+    "calibration_vis.json": "83bf2d1350425bcf32fc0441a2e8ebed25919a0ee93d12f976ce953af76d6f20",
+    "selected_hyperparameters_vis.json": "c254158286055080a41b88d41210d537afadd1b1f7aac6a965ce35082d67b17b",
+    "models/model_vis.pkl": "2ff62c03f04beeb61a019ab6829ecdbc81ae8b976360a96a1486535d9570631d",
+    "candidate_predictions_vis.npz": "b4b1abd74289a74945e67203a005e6e8259cbc1c3ee5a87e36e322642696f541",
+    "metrics_tox.json": "d6ae80fda00e42b82cd5dc041585a651b242e2e4257ae3111f3a42c7980440ea",
+    "test_predictions_tox.csv": "b8c101928013541b50eaac2dc64719690dc054772321f09fa19fd3047fa6e1c9",
+    "calibration_tox.npz": "5d9e4901407fed73b8f93d586f09453827ad45ed82cd1d64d7f050eba9ddd4cd",
+    "calibration_tox.json": "ee492f9aa3bf564d0094d5c7c74d9c1d2b98ef6eb83bc565fa1957de6934bd17",
+    "selected_hyperparameters_tox.json": "3b519378228b6ef0dd1b1ece665b68cb0f5f25214bbeafbe4d22675327d6211c",
+    "models/model_tox.pkl": "472792a8f81f85cfa8fec5dec04a7a014d27e72923712be9720be7f14abd7199",
+    "candidate_predictions_tox.npz": "18cbd03953f72a205d778807b132849fb5cf7ce6b8c01054a7935e060842b67e"
+  },
+  "cache_sha256": "f74d7da7fc20de66c3589d154a65dbdc4741b3e7ce6bac0551f9b0ee1f64ab5d",
+  "pair_table_sha256": "19ae84bd79ca59617370db427a43477b578d638c1693b139c1a22ec97e47cbe4",
+  "old_prediction_caches_used": false
+}

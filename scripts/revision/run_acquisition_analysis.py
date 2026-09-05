@@ -8,6 +8,7 @@ analytical q=1 EHVI against a non-empty incumbent Pareto front.
 from __future__ import annotations
 
 import json
+import argparse
 import pickle
 import sys
 from pathlib import Path
@@ -30,6 +31,7 @@ from cf_bild.acquisition import (  # noqa: E402
     top_indices,
 )
 from cf_bild.fragment_vocab import canonicalize_smiles  # noqa: E402
+from cf_bild.ion_validation import require_valid_pairs  # noqa: E402
 
 
 DATA_DIR = ROOT / 'data'
@@ -44,6 +46,17 @@ TARGET_COLUMNS = {
 
 
 def load_cache():
+    generic = OUTPUT_DIR / 'candidate_predictions.npz'
+    if generic.exists():
+        with np.load(generic, allow_pickle=False) as arrays:
+            cache = {name: arrays[name].copy() for name in arrays.files}
+        pairs = pd.read_csv(OUTPUT_DIR / 'candidate_pairs.csv')
+        cache['candidate_cation_anion'] = list(pairs[['cation', 'anion']].itertuples(index=False, name=None))
+        cache['co2_posterior'] = 'Gaussian conditioned on capacity >= 0'
+        for name in ('latent_mu', 'latent_sigma', 'physical_mu', 'physical_sigma'):
+            if cache[name].shape != (len(pairs), 3) or not np.all(np.isfinite(cache[name])):
+                raise ValueError('Candidate cache shape or finiteness mismatch')
+        return cache
     with (OUTPUT_DIR / 'predictions_87365_revision.pkl').open('rb') as handle:
         return pickle.load(handle)
 
@@ -54,7 +67,7 @@ def non_test_frame(property_name):
     return pd.concat([train, validation], ignore_index=True)
 
 
-def operating_points_from_property_data(percentile=75):
+def operating_points_from_restricted_data(percentile=75):
     targets = {
         name: non_test_frame(name)[TARGET_COLUMNS[name]].to_numpy()
         for name in PROPERTIES
@@ -72,7 +85,7 @@ def operating_points_from_property_data(percentile=75):
     return reference, thresholds
 
 
-def property_tables_available():
+def restricted_tables_available():
     return all(
         (DATA_DIR / f'{role}_1_group_{property_name}.csv').exists()
         for property_name in PROPERTIES
@@ -109,14 +122,14 @@ def incumbent_indices(cache):
 
 
 def load_or_build_public_inputs(cache):
-    '''Load aggregated inputs, or rebuild them from the public property inputs.
+    '''Load aggregated inputs, or rebuild them when restricted data are local.
 
     The public artifact contains only operating summaries and the model-derived
     incumbent Pareto coordinates. It contains no source experimental record.
     '''
-    if property_tables_available():
+    if restricted_tables_available():
         physical_mu = to_maximization(cache['physical_mu'])
-        reference, _ = operating_points_from_property_data(75)
+        reference, _ = operating_points_from_restricted_data(75)
         incumbent_ids = incumbent_indices(cache)
         front = incumbent_front(physical_mu, reference, incumbent_ids)
         payload = {
@@ -127,7 +140,7 @@ def load_or_build_public_inputs(cache):
             ),
             'reference_point_maximization_frame': reference.tolist(),
             'feasibility_thresholds_by_percentile': {
-                str(percentile): operating_points_from_property_data(
+                str(percentile): operating_points_from_restricted_data(
                     percentile
                 )[1].tolist()
                 for percentile in (50, 60, 70, 75, 80, 90)
@@ -363,9 +376,14 @@ def threshold_sensitivity(
     return rows
 
 
-def main():
+def main(data_directory=None, output_directory=None):
+    global DATA_DIR, OUTPUT_DIR, PUBLIC_INPUTS_PATH
+    if data_directory is not None: DATA_DIR = Path(data_directory).resolve()
+    if output_directory is not None: OUTPUT_DIR = Path(output_directory).resolve()
+    PUBLIC_INPUTS_PATH = OUTPUT_DIR / 'acquisition_inputs_revision.json'
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     cache = load_cache()
+    require_valid_pairs(cache['candidate_cation_anion'], context='acquisition pool')
     public_inputs = load_or_build_public_inputs(cache)
     comparison, three_scores, physical_mu, physical_sigma = (
         acquisition_comparison(cache, public_inputs)
@@ -387,4 +405,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data-directory', type=Path)
+    parser.add_argument('--output-directory', type=Path)
+    args = parser.parse_args()
+    main(args.data_directory, args.output_directory)

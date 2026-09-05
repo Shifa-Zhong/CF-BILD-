@@ -1,0 +1,76 @@
+{
+  "artifact_version": "DD-ion-clean-refit-2026-09",
+  "environment": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.10.0+cu128",
+    "gpytorch": "1.15.2",
+    "botorch": "0.16.1",
+    "hyperopt": "0.2.7",
+    "rdkit-pypi": "2022.9.5",
+    "bit-collision-free-mf": "1.0.0",
+    "python": "3.10.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "vocabulary": {
+    "cations": 444,
+    "anions": 152,
+    "candidates": 67488,
+    "cation_dimensions": 1242,
+    "anion_dimensions": 828
+  },
+  "properties": {
+    "co2": {
+      "r2": 0.9123897045429075,
+      "rmse": 0.05613624456293729,
+      "mae": 0.04407280753612284,
+      "coverage_95": 0.9712962962962963,
+      "nlpd_moment_matched": -1.4700047952995525,
+      "nlpd": -1.542952828918737,
+      "n_refit": 10867,
+      "n_test": 1080,
+      "variance_scale": 1.1633034001015214,
+      "n_search_trials": 157,
+      "best_cv_rmse": 0.0805110849911869,
+      "elapsed_seconds": 337.05455708503723
+    },
+    "vis": {
+      "r2": 0.8739980798928333,
+      "rmse": 0.5798402901335443,
+      "mae": 0.35699456919623823,
+      "coverage_95": 0.9471726190476191,
+      "nlpd_moment_matched": 0.6859217782448436,
+      "nlpd": 0.6859217782448436,
+      "n_refit": 11101,
+      "n_test": 1344,
+      "variance_scale": 8.541221656185522,
+      "n_search_trials": 124,
+      "best_cv_rmse": 0.63464332367991,
+      "real_space": {
+        "r2": 0.5273372577978941,
+        "rmse_pa_s": 4.9036275107383,
+        "mae_pa_s": 0.37024705677152553,
+        "median_ae_pa_s": 0.009246241572792857,
+        "median_ape_percent": 18.023159890756922
+      },
+      "elapsed_seconds": 241.33547973632812
+    },
+    "tox": {
+      "r2": 0.7537279773159796,
+      "rmse": 0.45160745456844487,
+      "mae": 0.3689249887717206,
+      "coverage_95": 1.0,
+      "nlpd_moment_matched": 1.1564371981848462,
+      "nlpd": 1.1564371981848462,
+      "n_refit": 300,
+      "n_test": 31,
+      "variance_scale": 41.088477386745,
+      "n_search_trials": 89,
+      "best_cv_rmse": 0.4886602465530127,
+      "elapsed_seconds": 12.356797218322754
+    }
+  }
+}

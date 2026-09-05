@@ -1,9 +1,8 @@
-'''Refit the selected CF-BILD GPs on all non-test data and cache predictions.
+'''Shared model-conditioning helpers; not a runnable revision workflow.
 
-Hyperparameters remain those selected by the original five predefined,
-species-grouped CV folds. Only the final conditioning set changes from one
-fold's training subset to the complete train+validation pool. The held-out
-test set remains untouched.
+The historical main routine used pre-cleaning hyperparameters and paths.
+It is retained only for provenance and is disabled at the command line.
+Use run_clean_refit.py for the current curated-data tuning and refit protocol.
 '''
 
 from __future__ import annotations
@@ -413,4 +412,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    raise SystemExit(
+        'This is a helper module, not the current workflow. '
+        'Run scripts/revision/run_clean_refit.py --help instead.'
+    )

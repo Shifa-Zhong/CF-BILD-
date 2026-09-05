@@ -1,0 +1,108 @@
+{
+  "fingerprint": "Morgan radius 2, 2048 bits",
+  "comparisons": {
+    "co2": {
+      "cation": {
+        "n": 20000,
+        "median": 0.16279069767441862,
+        "q25": 0.1282051282051282,
+        "q75": 0.20512820512820512,
+        "fraction_ge_0.7": 0.00085,
+        "fraction_ge_0.8": 0.00085,
+        "fraction_exact": 0.00085,
+        "n_reference_ions": 72
+      },
+      "anion": {
+        "n": 20000,
+        "median": 0.23809523809523808,
+        "q25": 0.18,
+        "q75": 0.30434782608695654,
+        "fraction_ge_0.7": 0.0049,
+        "fraction_ge_0.8": 0.00465,
+        "fraction_exact": 0.0046,
+        "n_reference_ions": 52
+      }
+    },
+    "vis": {
+      "cation": {
+        "n": 20000,
+        "median": 0.21052631578947367,
+        "q25": 0.17073170731707318,
+        "q75": 0.2608695652173913,
+        "fraction_ge_0.7": 0.00485,
+        "fraction_ge_0.8": 0.0042,
+        "fraction_exact": 0.0034,
+        "n_reference_ions": 315
+      },
+      "anion": {
+        "n": 20000,
+        "median": 0.26,
+        "q25": 0.20512820512820512,
+        "q75": 0.3333333333333333,
+        "fraction_ge_0.7": 0.00695,
+        "fraction_ge_0.8": 0.00625,
+        "fraction_exact": 0.0061,
+        "n_reference_ions": 119
+      }
+    },
+    "tox": {
+      "cation": {
+        "n": 20000,
+        "median": 0.16666666666666666,
+        "q25": 0.12903225806451613,
+        "q75": 0.22580645161290322,
+        "fraction_ge_0.7": 0.00085,
+        "fraction_ge_0.8": 0.00075,
+        "fraction_exact": 0.00075,
+        "n_reference_ions": 134
+      },
+      "anion": {
+        "n": 20000,
+        "median": 0.24324324324324326,
+        "q25": 0.1836734693877551,
+        "q75": 0.32,
+        "fraction_ge_0.7": 0.00645,
+        "fraction_ge_0.8": 0.0061,
+        "fraction_exact": 0.00585,
+        "n_reference_ions": 44
+      }
+    },
+    "union": {
+      "cation": {
+        "n": 20000,
+        "median": 0.21621621621621623,
+        "q25": 0.17391304347826086,
+        "q75": 0.2727272727272727,
+        "fraction_ge_0.7": 0.00505,
+        "fraction_ge_0.8": 0.00435,
+        "fraction_exact": 0.0036,
+        "n_reference_ions": 415
+      },
+      "anion": {
+        "n": 20000,
+        "median": 0.2702702702702703,
+        "q25": 0.21212121212121213,
+        "q75": 0.34285714285714286,
+        "fraction_ge_0.7": 0.008,
+        "fraction_ge_0.8": 0.00705,
+        "fraction_exact": 0.00685,
+        "n_reference_ions": 142
+      },
+      "pair_minimum": {
+        "n": 20000,
+        "median": 0.1951219512195122,
+        "q25": 0.16071428571428573,
+        "q75": 0.23684210526315788,
+        "fraction_ge_0.7": 0.0,
+        "fraction_ge_0.8": 0.0,
+        "fraction_exact": 0.0
+      }
+    }
+  },
+  "exact_identity_overlap": {
+    "cation_count": 67,
+    "anion_count": 124,
+    "pair_count": 0,
+    "definition": "exact canonical SMILES identities, not fingerprint similarity equal to one"
+  }
+}

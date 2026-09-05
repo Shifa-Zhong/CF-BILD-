@@ -13,6 +13,7 @@ import os
 import pickle
 
 from bit_collision_free_MF.fingerprint import CollisionFreeMorganFP
+from cf_bild.ion_validation import require_valid_pairs
 
 
 TARGET_COLUMNS = {
@@ -50,6 +51,10 @@ class FragmentVocabulary:
         all_anions = set()
 
         for df in dfs:
+            require_valid_pairs(
+                df[['new_cation', 'new_anion']].itertuples(index=False, name=None),
+                context='vocabulary construction',
+            )
             for _, row in df.iterrows():
                 cat = canonicalize_smiles(str(row['new_cation']).strip())
                 an = canonicalize_smiles(str(row['new_anion']).strip())
@@ -273,6 +278,19 @@ def prepare_cv_splits(datasets, vocab, property_name):
 
     folds = datasets[property_name]['folds']
     test_df = datasets[property_name]['test']
+
+    # Validate before feature generation/scaling; never silently change chemistry.
+    for fold_number, (training, validation) in enumerate(folds, start=1):
+        for role, frame in (('training', training), ('validation', validation)):
+            require_valid_pairs(
+                frame[['new_cation', 'new_anion']].itertuples(index=False, name=None),
+                context=f'{property_name} fold {fold_number} {role}',
+            )
+    if test_df is not None:
+        require_valid_pairs(
+            test_df[['new_cation', 'new_anion']].itertuples(index=False, name=None),
+            context=f'{property_name} held-out test',
+        )
 
     # First pass: get raw features for all folds
     raw_folds = []

@@ -1,0 +1,21 @@
+{
+  "model_comparisons_complete": true,
+  "missing_model_comparisons": [],
+  "fw_aei_hypervolume": 27.733750670143205,
+  "ehvi_hypervolume": 29.668438838647944,
+  "fw_aei_hypervolume_change_percent": -6.521031251514642,
+  "fw_aei_uncertainty_ratios": {
+    "co2": 0.9383030840876273,
+    "vis": 1.043176311976205,
+    "tox": 1.0139089018435683
+  },
+  "fw_aei_has_lower_uncertainty_in_every_property": false,
+  "candidate_co2_support": {
+    "negative_untruncated_means": 1446,
+    "negative_reported_means": 0,
+    "reported_means_above_one": 0,
+    "reported_mean_min": 0.03359333888089633,
+    "reported_mean_max": 0.5177640051681446
+  },
+  "mean_sigma_across_mixed_property_units_used_for_claims": false
+}

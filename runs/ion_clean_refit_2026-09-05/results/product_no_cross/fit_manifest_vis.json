@@ -1,0 +1,33 @@
+{
+  "signature": {
+    "inputs": {
+      "test_group_vis.csv": "00607ab5c85dc7bad044f018d56af8a8356aaeb9fb34b3877dbc9a8afb5a800a",
+      "train_1_group_vis.csv": "fb4307098fc53261a117eedbbfa858afb54493da21131aca94405f8a5cb63dd7",
+      "train_2_group_vis.csv": "ff7bd824e8263d0a907c1ec8f7369d80a2ae987c2e6ad8e72ae4c3ef043119a9",
+      "train_3_group_vis.csv": "d9c0afe7cf56cf7b807a06d45d6efd1fcfcdac075656383200e134d3ab46d8c2",
+      "train_4_group_vis.csv": "dd2d88da4819a73ef0aadd397d3854e57d74eda51443b705d8ca0ea9b9cff3db",
+      "train_5_group_vis.csv": "811f69b6a154cb04461a8eb1f258c922ff40be0718936fb97276a4d6dccddc75",
+      "val_1_group_vis.csv": "0e466303d68a56afe9fd25f1419ba7f585256279e9f6301ba4b72a9cbca3a722",
+      "val_2_group_vis.csv": "6a665440076dac793e180b89399c278a847ec7a3648b56009fd2bfae53d1c11f",
+      "val_3_group_vis.csv": "6a32d4c7967e18767bf22f61c62c635e84874a7df3a3fd7ff2a7491d2b440303",
+      "val_4_group_vis.csv": "4feb6f55e0cf2d68cb93df2a7bf4580b4e5d6983a04e3e1b25d04f9806239b58",
+      "val_5_group_vis.csv": "5c2c24b05738f8c3b995b7e1c56e80c546e6b0f4fbe64ef7c2d3dc0176cee935"
+    },
+    "vocabulary": "b4febfe816ef6e72ca406538ca417d135a0700e851980e47fab8cba8533829e9",
+    "form": "product_no_cross",
+    "max_evals": 3000,
+    "patience": 50,
+    "seed": 42,
+    "optimizer_code": "c7a4badad895db47bc5c950afc128550d7e04505315872195ad3d281fc4ae3ab",
+    "runner_code": "8aad51706392bcbc1f1475c3c18c028c02ab5b3dd1702488dc04012b1e3a6d00",
+    "feature_code": "1b11f5b5cfe74a7f1763b715431a8fda06c89f77c0b0abdf51cbfddf1c549060"
+  },
+  "artifacts_sha256": {
+    "metrics_vis.json": "f693ed14384d096a84dca4de8e688496dd11e508522a6825ca3c390a2b31e93b",
+    "test_predictions_vis.csv": "648f3d12c093da27d3e9d8a7c794cfb0d739bd15cd18f48bfe6dce1f45a4330d",
+    "calibration_vis.npz": "8d5ddc85565ab92893f95bd3ffffb6de265cc6b0e6fea02be51e86bc0a64d6d6",
+    "calibration_vis.json": "315dcbfd70ead006e0a254841e53d9eae7c334ff15bd45e7666177dee7cf314c",
+    "selected_hyperparameters_vis.json": "f957fc399b5b3b39dfe87044077d1042e8747262a5ffd8004d280b6c380d3b04",
+    "models/model_vis.pkl": "c2842c88607e33fc5aa893492dc88c5070f18e2b496a107d754351e23e95d1dc"
+  }
+}

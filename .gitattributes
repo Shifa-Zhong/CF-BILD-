@@ -1,7 +1,10 @@
-# Preserve the exact published artifact bytes across platforms.
+# Preserve hash-bound scientific input and implementation bytes on all platforms.
+* -text
+/runs/** -text
 /data/** -text
-/output/** -text
-/figures/** -text
+/cf_bild/** -text
+/scripts/** -text
+/tests/** -text
 *.pkl -text
 *.npz -text
 *.gz -text

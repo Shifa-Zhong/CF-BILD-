@@ -486,6 +486,7 @@ class GPCrossValidatedOptimizer:
         params = self.best_params
         all_residuals = []
         all_pred_std = []
+        calibration_counts = []
 
         # Clear GPU cache before calibration
         if self.device.type == 'cuda':
@@ -531,22 +532,27 @@ class GPCrossValidatedOptimizer:
 
                 all_residuals.extend(residuals.tolist())
                 all_pred_std.extend(pred_stds.tolist())
+                calibration_counts.append(len(y_va))
 
                 del model, likelihood, kernel, X_t, y_t, X_v, pred
                 if device.type == 'cuda':
                     torch.cuda.empty_cache()
                 gc.collect()
             except Exception as e:
-                logger.warning(f"Calibration fold error: {e}")
-                continue
+                raise RuntimeError('Variance calibration requires every CV fold; '
+                                   'refusing a silently incomplete calibration') from e
 
         if len(all_residuals) == 0:
-            self.variance_scale_ = 1.0
-            return
+            raise ValueError('No out-of-fold residuals available for variance calibration')
 
         # Find scale factor: we want P(|residual| < 1.96 * scale * pred_std) ≈ 0.95
         all_residuals = np.array(all_residuals)
         all_pred_std = np.array(all_pred_std)
+        if not (np.all(np.isfinite(all_residuals)) and
+                np.all(np.isfinite(all_pred_std)) and np.all(all_pred_std > 0)):
+            raise ValueError('Invalid out-of-fold residuals or predictive standard deviations')
+        self.calibration_residuals_ = all_residuals
+        self.calibration_raw_std_ = all_pred_std
 
         # Compute z-scores with current σ
         z_scores = all_residuals / (all_pred_std + 1e-10)
@@ -557,6 +563,12 @@ class GPCrossValidatedOptimizer:
 
         # Ensure scale >= 1 (never shrink variance)
         self.variance_scale_ = max(scale, 1.0) ** 2  # square because we scale variance
+        self.calibration_diagnostics_ = {
+            'n_folds': len(calibration_counts), 'fold_record_counts': calibration_counts,
+            'n_records': len(all_residuals), 'target_coverage': target_coverage,
+            'raw_standardized_residual_quantile': float(z_95),
+            'variance_scale': float(self.variance_scale_),
+        }
         logger.info(f"Variance calibration: scale={self.variance_scale_:.4f} "
                     f"(raw z95={z_95:.4f})")
 

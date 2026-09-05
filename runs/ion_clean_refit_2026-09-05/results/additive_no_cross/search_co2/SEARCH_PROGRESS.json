@@ -1,0 +1,19 @@
+{
+  "status": "selection_complete",
+  "n_trials": 111,
+  "max_evals": 3000,
+  "patience": 50,
+  "best_trial": 61,
+  "best_cv_rmse": 0.08047006969386086,
+  "best_params": {
+    "kernel_name": "Matern32",
+    "kernel_variance": 0.11060979470297208,
+    "likelihood_noise_variance": 0.038617071781209954,
+    "ls_an": 46.27401754882204,
+    "ls_cat": 41.94933789506241,
+    "ls_env_0": 2.767836451310826,
+    "ls_env_1": 0.2656305384489099
+  },
+  "process_elapsed_seconds": 120.4756453037262,
+  "test_used_in_selection": false
+}

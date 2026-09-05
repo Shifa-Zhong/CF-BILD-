@@ -1,0 +1,33 @@
+{
+  "signature": {
+    "inputs": {
+      "test_group_co2.csv": "db866bd8c55fab9a55dae5f05424a3b437ec8d53f086477ee2f13664dd46b574",
+      "train_1_group_co2.csv": "5858c059c29abccb777e249ba03ced9cc426645b5fcd84362728ea6a6bd8f36e",
+      "train_2_group_co2.csv": "1ced4077b3cfbd41d3b84c5328731805306bad67a96e3dd321a5efb2c915d886",
+      "train_3_group_co2.csv": "92695418efb0bdefadb368a8bc494caa12824fa5a810fd296ee761da42273433",
+      "train_4_group_co2.csv": "be59ef2f52f469dd5d9b16bd9ee283fbad422188a252ff7e3c76e2f0f2ff6215",
+      "train_5_group_co2.csv": "985056d931de53c77f9d325acbec5c2e80cc77939432d842e0777c521e1ec30c",
+      "val_1_group_co2.csv": "b34c09dbb47356a76d143dcc03361121f9f5d21cdb9a9dad938d7742f1ce0dbc",
+      "val_2_group_co2.csv": "5a537d34e38632a4a06bfa1d887f54a2d0f66ce6f92ed61af0b03c84ff07635b",
+      "val_3_group_co2.csv": "d15a0dc11e9127d442e5da341f0e6a09fa5e7a07e4f255735543cc19488888bf",
+      "val_4_group_co2.csv": "2c054255307f849a60900baf9aaeec48342c7d61f18454990800e87e91ce642c",
+      "val_5_group_co2.csv": "e708412eca967eaf192e84a6193f123ce679b72811e17d6be88093d7159886a2"
+    },
+    "vocabulary": "b4febfe816ef6e72ca406538ca417d135a0700e851980e47fab8cba8533829e9",
+    "form": "standard",
+    "max_evals": 3000,
+    "patience": 50,
+    "seed": 42,
+    "optimizer_code": "c7a4badad895db47bc5c950afc128550d7e04505315872195ad3d281fc4ae3ab",
+    "runner_code": "8aad51706392bcbc1f1475c3c18c028c02ab5b3dd1702488dc04012b1e3a6d00",
+    "feature_code": "1b11f5b5cfe74a7f1763b715431a8fda06c89f77c0b0abdf51cbfddf1c549060"
+  },
+  "artifacts_sha256": {
+    "metrics_co2.json": "8af62f8a2666de90fe6bcc3f22802ba020e7a18e088891a53cc69bf29d147fd5",
+    "test_predictions_co2.csv": "a3bde9c0f29b9394c47f48e4938678105352f1047266f2e82198f706aef6dbb1",
+    "calibration_co2.npz": "a5fa4d580ea9e130fd76a7540c40bd30f143b609d2465f00fe93f047bd5c6d33",
+    "calibration_co2.json": "7d06f660a6bb68079fb99638ed977d40295a39b008b5472d788334a681b1ee02",
+    "selected_hyperparameters_co2.json": "52a78390abea0fbc2ed0fbe084f1d355f659512f38d65fbfd6131d663a4dfbc9",
+    "models/model_co2.pkl": "67cfc0206ea48fba94cd71a8c71fc3ffd6cb6a313d4c6c87d3ff681996ad19e8"
+  }
+}

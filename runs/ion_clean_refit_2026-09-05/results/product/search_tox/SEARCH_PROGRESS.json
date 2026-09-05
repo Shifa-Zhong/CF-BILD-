@@ -1,0 +1,18 @@
+{
+  "status": "selection_complete",
+  "n_trials": 89,
+  "max_evals": 3000,
+  "patience": 50,
+  "best_trial": 39,
+  "best_cv_rmse": 0.4886602465530127,
+  "best_params": {
+    "kernel_name": "Matern52",
+    "kernel_variance": 0.03733912417460281,
+    "likelihood_noise_variance": 0.0006227590354490509,
+    "ls_an": 4.307796099089439,
+    "ls_cat": 30.50871143317087,
+    "ls_cross": 47.0122283511101
+  },
+  "process_elapsed_seconds": 9.351672172546387,
+  "test_used_in_selection": false
+}

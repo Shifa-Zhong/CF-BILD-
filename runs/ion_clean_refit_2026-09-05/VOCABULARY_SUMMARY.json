@@ -1,0 +1,12 @@
+{
+  "n_cations": 444,
+  "n_anions": 152,
+  "n_candidates": 67488,
+  "cation_dimensions": 1242,
+  "anion_dimensions": 828,
+  "cation_nominal_bits": 642997,
+  "anion_nominal_bits": 102400,
+  "source": "union of all retained property structures, including held-out structures but not test targets",
+  "contract": "+1/-1 connected constituent ions; formally charge-balanced 1:1 pairs",
+  "vocabulary_sha256": "b4febfe816ef6e72ca406538ca417d135a0700e851980e47fab8cba8533829e9"
+}

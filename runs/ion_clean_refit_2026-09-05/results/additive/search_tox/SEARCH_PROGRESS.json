@@ -1,0 +1,18 @@
+{
+  "status": "selection_complete",
+  "n_trials": 66,
+  "max_evals": 3000,
+  "patience": 50,
+  "best_trial": 16,
+  "best_cv_rmse": 0.5222345738975985,
+  "best_params": {
+    "kernel_name": "RBF",
+    "kernel_variance": 0.29205008184976633,
+    "likelihood_noise_variance": 0.0025937972744032685,
+    "ls_an": 0.06563522948575054,
+    "ls_cat": 89.32002744434773,
+    "ls_cross": 31.6949766819274
+  },
+  "process_elapsed_seconds": 5.7394750118255615,
+  "test_used_in_selection": false
+}

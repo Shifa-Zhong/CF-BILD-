@@ -4,21 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cf-bild-dd"
-version = "0.2.0"
-description = "Reproducible CF-BILD workflow for DD-ART-06-2026-000373"
+version = "0.3.0"
+description = "Curated and reproducible 1:1 CF-BILD screening workflow"
 requires-python = "==3.10.*"
 dependencies = [
-  "numpy==1.26.4",
-  "pandas==2.3.3",
-  "scipy==1.15.3",
-  "scikit-learn==1.7.2",
-  "torch==2.10.0",
-  "gpytorch==1.15.2",
-  "botorch==0.16.1",
-  "hyperopt==0.2.7",
-  "rdkit-pypi==2022.9.5",
+  "numpy==1.26.4", "pandas==2.3.3", "scipy==1.15.3",
+  "scikit-learn==1.7.2", "torch==2.10.0", "gpytorch==1.15.2",
+  "botorch==0.16.1", "hyperopt==0.2.7", "rdkit-pypi==2022.9.5",
+  "bit-collision-free-mf @ git+https://github.com/Shifa-Zhong/bit_collision_free_MF.git@698c31559e71f9cb14fd58e56562511ae644fc40"
 ]
 
 [tool.setuptools]
 packages = ["cf_bild"]
-

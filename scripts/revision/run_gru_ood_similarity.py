@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import json
+import argparse
+from functools import lru_cache
 import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import torch  # Import before RDKit on Windows.
 from rdkit import Chem, DataStructs
 from rdkit.Chem import AllChem
 
@@ -23,6 +26,7 @@ OUTPUT_DIR = ROOT / 'output' / 'revision_2026'
 PUBLIC_REFERENCE_PATH = OUTPUT_DIR / 'gru_reference_ions_revision.json'
 
 
+@lru_cache(maxsize=131072)
 def fingerprint(smiles):
     molecule = Chem.MolFromSmiles(str(smiles))
     if molecule is None:
@@ -48,7 +52,7 @@ def non_test_ions(property_name, column):
     })
 
 
-def property_tables_available():
+def restricted_tables_available():
     return all(
         (DATA_DIR / f'{role}_1_group_{property_name}.csv').exists()
         for property_name in ('co2', 'vis', 'tox')
@@ -58,7 +62,7 @@ def property_tables_available():
 
 def load_or_build_references():
     '''Return derived non-test ion sets without exposing source records.'''
-    if property_tables_available():
+    if restricted_tables_available():
         reference = {}
         for property_name in ('co2', 'vis', 'tox'):
             reference[(property_name, 'cation')] = non_test_ions(
@@ -125,10 +129,14 @@ def summarize(values):
     }
 
 
-def main():
+def main(data_directory=None, output_directory=None, generated_file=None):
+    global DATA_DIR, OUTPUT_DIR, PUBLIC_REFERENCE_PATH
+    if data_directory is not None: DATA_DIR = Path(data_directory).resolve()
+    if output_directory is not None: OUTPUT_DIR = Path(output_directory).resolve()
+    PUBLIC_REFERENCE_PATH = OUTPUT_DIR / 'gru_reference_ions_revision.json'
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     generated_all = pd.read_csv(
-        ROOT / 'data' / 'gru' / 'generate_result.csv'
+        generated_file or ROOT / 'data' / 'gru' / 'generate_result.csv'
     )
     generated = generated_all.sample(20000, random_state=42).copy()
     generated['cation_canonical'] = generated['cation'].map(canonicalize_smiles)
@@ -158,6 +166,22 @@ def main():
         generated['union_anion_max_tanimoto'].to_numpy(),
     )
     result['comparisons']['union']['pair_minimum'] = summarize(union_pair_min)
+    actual_pairs = set()
+    for prop in ('co2', 'vis', 'tox'):
+        for role in ('train', 'val'):
+            path = DATA_DIR / f'{role}_1_group_{prop}.csv'
+            if path.exists():
+                frame = pd.read_csv(path)
+                actual_pairs.update((canonicalize_smiles(c), canonicalize_smiles(a))
+                    for c, a in zip(frame.new_cation, frame.new_anion))
+    if actual_pairs:
+        result['exact_identity_overlap'] = {
+            'cation_count': int(generated.cation_canonical.isin(reference[('union', 'cation')]).sum()),
+            'anion_count': int(generated.anion_canonical.isin(reference[('union', 'anion')]).sum()),
+            'pair_count': sum((c, a) in actual_pairs for c, a in
+                zip(generated.cation_canonical, generated.anion_canonical)),
+            'definition': 'exact canonical SMILES identities, not fingerprint similarity equal to one',
+        }
     generated.to_csv(
         OUTPUT_DIR / 'gru_ood_similarity_candidates.csv', index=False
     )
@@ -169,4 +193,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data-directory', type=Path)
+    parser.add_argument('--output-directory', type=Path)
+    parser.add_argument('--generated-file', type=Path)
+    args = parser.parse_args()
+    main(args.data_directory, args.output_directory, args.generated_file)

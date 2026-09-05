@@ -1,0 +1,14 @@
+{
+  "best_params": {
+    "kernel_name": "RBF",
+    "kernel_variance": 0.29205008184976633,
+    "likelihood_noise_variance": 0.0025937972744032685,
+    "ls_an": 0.06563522948575054,
+    "ls_cat": 89.32002744434773,
+    "ls_cross": 31.6949766819274
+  },
+  "variance_scale": 42.879600067130966,
+  "effective_noise_variance": 0.0025937972744032685,
+  "environment_kernel": null,
+  "selection": "new five-fold species-disjoint CV on curated non-test records only"
+}

@@ -1,0 +1,18 @@
+{
+  "n_candidates": 100,
+  "status_counts": {
+    "Fail": 63,
+    "Pass": 35,
+    "Caution": 2
+  },
+  "tier1_flagged": 63,
+  "tier2_flagged": 44,
+  "tier3_flagged": 0,
+  "tier3_among_tier1_pass": 0,
+  "final_pass": 35,
+  "final_caution": 2,
+  "final_fail": 63,
+  "post_filter_top_rank": 5,
+  "post_filter_top_cation": "CCn1ccc[n+]1C",
+  "post_filter_top_anion": "CC1(C(=O)[O-])CCCN1"
+}

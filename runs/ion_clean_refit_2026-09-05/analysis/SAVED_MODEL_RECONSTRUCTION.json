@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "trusted_pickle_required": true,
+  "comparison_rtol": 1e-05,
+  "comparison_atol": 1e-06,
+  "reconstruction": "restore end-of-search RNG state, replay five-fold calibration, condition on full pool, then predict; no retuning",
+  "numerical_note": "GPyTorch fast_pred_var uses a Lanczos variance approximation; saved parameters alone omit its random numerical cache",
+  "checks": [
+    {
+      "form": "product",
+      "property": "co2",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.9432678183560768e-08,
+      "latent_std_maximum_absolute_difference": 6.634521487747236e-09,
+      "pred_mean_maximum_absolute_difference": 9.71445146547012e-17,
+      "pred_std_maximum_absolute_difference": 9.71445146547012e-17
+    },
+    {
+      "form": "product",
+      "property": "vis",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.3834228546348868e-07,
+      "latent_std_maximum_absolute_difference": 5.596923835504697e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "form": "product",
+      "property": "tox",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.1252441406716116e-07,
+      "latent_std_maximum_absolute_difference": 5.070495623371585e-08,
+      "pred_mean_maximum_absolute_difference": 4.440892098500626e-16,
+      "pred_std_maximum_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "form": "product_no_cross",
+      "property": "co2",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.8976440469286047e-08,
+      "latent_std_maximum_absolute_difference": 7.216453545844104e-09,
+      "pred_mean_maximum_absolute_difference": 9.71445146547012e-17,
+      "pred_std_maximum_absolute_difference": 9.71445146547012e-17
+    },
+    {
+      "form": "product_no_cross",
+      "property": "vis",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.368774412175867e-07,
+      "latent_std_maximum_absolute_difference": 5.1147460933265165e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "form": "product_no_cross",
+      "property": "tox",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.2021484369361133e-07,
+      "latent_std_maximum_absolute_difference": 1.0348510759428109e-07,
+      "pred_mean_maximum_absolute_difference": 4.440892098500626e-16,
+      "pred_std_maximum_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "form": "additive",
+      "property": "co2",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.9512023935751586e-08,
+      "latent_std_maximum_absolute_difference": 7.425308229391803e-09,
+      "pred_mean_maximum_absolute_difference": 9.71445146547012e-17,
+      "pred_std_maximum_absolute_difference": 9.71445146547012e-17
+    },
+    {
+      "form": "additive",
+      "property": "vis",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.372436522790622e-07,
+      "latent_std_maximum_absolute_difference": 4.963531496926521e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "form": "additive",
+      "property": "tox",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 1.8676757829183543e-07,
+      "latent_std_maximum_absolute_difference": 3.8748169117752695e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 5.551115123125783e-17
+    },
+    {
+      "form": "additive_no_cross",
+      "property": "co2",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.9515075716801675e-08,
+      "latent_std_maximum_absolute_difference": 1.4720535290724257e-08,
+      "pred_mean_maximum_absolute_difference": 8.326672684688674e-17,
+      "pred_std_maximum_absolute_difference": 8.326672684688674e-17
+    },
+    {
+      "form": "additive_no_cross",
+      "property": "vis",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.372436522790622e-07,
+      "latent_std_maximum_absolute_difference": 5.934143065822184e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "form": "additive_no_cross",
+      "property": "tox",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.0849609416728754e-07,
+      "latent_std_maximum_absolute_difference": 2.9049682659376685e-08,
+      "pred_mean_maximum_absolute_difference": 4.440892098500626e-16,
+      "pred_std_maximum_absolute_difference": 5.551115123125783e-17
+    },
+    {
+      "form": "standard",
+      "property": "co2",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 1.4889907862247753e-08,
+      "latent_std_maximum_absolute_difference": 7.232856757966033e-09,
+      "pred_mean_maximum_absolute_difference": 8.326672684688674e-17,
+      "pred_std_maximum_absolute_difference": 8.326672684688674e-17
+    },
+    {
+      "form": "standard",
+      "property": "vis",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 2.3770141588386196e-07,
+      "latent_std_maximum_absolute_difference": 5.907440181474044e-08,
+      "pred_mean_maximum_absolute_difference": 8.881784197001252e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "form": "standard",
+      "property": "tox",
+      "passed": true,
+      "latent_mu_maximum_absolute_difference": 1.1177063008460664e-07,
+      "latent_std_maximum_absolute_difference": 5.774688727200328e-08,
+      "pred_mean_maximum_absolute_difference": 4.440892098500626e-16,
+      "pred_std_maximum_absolute_difference": 2.220446049250313e-16
+    }
+  ]
+}

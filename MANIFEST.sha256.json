@@ -1,23 +1,13 @@
 [
   {
     "path": ".gitattributes",
-    "bytes": 149,
-    "sha256": "ff1bd466d14f1c3b2084579be95cd74de65c18321a26204d8242f13065161aa6"
+    "bytes": 207,
+    "sha256": "81a0ad9aa6abe8e9d849baca666253198c9f206263df518da7120e8ebab07865"
   },
   {
     "path": ".gitignore",
-    "bytes": 812,
-    "sha256": "9f1ccbc507c190cb37f3326e3651238b11ddf40c9d997184b1a84ac5a4e74f96"
-  },
-  {
-    "path": "LICENSE",
-    "bytes": 1095,
-    "sha256": "306e0613e8adc4e4f526d6c7bb171efccf5c04b9caf779794dc2c7b8995a1f43"
-  },
-  {
-    "path": "README.md",
-    "bytes": 6118,
-    "sha256": "faa39ade551cf735108c877cef82d7632d2b6b6866fc85aeeeab811e781956d3"
+    "bytes": 785,
+    "sha256": "7e7d0044275b0736d448b6980ec63ec4da0e0b7e8f7ca5206979958c7a767186"
   },
   {
     "path": "cf_bild/__init__.py",
@@ -31,13 +21,23 @@
   },
   {
     "path": "cf_bild/fragment_vocab.py",
-    "bytes": 12430,
-    "sha256": "f01ee4e18c9b817644df715695aa89cbc47d1b1ca9525151f9592ff916ca6c10"
+    "bytes": 13316,
+    "sha256": "1b11f5b5cfe74a7f1763b715431a8fda06c89f77c0b0abdf51cbfddf1c549060"
   },
   {
     "path": "cf_bild/gp_cvloss.py",
-    "bytes": 25500,
-    "sha256": "f43859c5bdefcd67a1709beb0d1bfe5a1e6ce04a2b1ebf58f0547d56918e2d54"
+    "bytes": 26380,
+    "sha256": "c7a4badad895db47bc5c950afc128550d7e04505315872195ad3d281fc4ae3ab"
+  },
+  {
+    "path": "cf_bild/ion_families.py",
+    "bytes": 3125,
+    "sha256": "587b081a728c80541c7df3eb1b9756f0c3125ecf2abf9882d354a181f81dbc4e"
+  },
+  {
+    "path": "cf_bild/ion_validation.py",
+    "bytes": 2250,
+    "sha256": "446c3f50fd1de78b4fd1b9d380e86a249027cf50af75db130aa2f0b5ef3e1bc5"
   },
   {
     "path": "cf_bild/predictive.py",
@@ -45,34 +45,14 @@
     "sha256": "80c5be86017b03acaeb3cae0a4035cc18ed4675e5e3d8c8daec998eb23e34a51"
   },
   {
-    "path": "config/selected_hyperparameters.json",
-    "bytes": 1281,
-    "sha256": "6b92ce9056e67fdf1455a7ab003118258650b013f115b2e4e5dd841d2f4aa3e6"
-  },
-  {
     "path": "data/DATA_ACCESS.md",
-    "bytes": 3591,
-    "sha256": "39c46a06e8950e0807eb11146e82fdcbc42ab24ea050ed068c6a2a03c74500ae"
-  },
-  {
-    "path": "data/PUBLIC_DATA_RELEASE.json",
-    "bytes": 30451,
-    "sha256": "76f6605b0c8148b1fc9fcc81a0da7879881c51062dcacd82c1ea9a71155e7fb1"
-  },
-  {
-    "path": "data/SPLIT_AUDIT.json",
-    "bytes": 1295,
-    "sha256": "cad4b604d6c20a9732fb7a7739f39f29b564411447188283493f063f999b1c1d"
-  },
-  {
-    "path": "data/TOXICITY_TARGET.md",
-    "bytes": 1613,
-    "sha256": "5c21339c9c65767cebcdb0c22a67bdf8f03ab1104c819c3f01763e022c74ba9f"
+    "bytes": 1801,
+    "sha256": "cdd6efebb822278f56ddc56efe071b0d9bdd6f7db639c8295e65894e88ef0354"
   },
   {
     "path": "data/gru/generate_result.csv",
-    "bytes": 9675094,
-    "sha256": "668ea7c1f2f07f28e8d71f1fdc9f99f360eacdedf223e66f0bc59f4ab389a2f0"
+    "bytes": 9770380,
+    "sha256": "3ff089a30e4a68f9b069122bc99fec9da4110e8c6cad6e43f4599430487aa99a"
   },
   {
     "path": "data/gru/pubchem_corpus_portable/manifest.json",
@@ -625,174 +605,9 @@
     "sha256": "13aef7cd5f8a1c8eb1ce2dcf0971226ec3cb33b1cfaef96535b1a088a1728507"
   },
   {
-    "path": "data/restricted_data_manifest.json",
-    "bytes": 11700,
-    "sha256": "865b978c8a9aba1d67755e615bdb09d6a2cf8053b09bd1b29f29ee9c44bbb5a0"
-  },
-  {
-    "path": "data/test_group_co2.csv",
-    "bytes": 187527,
-    "sha256": "49d3d05aa11ab515a3fa562b2abedef92c64473d1b7b6289dacd7eaaa08df118"
-  },
-  {
-    "path": "data/test_group_tox.csv",
-    "bytes": 3211,
-    "sha256": "039219af39baf0201200f23e9e189fcd304d99a9f215298369356b8463295470"
-  },
-  {
-    "path": "data/test_group_vis.csv",
-    "bytes": 259382,
-    "sha256": "90fbdc3ef36a4c12d54d112b3cd99a96a9a82b2f23969c6b05f7fd70eb18242d"
-  },
-  {
-    "path": "data/train_1_group_co2.csv",
-    "bytes": 1542302,
-    "sha256": "9ae12098c53dd1b37d8755f2f5a9cfef1651111bc1faf49ca2388b7270161fa3"
-  },
-  {
-    "path": "data/train_1_group_tox.csv",
-    "bytes": 21209,
-    "sha256": "6b46f9abc5cc3df2b4f3c42dd7644dc17a05847760e9791a9fe887340cfabdd9"
-  },
-  {
-    "path": "data/train_1_group_vis.csv",
-    "bytes": 1715224,
-    "sha256": "d3fe2540a3cc4e2ec165e8f06fbd1e793c9712f50e05179258db92c6aabba8d0"
-  },
-  {
-    "path": "data/train_2_group_co2.csv",
-    "bytes": 1715910,
-    "sha256": "33b7bda59918505da07be866d883b0c3e34a7b131336ff5cb72d8af20336bf2e"
-  },
-  {
-    "path": "data/train_2_group_tox.csv",
-    "bytes": 21097,
-    "sha256": "174d726ee799dbe76690d6ab89d5576dbe1b12782da6a9012c613998dda9d487"
-  },
-  {
-    "path": "data/train_2_group_vis.csv",
-    "bytes": 1673392,
-    "sha256": "7ed714faa4e8e017c290225700d25eb46da07e7ca821a9841ae755c0459db7a9"
-  },
-  {
-    "path": "data/train_3_group_co2.csv",
-    "bytes": 1738180,
-    "sha256": "6c14a8c675da1a5cc58b77a838a3cf8c664b4beed2fe8cc0c9445e81f16aac86"
-  },
-  {
-    "path": "data/train_3_group_tox.csv",
-    "bytes": 21124,
-    "sha256": "01b0bcefad4b7babe4a208a971ab4ff67746423cda713b181e16e5f61ccffbbb"
-  },
-  {
-    "path": "data/train_3_group_vis.csv",
-    "bytes": 1719129,
-    "sha256": "08d98f320be164ed4419af9f248bfb6dc5064948884aae5802f31b2cb452417d"
-  },
-  {
-    "path": "data/train_4_group_co2.csv",
-    "bytes": 1717507,
-    "sha256": "b81cfc0779095805c9675c3d9592291b9cb4d11e9589366ca5e94556c11eb190"
-  },
-  {
-    "path": "data/train_4_group_tox.csv",
-    "bytes": 21334,
-    "sha256": "df92834034349291e8f5c480ee61231dc7926203231f71fe3224d43f14ba670f"
-  },
-  {
-    "path": "data/train_4_group_vis.csv",
-    "bytes": 1638062,
-    "sha256": "ea40600099274ab05a03916c86eb270d53e67725cff02c292afd356e5120c021"
-  },
-  {
-    "path": "data/train_5_group_co2.csv",
-    "bytes": 1509984,
-    "sha256": "66cb1f2dffc72f607db63000fb49a3d755c73cc6072a48c0c9431861a9e02d0b"
-  },
-  {
-    "path": "data/train_5_group_tox.csv",
-    "bytes": 21113,
-    "sha256": "80ec1d0f68e4140cf40c296a92bca6fef89ee9647c0d95d8f37b056322ae5c36"
-  },
-  {
-    "path": "data/train_5_group_vis.csv",
-    "bytes": 1651016,
-    "sha256": "9fdb8ab624f01eefbaf2f9255c63538faade804dec019476745ab4ba774ce1ba"
-  },
-  {
-    "path": "data/val_1_group_co2.csv",
-    "bytes": 513707,
-    "sha256": "110e68af28610f4b908c8bb3d7660fa341bbfbdd64f8368b665a789b0093d42c"
-  },
-  {
-    "path": "data/val_1_group_tox.csv",
-    "bytes": 5300,
-    "sha256": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3"
-  },
-  {
-    "path": "data/val_1_group_vis.csv",
-    "bytes": 384017,
-    "sha256": "24f6fee9f0a54ec6fd361eba3347ec7f613ac083281ba042463bc8fd45f6738f"
-  },
-  {
-    "path": "data/val_2_group_co2.csv",
-    "bytes": 340099,
-    "sha256": "669bfd97246d94f03880e94967ef13bbfef6f5cc0b4bcd00c4eca109923be7c5"
-  },
-  {
-    "path": "data/val_2_group_tox.csv",
-    "bytes": 5412,
-    "sha256": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74"
-  },
-  {
-    "path": "data/val_2_group_vis.csv",
-    "bytes": 425849,
-    "sha256": "62211d9c749854afd7ab5197ca150b55fa44907827630a8102ac9dbc9c65fd6b"
-  },
-  {
-    "path": "data/val_3_group_co2.csv",
-    "bytes": 317829,
-    "sha256": "72e40b2069f49235bc325f3109679aba546bbeb818a25fa040774dde91ec79ad"
-  },
-  {
-    "path": "data/val_3_group_tox.csv",
-    "bytes": 5385,
-    "sha256": "dfdf846c128e288c01903092221ff40cae38ef1ba97037966f53b82108c2539b"
-  },
-  {
-    "path": "data/val_3_group_vis.csv",
-    "bytes": 380112,
-    "sha256": "7c8266e8a11aa857c00b0d72c2370826024353edff9450fb95997506b029452d"
-  },
-  {
-    "path": "data/val_4_group_co2.csv",
-    "bytes": 338502,
-    "sha256": "e742f5f30d57ca043ca2e1a9977710c1886458b5a3413b82fe5bc3d903478474"
-  },
-  {
-    "path": "data/val_4_group_tox.csv",
-    "bytes": 5175,
-    "sha256": "c8d64d2af7e7c43547270cff5463e5f604bc6f78f25f2478055c52118202d49e"
-  },
-  {
-    "path": "data/val_4_group_vis.csv",
-    "bytes": 461179,
-    "sha256": "d408ec44b747654c0a40c446e252dc7d1629c51e7dd36a1f73da7831ccea0b90"
-  },
-  {
-    "path": "data/val_5_group_co2.csv",
-    "bytes": 546025,
-    "sha256": "30a1396964f53f367dfa664fee1ed586e5b27157306aec2f32b201e4009cbeea"
-  },
-  {
-    "path": "data/val_5_group_tox.csv",
-    "bytes": 5396,
-    "sha256": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef"
-  },
-  {
-    "path": "data/val_5_group_vis.csv",
-    "bytes": 448225,
-    "sha256": "1ddfadbca7d9c5b9e6e3a2bbb660eb30f5b3e60b8560aeb2157eaec5c5126696"
+    "path": "data/TOXICITY_TARGET.md",
+    "bytes": 1613,
+    "sha256": "5c21339c9c65767cebcdb0c22a67bdf8f03ab1104c819c3f01763e022c74ba9f"
   },
   {
     "path": "environment-revision.yml",
@@ -800,34 +615,29 @@
     "sha256": "3fa2cff6c499183e3c94e5c92e6fa2cb1af8181f3512eafc7fe8ef801cd950b6"
   },
   {
-    "path": "generative_baseline/README.md",
-    "bytes": 1549,
-    "sha256": "d881596837525deefea053cf758c9b45a83a8d0ccc54428bff163cbadd560ad2"
-  },
-  {
     "path": "generative_baseline/augment-SMILES.py",
-    "bytes": 1693,
-    "sha256": "2a02760ab907a6ad8e36de9dcd5fd2074871588dbd12d5dea54bc1e323f2698e"
+    "bytes": 1745,
+    "sha256": "a957c89ed9d5060e2d64887b12f88980ba3d74354f292215309c11173514d45f"
   },
   {
     "path": "generative_baseline/calculate_outcomes.py",
-    "bytes": 21267,
-    "sha256": "b84ca9bd920840c5f159ff78b83efbeec83e55b849a3cd060b51a4e15001d961"
+    "bytes": 21725,
+    "sha256": "261ed1fbe357001a8945018861f68caccce9b019d5654596522ffb62b1787c2e"
   },
   {
     "path": "generative_baseline/clean-SMILES.py",
-    "bytes": 4194,
-    "sha256": "3f3150cdfc9b705d9e864698d32f0520f0ad3d88c76810e2d2bdb918e5f87291"
+    "bytes": 4310,
+    "sha256": "a9aa5dedac2c33afd021a9e7ce957ce0b484b985d813f0539956fc34cb54d499"
   },
   {
     "path": "generative_baseline/convert-DeepSMILES.py",
-    "bytes": 853,
-    "sha256": "21716c03a6d4bd195b0d5de705133c6242d2aa2a624d8e12050b60b8a30cd5e6"
+    "bytes": 879,
+    "sha256": "351f11cffb06a1608e07a69a08d39799bc16cc4d6f0c441bbe07290da13eddb5"
   },
   {
     "path": "generative_baseline/datasets.py",
-    "bytes": 14867,
-    "sha256": "f7db8f5bdd5dc8e8776c07b084f99e98621fa6bcb4d7f563c001c47bf7dc855a"
+    "bytes": 15246,
+    "sha256": "57cdc78ad409685eb4fc7826d7dc4735827fd38cd2ec64a4504d9121c5614b1c"
   },
   {
     "path": "generative_baseline/functions.py",
@@ -840,9 +650,14 @@
     "sha256": "d41e4026ba02c6df6d2978409104c643b98da79bb77a4d29261301a29a1d36f6"
   },
   {
+    "path": "generative_baseline/README.md",
+    "bytes": 1549,
+    "sha256": "d881596837525deefea053cf758c9b45a83a8d0ccc54428bff163cbadd560ad2"
+  },
+  {
     "path": "generative_baseline/sample-molecules.py",
-    "bytes": 2568,
-    "sha256": "c57b6ddfdd24035643a73ed1d6a710dea4f89decff38138edb3fe0e43ac3c4c2"
+    "bytes": 2642,
+    "sha256": "1fedb650c4f3a5a240b40e4fa046bc35fad8a68fb02581a062ee7965076f3940"
   },
   {
     "path": "generative_baseline/train_model.py",
@@ -850,204 +665,1404 @@
     "sha256": "a201b8da9e3733dbbfa306279b75d61bdeb5c8bc1028cc7da2d70f6622c682d4"
   },
   {
-    "path": "output/fragment_vocab.pkl",
-    "bytes": 10493059,
-    "sha256": "8788863c472ede69a201474812c077ff685dc15a463f35092ff9a653245df0a7"
-  },
-  {
-    "path": "output/revision_2026/acquisition_analysis_revision.json",
-    "bytes": 8052,
-    "sha256": "17893cf1df15acd73868f46e41ef59af4cddff87f328a71a1db7b908cfe687af"
-  },
-  {
-    "path": "output/revision_2026/acquisition_comparison_revision.csv",
-    "bytes": 302,
-    "sha256": "61b1ff91bf8830f504713cfb0e60fc08fdd0b824204cee72b58796408239f780"
-  },
-  {
-    "path": "output/revision_2026/acquisition_inputs_revision.json",
-    "bytes": 3789,
-    "sha256": "17ab327b3795f32ffe988d6aa2c29f1a22a087f0d430ccc3602e4131aef5b80d"
-  },
-  {
-    "path": "output/revision_2026/candidate_predictions_co2.npz",
-    "bytes": 1884037,
-    "sha256": "2a82fdd985bd0a502fec74ceaec3394a6c256e5f3c7bf2d84396a0d0d968adcd"
-  },
-  {
-    "path": "output/revision_2026/candidate_predictions_tox.npz",
-    "bytes": 1514261,
-    "sha256": "531f5ced03a3244476c33409df9b73ca6e46b6fd14edf4bf62c5826fc4e42f91"
-  },
-  {
-    "path": "output/revision_2026/candidate_predictions_vis.npz",
-    "bytes": 1555196,
-    "sha256": "08488e515765601263760a06dcb1710bb613a62b2cf93fd557b475daadb52a76"
-  },
-  {
-    "path": "output/revision_2026/data_sha256.json",
-    "bytes": 3396,
-    "sha256": "ca4dcdb35d0ef6abd773618c32f4f5ae0c2dc4c508e0436c2a501471fffe5c72"
-  },
-  {
-    "path": "output/revision_2026/fragment_vocabulary_provenance.csv",
-    "bytes": 148979,
-    "sha256": "31d5a65733172cca856a258701feb96c8ee963b02a0e91427627df0fb69c4976"
-  },
-  {
-    "path": "output/revision_2026/gru_ood_similarity_candidates.csv",
-    "bytes": 5741707,
-    "sha256": "082ade88c533e54609b7e061ce2e25d788c4b75338e382d39b668ed3a934d7ad"
-  },
-  {
-    "path": "output/revision_2026/gru_ood_similarity_summary.json",
-    "bytes": 2737,
-    "sha256": "cb3695c8a2f7b831bdff4633ede2062c6938414d81cff983398af40632f4f5fd"
-  },
-  {
-    "path": "output/revision_2026/gru_reference_ions_revision.json",
-    "bytes": 46391,
-    "sha256": "696d9f2e21dcff8a36ec35881151c7f4f66574c26b1090ac745ec16a37be1161"
-  },
-  {
-    "path": "output/revision_2026/inter_property_correlation.csv",
-    "bytes": 225,
-    "sha256": "79185f53d663c60e9dd1013cb78cfc816432dde3636e8e18072e87c2518b3143"
-  },
-  {
-    "path": "output/revision_2026/median_heuristic_baseline.json",
-    "bytes": 2271,
-    "sha256": "f9a75811cf2b3b3ebe254bb7ebf11b31fb091ccbdb5ccf9b93a69b4a8701e507"
-  },
-  {
-    "path": "output/revision_2026/metrics_co2.json",
-    "bytes": 323,
-    "sha256": "6b551ee35ab9eb053f7457242f65f48d2f33c88f0898e92db6463f35c963a00f"
-  },
-  {
-    "path": "output/revision_2026/metrics_tox.json",
-    "bytes": 299,
-    "sha256": "3391ed14c6ba6da87007950ee955cbaf4d073a1696f6ed8e7f6dc5ce4b7b167d"
-  },
-  {
-    "path": "output/revision_2026/metrics_vis.json",
-    "bytes": 532,
-    "sha256": "38862391c0e064be5f1f168dc1bee3978b57cac366d59372160a9e95f000271c"
-  },
-  {
-    "path": "output/revision_2026/models/model_co2.pkl",
-    "bytes": 188373,
-    "sha256": "c39c2dafebf7ca8b96ebdc8be09c9fb930f883eeffcc8e2171639aa16b6c23a6"
-  },
-  {
-    "path": "output/revision_2026/models/model_tox.pkl",
-    "bytes": 140243,
-    "sha256": "be2d54eb1ddf809fafd9004da1f1936c8196fe7e454764d4bb57a79fd22c1929"
-  },
-  {
-    "path": "output/revision_2026/models/model_vis.pkl",
-    "bytes": 193461,
-    "sha256": "603c3e0c37da234506b9489cf528e9450ab5d9fcbabb54b47ad3366f7dbf8bfa"
-  },
-  {
-    "path": "output/revision_2026/pareto_candidates_revision.csv",
-    "bytes": 4470,
-    "sha256": "d2f62f3caf9f7a7aa741151e34ec9a8c24c5f76d6aa1ef72fda17565c2c5667f"
-  },
-  {
-    "path": "output/revision_2026/post_filter_top10_revision.csv",
-    "bytes": 2695,
-    "sha256": "cc26f8c288cfa403254373da6f570973c3ee55f7476f01f15c532b526d3ef8a5"
-  },
-  {
-    "path": "output/revision_2026/predictions_87365_revision.pkl",
-    "bytes": 7166329,
-    "sha256": "023a0c8e0b671935416d06a4eadf852f8d7763a63e4303366f1cd2422b11c3cd"
-  },
-  {
-    "path": "output/revision_2026/revision_model_summary.json",
-    "bytes": 1958,
-    "sha256": "ff340722e0e4fdc89c9a3687a866c04abc5c9c7f09c9c3d9a92dd604f69e3d5f"
-  },
-  {
-    "path": "output/revision_2026/stability_screening_revision.csv",
-    "bytes": 27670,
-    "sha256": "e7f1046d4e41fd0cb422a3bf3a5a59eec8536aecda6cc5b33e7367ce03f429ba"
-  },
-  {
-    "path": "output/revision_2026/stability_summary_revision.json",
-    "bytes": 385,
-    "sha256": "611e8bff41d3f7eb4f07020d55e85699970e56ec2e09c6532300ab29f411d452"
-  },
-  {
-    "path": "output/revision_2026/table_s2_fragment_vocabulary.csv",
-    "bytes": 37259,
-    "sha256": "1f47902030808381627466157e578b1bb44eafcea27697aa0f2ed463bfcde583"
-  },
-  {
-    "path": "output/revision_2026/table_s5_scaffold_overlap.csv",
-    "bytes": 361,
-    "sha256": "bc53bdaed9a29f70996f023c354195a11d0176cab563c2e0f177c46b3d308af6"
-  },
-  {
-    "path": "output/revision_2026/test_predictions_co2.csv",
-    "bytes": 141772,
-    "sha256": "bf015663b620fa898516827484b4f505dad4fe4b8f33f0d823d4130d35df109f"
-  },
-  {
-    "path": "output/revision_2026/test_predictions_tox.csv",
-    "bytes": 3315,
-    "sha256": "cd9bca0382aa810d6e9e34b3db9f4c62b3333c8d845acace66700390c16bf72d"
-  },
-  {
-    "path": "output/revision_2026/test_predictions_vis.csv",
-    "bytes": 164574,
-    "sha256": "6fe22661a601723d599bfae1358513a6cac7b67a12fdf704abc064d18c2e8a9f"
-  },
-  {
-    "path": "output/revision_2026/threshold_sensitivity_revision.csv",
-    "bytes": 468,
-    "sha256": "e0b25ca959d0d30c77bcd1feb76e6b20171c8668d6ed1f2adcc63e26154ff140"
-  },
-  {
-    "path": "output/revision_2026/top_candidates_revision.csv",
-    "bytes": 21886,
-    "sha256": "4f32d1ca38982e7fdce2f3223922e7a23b855a4338b0e04771e2d98bb6161864"
-  },
-  {
-    "path": "output/revision_2026/two_vs_three_top50_revision.csv",
-    "bytes": 14054,
-    "sha256": "d19bb58797214ed1341a20aba6251460c67fb33ac550f02b33a41f292d5f0136"
-  },
-  {
-    "path": "output/revision_2026/vocabulary_anion_families.csv",
-    "bytes": 128,
-    "sha256": "604440ec3b77998977cf91f4844a7f253cacd4be7414e4b55e0b226add0f742b"
-  },
-  {
-    "path": "output/revision_2026/vocabulary_cation_families.csv",
-    "bytes": 168,
-    "sha256": "912410043f93f213e93d0cac57cf2ee616ef1fec1ddb0f71f091d9f3aba7c715"
-  },
-  {
-    "path": "output/revision_2026/vocabulary_ions_with_mw.csv",
-    "bytes": 51126,
-    "sha256": "da3d599e36fc6593f4e2a0309a0dcf1d5418aa4b73435a1f00f4184dd8c53aac"
-  },
-  {
-    "path": "output/revision_2026/vocabulary_tsne_coordinates.csv",
-    "bytes": 40984,
-    "sha256": "48fd9419b4fa80c69e8a7ade676ed820016bdbce845ea2f39299d1035e44fe1f"
+    "path": "LICENSE",
+    "bytes": 1095,
+    "sha256": "306e0613e8adc4e4f526d6c7bb171efccf5c04b9caf779794dc2c7b8995a1f43"
   },
   {
     "path": "pyproject.toml",
-    "bytes": 497,
-    "sha256": "164f86ec0730f0bf80bb4eb3bca8e950a0b9242e8cb2e4b462de5fb51dab011c"
+    "bytes": 614,
+    "sha256": "dabdcdb712a2d58329ddfdceed518f6ee360889033c7007be48fcc3b6c072915"
+  },
+  {
+    "path": "README.md",
+    "bytes": 9174,
+    "sha256": "85aed2511caf2ac6a6e573c60329765d6be57aebe3266186d05ee45a7a9bd8eb"
   },
   {
     "path": "requirements-revision-lock.txt",
     "bytes": 326,
     "sha256": "bbb6255996db0801f1648c3dd914f5fefc4a38b054e56942124dc58cf09f466a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/acquisition_analysis_revision.json",
+    "bytes": 8460,
+    "sha256": "aa90d6c8e6195156daa14ea393c977b88a2391465a981b0176d2a5060d7472e0"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/acquisition_comparison_revision.csv",
+    "bytes": 305,
+    "sha256": "58c150d4ee0d2c9c2f48197cbded0f2fdbe6990ec4c980e961adb67cfff47f96"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/acquisition_inputs_revision.json",
+    "bytes": 3878,
+    "sha256": "cb13da2a78ff6b72d20df3f9a0976cd3c9e8fdeb63558e1a23564efed0fdc7af"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/acquisition_property_uncertainty.csv",
+    "bytes": 575,
+    "sha256": "157847171de1cd50fef83806c823fc0763de7e79aac64e7ed1e8bfef89060f0c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_co2.json",
+    "bytes": 260,
+    "sha256": "3cde529d7415a47d04737c14a3ac91815fffcb767c431c895cbe36383210839c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_curve_co2.csv",
+    "bytes": 2599,
+    "sha256": "8ddbf3b90a91f6c7cdd1cb8cec2719fdbdb306059b4122a56160cd0a416067db"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_curve_tox.csv",
+    "bytes": 2489,
+    "sha256": "4dba5e8725af0658ec738cf56118cceb2890c621fd2d68bc1d9285f4e7d7e2df"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_curve_vis.csv",
+    "bytes": 2635,
+    "sha256": "6caf619086f970964809249ebdf84cd71f5fa4dd755af64656f12ce6d1e80833"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_tox.json",
+    "bytes": 245,
+    "sha256": "ee492f9aa3bf564d0094d5c7c74d9c1d2b98ef6eb83bc565fa1957de6934bd17"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/calibration_vis.json",
+    "bytes": 258,
+    "sha256": "83bf2d1350425bcf32fc0441a2e8ebed25919a0ee93d12f976ce953af76d6f20"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/candidate_pairs.csv",
+    "bytes": 3132610,
+    "sha256": "19ae84bd79ca59617370db427a43477b578d638c1693b139c1a22ec97e47cbe4"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/candidate_prediction_metadata.json",
+    "bytes": 2587,
+    "sha256": "a3ab6dcf70ca876ce264c3cbf9953353e3ef7776de4af53668db9b3e8a0cdc71"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/candidate_predictions.npz",
+    "bytes": 4046277,
+    "sha256": "f74d7da7fc20de66c3589d154a65dbdc4741b3e7ce6bac0551f9b0ee1f64ab5d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/clean_comparison_summary.json",
+    "bytes": 728,
+    "sha256": "9f6b39508f475986efc3258d1d75863a5fbaf3a5c3c3793661b71e7d9a820aa7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/clean_data_diagnostics.json",
+    "bytes": 3386,
+    "sha256": "a4f7baae667566ec4832636d3a9f1832c2feb2806c53711e55d4af34fe74b313"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/correlation_pairs_co2_tox.csv",
+    "bytes": 1241,
+    "sha256": "584b8490b8b8c2accc5be7cdf8ac6608fbee4cfec53d5810950015b77c6948d1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/correlation_pairs_co2_vis.csv",
+    "bytes": 5303,
+    "sha256": "662c396631b625342ad5feecf982cbb722cda730cf8c840868a4d1a516e8ad07"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/correlation_pairs_vis_tox.csv",
+    "bytes": 5734,
+    "sha256": "7bbcf0cef4a6cbac05d61c3ea91b4b0f76df757ef89a1da4f65275919ed27905"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/fragment_vocabulary_provenance.csv",
+    "bytes": 143332,
+    "sha256": "ccd9b281ea8271d54aa3dfa9eb40081ed394c1b9ca76d6fef72852f4c01246be"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/gru_ood_similarity_candidates.csv",
+    "bytes": 5762496,
+    "sha256": "54b614beb6272c7f5f2f7f333d793ca2bd9fe8fc5139d0712b2547f28fbd55e1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/gru_ood_similarity_summary.json",
+    "bytes": 3022,
+    "sha256": "62f689288dd7740ec9544a5331c67d3ac5c1c885ffdd7295500809fc732a3d05"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/gru_reference_ions_revision.json",
+    "bytes": 41793,
+    "sha256": "5ffe9e8eceb0b60e8b0d2eb4a50c0a38a3fc4dbeaf0353151a6cf5243beced22"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/inter_property_correlation.csv",
+    "bytes": 384,
+    "sha256": "399da459f316563f36658a9ca9c74e2b8f9ddbe50db5b0a72eb02d220acb2219"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/median_heuristic_baseline.json",
+    "bytes": 2447,
+    "sha256": "d94a3a0081e63c7bc7415bdd0be648b319d411204c00e57166fb862291669d18"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/model_comparison_clean.csv",
+    "bytes": 4150,
+    "sha256": "395b44bfa2f8f0cc5806f3099dc7385c8bc3dd0a6a352dbf8b306e58825e587e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/pareto_candidates_revision.csv",
+    "bytes": 4787,
+    "sha256": "8e86b3daf35a895e315ea318dee199bc6f972da4c173fbab4fd1b36f2bea06f1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/post_filter_top10_revision.csv",
+    "bytes": 2652,
+    "sha256": "5a885889a2e14aceccc65e6c962d89d5e37696339f94dd2758eb84660ebd4521"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/prediction_diagnostics_clean.json",
+    "bytes": 1900,
+    "sha256": "9c415eb96df492876bdf2d855d19047da791ceb8747aa68ec213233ee7640ca8"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/revision_model_summary.json",
+    "bytes": 2248,
+    "sha256": "4e9a21d59e37d7f0412d1a3bd1aece50d49278f1c98a3a4749180a7ef5e4b881"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/SAVED_MODEL_RECONSTRUCTION.json",
+    "bytes": 6087,
+    "sha256": "ecb9f9da04197c4e4bc8d73dfc9ed93600bffa26ee55d5ee09b4156c3a40ff45"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/selected_hyperparameters.json",
+    "bytes": 1751,
+    "sha256": "f6987ec9546d5cdc52413d9df508e6c24032c1cbc21734eaceaa90b27b5aae07"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/stability_screening_revision.csv",
+    "bytes": 28164,
+    "sha256": "b66ac0ae6ed4df16feadaa3b069ef5d28fd19ce3b971a8d815447304bcf75d41"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/stability_summary_revision.json",
+    "bytes": 402,
+    "sha256": "53b472b8f8472d77ce91e3ad873793a3675d3ee9a6885ead40272dd01e4ca2fa"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/table_s2_fragment_vocabulary.csv",
+    "bytes": 33755,
+    "sha256": "4b38b18311f14acf2dd77bffe9366b084e667420b435d12d6d6f83b533495665"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_predictions_co2.csv",
+    "bytes": 123215,
+    "sha256": "664765f0b3c7be98a4f385acf2cc7b15e75adf4ce5d8e0f0ce460f5e9e5eef0a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_predictions_tox.csv",
+    "bytes": 3352,
+    "sha256": "b8c101928013541b50eaac2dc64719690dc054772321f09fa19fd3047fa6e1c9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_predictions_vis.csv",
+    "bytes": 158217,
+    "sha256": "35aeee86821094bac7f1d403a131f72bdfe30d4a6d40020b76c1ed3a4da1afa6"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_species_predictions_co2.csv",
+    "bytes": 1341,
+    "sha256": "617762865e04c0116559e249e6279f98703fe39db575d9c61693698513e9edaf"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_species_predictions_tox.csv",
+    "bytes": 2149,
+    "sha256": "ec2953f7fc87e979f36a1604e6b33547ecb9b2936169d55733326d898740b462"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/test_species_predictions_vis.csv",
+    "bytes": 6492,
+    "sha256": "acedbda10d6ca219c44f6ff34c85158ce9e3059a8c43aa8799cd1d95a7284850"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/threshold_sensitivity_revision.csv",
+    "bytes": 476,
+    "sha256": "30b80b81f35b4a07bf6deabaa22457be48f1bc31e8bd970dd807a2d679f8d18c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/top_candidates_revision.csv",
+    "bytes": 22017,
+    "sha256": "783cce68e275f6ef3bf7200066f9f703b3adb5e41615204e81b927befd47d5a8"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/two_vs_three_top50_revision.csv",
+    "bytes": 14087,
+    "sha256": "525c41e90a2404ff080ce1e28a77f5163bf0da16d9ac9e1155536154b87b97ef"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/vocabulary_anion_families.csv",
+    "bytes": 107,
+    "sha256": "0b800b4ea2d92d496a3437c5ce6e3df86de17e2daae5ee08d2c2a5b96a7cd9b3"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/vocabulary_cation_families.csv",
+    "bytes": 189,
+    "sha256": "5b821683317bf7a02c89071dec4a32c1458c46b1e2cfc87b0c0c24f3363a3d68"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/vocabulary_ions_with_mw.csv",
+    "bytes": 143304,
+    "sha256": "edbba715b3831507ceec0580b59991e6a780f2c665c59c0f45a1aa544615eb0a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/analysis/vocabulary_tsne_coordinates.csv",
+    "bytes": 47413,
+    "sha256": "98bb5d22c3d1cdfeb7fb540b6ca3887464d85e41c8698fd0e0ac6409f04515c6"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/CLEAN_INPUT_VERIFICATION.json",
+    "bytes": 11534,
+    "sha256": "1495dae61e9cde8cc79d903c10142d99188e7da788da96e5f9808774fc8fa970"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/COMPUTATIONAL_ENVIRONMENT.json",
+    "bytes": 351,
+    "sha256": "c0eca8677fe5daa9bbc2ce3d3a36ef9c71f81af53569fb0d79196fec263145a1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/CURATION_SUMMARY.json",
+    "bytes": 8734,
+    "sha256": "36f8d0727d66c0d146a16c1937c0f1dc162562f57f90487cbabca5807bec3340"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/test_group_co2.csv",
+    "bytes": 138685,
+    "sha256": "db866bd8c55fab9a55dae5f05424a3b437ec8d53f086477ee2f13664dd46b574"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/test_group_tox.csv",
+    "bytes": 3060,
+    "sha256": "3fae129f06ae1040f2ebdc736c2b2cafc4d3104ae5357e59357a720b287c04ad"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/test_group_vis.csv",
+    "bytes": 239501,
+    "sha256": "00607ab5c85dc7bad044f018d56af8a8356aaeb9fb34b3877dbc9a8afb5a800a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_1_group_co2.csv",
+    "bytes": 1341757,
+    "sha256": "5858c059c29abccb777e249ba03ced9cc426645b5fcd84362728ea6a6bd8f36e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_1_group_tox.csv",
+    "bytes": 21088,
+    "sha256": "6c975476e325f8a29d9ffd74e7025ccabc1f9b3f16a6aaa9c2041e2c847f5fb1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_1_group_vis.csv",
+    "bytes": 1547043,
+    "sha256": "fb4307098fc53261a117eedbbfa858afb54493da21131aca94405f8a5cb63dd7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_2_group_co2.csv",
+    "bytes": 1432812,
+    "sha256": "1ced4077b3cfbd41d3b84c5328731805306bad67a96e3dd321a5efb2c915d886"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_2_group_tox.csv",
+    "bytes": 20976,
+    "sha256": "756292a2d1ad0c41ea28cd49dfa2154af576db09bf83d0009e6516d6b12e235f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_2_group_vis.csv",
+    "bytes": 1524186,
+    "sha256": "ff7bd824e8263d0a907c1ec8f7369d80a2ae987c2e6ad8e72ae4c3ef043119a9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_3_group_co2.csv",
+    "bytes": 1493057,
+    "sha256": "92695418efb0bdefadb368a8bc494caa12824fa5a810fd296ee761da42273433"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_3_group_tox.csv",
+    "bytes": 21052,
+    "sha256": "85fadd3cd88bf3de1af99053fee8b34ecf3e321d6c8ff02f962e4ab57aba0bfc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_3_group_vis.csv",
+    "bytes": 1529563,
+    "sha256": "d9c0afe7cf56cf7b807a06d45d6efd1fcfcdac075656383200e134d3ab46d8c2"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_4_group_co2.csv",
+    "bytes": 1513074,
+    "sha256": "be59ef2f52f469dd5d9b16bd9ee283fbad422188a252ff7e3c76e2f0f2ff6215"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_4_group_tox.csv",
+    "bytes": 21285,
+    "sha256": "c88134a080c6db963ba23319ce14d17fba884dc410396a640d2f549a9cbcfce1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_4_group_vis.csv",
+    "bytes": 1474833,
+    "sha256": "dd2d88da4819a73ef0aadd397d3854e57d74eda51443b705d8ca0ea9b9cff3db"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_5_group_co2.csv",
+    "bytes": 1219343,
+    "sha256": "985056d931de53c77f9d325acbec5c2e80cc77939432d842e0777c521e1ec30c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_5_group_tox.csv",
+    "bytes": 20992,
+    "sha256": "56f3c09e79572f9fce48bae41bbfc2b980fd5647d50fece93932742e52c57ac4"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/train_5_group_vis.csv",
+    "bytes": 1488890,
+    "sha256": "811f69b6a154cb04461a8eb1f258c922ff40be0718936fb97276a4d6dccddc75"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_1_group_co2.csv",
+    "bytes": 408292,
+    "sha256": "b34c09dbb47356a76d143dcc03361121f9f5d21cdb9a9dad938d7742f1ce0dbc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_1_group_tox.csv",
+    "bytes": 5300,
+    "sha256": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_1_group_vis.csv",
+    "bytes": 344121,
+    "sha256": "0e466303d68a56afe9fd25f1419ba7f585256279e9f6301ba4b72a9cbca3a722"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_2_group_co2.csv",
+    "bytes": 317237,
+    "sha256": "5a537d34e38632a4a06bfa1d887f54a2d0f66ce6f92ed61af0b03c84ff07635b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_2_group_tox.csv",
+    "bytes": 5412,
+    "sha256": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_2_group_vis.csv",
+    "bytes": 366978,
+    "sha256": "6a665440076dac793e180b89399c278a847ec7a3648b56009fd2bfae53d1c11f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_3_group_co2.csv",
+    "bytes": 256992,
+    "sha256": "d15a0dc11e9127d442e5da341f0e6a09fa5e7a07e4f255735543cc19488888bf"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_3_group_tox.csv",
+    "bytes": 5336,
+    "sha256": "9c251cf42c772565d926a0fda7425128d7b2f7cf293981a86bcc5338292b46ab"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_3_group_vis.csv",
+    "bytes": 361601,
+    "sha256": "6a32d4c7967e18767bf22f61c62c635e84874a7df3a3fd7ff2a7491d2b440303"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_4_group_co2.csv",
+    "bytes": 236975,
+    "sha256": "2c054255307f849a60900baf9aaeec48342c7d61f18454990800e87e91ce642c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_4_group_tox.csv",
+    "bytes": 5103,
+    "sha256": "585147ead324893506d1919859fe0b81204ee981180d78472fe0b8ce3c91ddcb"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_4_group_vis.csv",
+    "bytes": 416331,
+    "sha256": "4feb6f55e0cf2d68cb93df2a7bf4580b4e5d6983a04e3e1b25d04f9806239b58"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_5_group_co2.csv",
+    "bytes": 530706,
+    "sha256": "e708412eca967eaf192e84a6193f123ce679b72811e17d6be88093d7159886a2"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_5_group_tox.csv",
+    "bytes": 5396,
+    "sha256": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/data/val_5_group_vis.csv",
+    "bytes": 402274,
+    "sha256": "5c2c24b05738f8c3b995b7e1c56e80c546e6b0f4fbe64ef7c2d3dc0176cee935"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/excluded_records.csv",
+    "bytes": 578544,
+    "sha256": "b1e32b836fc5855350b99c2d127b68552b4fd8c7c0a048b54cb0973663e2ba34"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/fold_membership_changes.csv",
+    "bytes": 1195,
+    "sha256": "13b32d3aec61216ca2023f6906de9c935b2790138fa4e7923764ca34051cb4e7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/fragment_vocab.pkl",
+    "bytes": 8922342,
+    "sha256": "b4febfe816ef6e72ca406538ca417d135a0700e851980e47fab8cba8533829e9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/test_group_co2.csv",
+    "bytes": 187527,
+    "sha256": "49d3d05aa11ab515a3fa562b2abedef92c64473d1b7b6289dacd7eaaa08df118"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/test_group_tox.csv",
+    "bytes": 3211,
+    "sha256": "039219af39baf0201200f23e9e189fcd304d99a9f215298369356b8463295470"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/test_group_vis.csv",
+    "bytes": 259382,
+    "sha256": "90fbdc3ef36a4c12d54d112b3cd99a96a9a82b2f23969c6b05f7fd70eb18242d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_1_group_co2.csv",
+    "bytes": 1542302,
+    "sha256": "9ae12098c53dd1b37d8755f2f5a9cfef1651111bc1faf49ca2388b7270161fa3"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_1_group_tox.csv",
+    "bytes": 21209,
+    "sha256": "6b46f9abc5cc3df2b4f3c42dd7644dc17a05847760e9791a9fe887340cfabdd9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_1_group_vis.csv",
+    "bytes": 1715224,
+    "sha256": "d3fe2540a3cc4e2ec165e8f06fbd1e793c9712f50e05179258db92c6aabba8d0"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_2_group_co2.csv",
+    "bytes": 1715910,
+    "sha256": "33b7bda59918505da07be866d883b0c3e34a7b131336ff5cb72d8af20336bf2e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_2_group_tox.csv",
+    "bytes": 21097,
+    "sha256": "174d726ee799dbe76690d6ab89d5576dbe1b12782da6a9012c613998dda9d487"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_2_group_vis.csv",
+    "bytes": 1673392,
+    "sha256": "7ed714faa4e8e017c290225700d25eb46da07e7ca821a9841ae755c0459db7a9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_3_group_co2.csv",
+    "bytes": 1738180,
+    "sha256": "6c14a8c675da1a5cc58b77a838a3cf8c664b4beed2fe8cc0c9445e81f16aac86"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_3_group_tox.csv",
+    "bytes": 21124,
+    "sha256": "01b0bcefad4b7babe4a208a971ab4ff67746423cda713b181e16e5f61ccffbbb"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_3_group_vis.csv",
+    "bytes": 1719129,
+    "sha256": "08d98f320be164ed4419af9f248bfb6dc5064948884aae5802f31b2cb452417d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_4_group_co2.csv",
+    "bytes": 1717507,
+    "sha256": "b81cfc0779095805c9675c3d9592291b9cb4d11e9589366ca5e94556c11eb190"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_4_group_tox.csv",
+    "bytes": 21334,
+    "sha256": "df92834034349291e8f5c480ee61231dc7926203231f71fe3224d43f14ba670f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_4_group_vis.csv",
+    "bytes": 1638062,
+    "sha256": "ea40600099274ab05a03916c86eb270d53e67725cff02c292afd356e5120c021"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_5_group_co2.csv",
+    "bytes": 1509984,
+    "sha256": "66cb1f2dffc72f607db63000fb49a3d755c73cc6072a48c0c9431861a9e02d0b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_5_group_tox.csv",
+    "bytes": 21113,
+    "sha256": "80ec1d0f68e4140cf40c296a92bca6fef89ee9647c0d95d8f37b056322ae5c36"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/train_5_group_vis.csv",
+    "bytes": 1651016,
+    "sha256": "9fdb8ab624f01eefbaf2f9255c63538faade804dec019476745ab4ba774ce1ba"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_1_group_co2.csv",
+    "bytes": 513707,
+    "sha256": "110e68af28610f4b908c8bb3d7660fa341bbfbdd64f8368b665a789b0093d42c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_1_group_tox.csv",
+    "bytes": 5300,
+    "sha256": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_1_group_vis.csv",
+    "bytes": 384017,
+    "sha256": "24f6fee9f0a54ec6fd361eba3347ec7f613ac083281ba042463bc8fd45f6738f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_2_group_co2.csv",
+    "bytes": 340099,
+    "sha256": "669bfd97246d94f03880e94967ef13bbfef6f5cc0b4bcd00c4eca109923be7c5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_2_group_tox.csv",
+    "bytes": 5412,
+    "sha256": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_2_group_vis.csv",
+    "bytes": 425849,
+    "sha256": "62211d9c749854afd7ab5197ca150b55fa44907827630a8102ac9dbc9c65fd6b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_3_group_co2.csv",
+    "bytes": 317829,
+    "sha256": "72e40b2069f49235bc325f3109679aba546bbeb818a25fa040774dde91ec79ad"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_3_group_tox.csv",
+    "bytes": 5385,
+    "sha256": "dfdf846c128e288c01903092221ff40cae38ef1ba97037966f53b82108c2539b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_3_group_vis.csv",
+    "bytes": 380112,
+    "sha256": "7c8266e8a11aa857c00b0d72c2370826024353edff9450fb95997506b029452d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_4_group_co2.csv",
+    "bytes": 338502,
+    "sha256": "e742f5f30d57ca043ca2e1a9977710c1886458b5a3413b82fe5bc3d903478474"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_4_group_tox.csv",
+    "bytes": 5175,
+    "sha256": "c8d64d2af7e7c43547270cff5463e5f604bc6f78f25f2478055c52118202d49e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_4_group_vis.csv",
+    "bytes": 461179,
+    "sha256": "d408ec44b747654c0a40c446e252dc7d1629c51e7dd36a1f73da7831ccea0b90"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_5_group_co2.csv",
+    "bytes": 546025,
+    "sha256": "30a1396964f53f367dfa664fee1ed586e5b27157306aec2f32b201e4009cbeea"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_5_group_tox.csv",
+    "bytes": 5396,
+    "sha256": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/raw/val_5_group_vis.csv",
+    "bytes": 448225,
+    "sha256": "1ddfadbca7d9c5b9e6e3a2bbb660eb30f5b3e60b8560aeb2157eaec5c5126696"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/record_curation_audit.csv",
+    "bytes": 4404687,
+    "sha256": "8889b62def529b95fdbe37ec43df44d3eedf0afbc847d0b3fc0ba778b10ff9f5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_co2.json",
+    "bytes": 245,
+    "sha256": "b425a53ddd19abc6b1817a6eef3f667a5f6617a6f60e7d2f61c62c89d5d6720a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_co2.npz",
+    "bytes": 105441,
+    "sha256": "27270d67f7e43bd22ef40b4c32dec8aff399b84a48ebb1043718c7b5a896cfec"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_tox.json",
+    "bytes": 248,
+    "sha256": "bbd29729a3eac0c285422896c742711dcc2b1031970fafc1f3ee9b090d6ecfa9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_tox.npz",
+    "bytes": 3635,
+    "sha256": "ac2e0d92a683ffdaf8c4ff3c440efcfeaf8ee0b735d435d5bfb32d227260bc3b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_vis.json",
+    "bytes": 259,
+    "sha256": "e454b13ec9594d793c31e57f906a564d1e22abb8dcd549bf30061358b01608ec"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/calibration_vis.npz",
+    "bytes": 123259,
+    "sha256": "e0edb7085eecae07c52f850a8e3b491bf4f8c42787c7ad352dcb555e57ca1786"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/fit_manifest_co2.json",
+    "bytes": 2203,
+    "sha256": "7d1faf44874242d35ed8f7fd881c20dffbcee4bb42cfc6af250075b8aa6d7d23"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/fit_manifest_tox.json",
+    "bytes": 2203,
+    "sha256": "6922d226e1cc96d8a3fb0ae5045eee1e78e8868dce12d3244bf40eb5c0fc0ffc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/fit_manifest_vis.json",
+    "bytes": 2203,
+    "sha256": "0774ce528a1d345a06a12577511f667bebbcb2759bfc1fea4cacd16d531b2d8e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/metrics_co2.json",
+    "bytes": 386,
+    "sha256": "66da5b47f2604159b32758c91e1c1495c8c507af2c4e7e8675a8634549495c4c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/metrics_tox.json",
+    "bytes": 375,
+    "sha256": "af730eb63248efcbd0b497e47af9ce19bd07c3662214fb807e1d126a54989058"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/metrics_vis.json",
+    "bytes": 617,
+    "sha256": "b8640a173837eb09c7a6f103f3207972dd7e8eebaa3bc91656ed7be30bd5c9f5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/models/model_co2.pkl",
+    "bytes": 130438,
+    "sha256": "d8080f6bcb883e1c2f934540680c0a1ebe7bee53bc64845f3a45e987ad0d449c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/models/model_tox.pkl",
+    "bytes": 127355,
+    "sha256": "0cf7daceddac74947283a73797cc49dfb1cf30adee03b3c3f88d496bcb3aa123"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/models/model_vis.pkl",
+    "bytes": 134657,
+    "sha256": "e19d10cb80b7402833202f7529a31e3a080f461d82b736bc54b106a5062703fd"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_co2/hyperopt_trials.csv",
+    "bytes": 38240,
+    "sha256": "fbdf8c2f776a68855683b4d5341280e48d3da6260c2a31c310d0973e5806e59c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_co2/search_checkpoint.pkl",
+    "bytes": 106837,
+    "sha256": "55bf0726284865eaf4b2dcca8c3242f94b44828656fbf55a75751b2a98b2280e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 579,
+    "sha256": "9656c4fe542a07b29f75e2eda7704d41c7a2937592230d22de616f4a536487b5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_tox/hyperopt_trials.csv",
+    "bytes": 9995,
+    "sha256": "51e47e7b6f8d2bc5a059d750a26762e8aeb3b8afe7c27e6e038ef371723c4e09"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_tox/search_checkpoint.pkl",
+    "bytes": 35947,
+    "sha256": "fb0ccc2c2ad411f0ea23deebab3d5d7ca14a7c82995d3f19aca6d417291fad66"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 502,
+    "sha256": "771658146c0504f42bc5cdcbafbb793c2757dfb0c7004462828d2c78f1be16a0"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_vis/hyperopt_trials.csv",
+    "bytes": 23194,
+    "sha256": "e1f5822eba1806d192df31300c8c935ab7a54fb1f256ed6ab5d33d72f5e165c8"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_vis/search_checkpoint.pkl",
+    "bytes": 68894,
+    "sha256": "277e77fa45c56fa16bf5abfaee718a0a926dcec312c1f57a442a39245c39dfa7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 589,
+    "sha256": "6633c955efb6e4ed95bd5bdec40004c9bb5f4931a7ee28341ce59180abe32e39"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/selected_hyperparameters_co2.json",
+    "bytes": 538,
+    "sha256": "6f17fabe7d3135362f78483d14f843a0ca022253d4177645da0e8afb531d8623"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/selected_hyperparameters_tox.json",
+    "bytes": 473,
+    "sha256": "2dcd2675fcfbec6f69021923b8bcab48576910e24f45ed85780e297679f74a82"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/selected_hyperparameters_vis.json",
+    "bytes": 576,
+    "sha256": "b221bbb22f61e6accb923958fb8276d2724418a0eec3a7856129858f972884c1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/test_predictions_co2.csv",
+    "bytes": 122536,
+    "sha256": "8a16920754b115522bd824d9c3052be4c85083b02f1d3b72c50e21e052b36787"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/test_predictions_tox.csv",
+    "bytes": 3370,
+    "sha256": "4285b7ad4fd9ccb8c1cf7a20b8cdba59cdc8b8cfe5645ae6566774ef83f99edf"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive/test_predictions_vis.csv",
+    "bytes": 158858,
+    "sha256": "507de9c34db8de49d65f1d3821548cd3c15d45bcc879632bad619371c3f6f4bc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_co2.json",
+    "bytes": 245,
+    "sha256": "a21ba40fb4e6fbd91d324d7623e45d508085d63ef7dad5b4b0efd6ce73d7d4a1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_co2.npz",
+    "bytes": 104295,
+    "sha256": "fcb81773ba89b09975333188bf01534830adaee27843d1eb00eb7b1a5dfe6697"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_tox.json",
+    "bytes": 247,
+    "sha256": "5d55e1b0a481acaba987980b7664988ce8b8720e6cb35d32620584fb5c3d8a64"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_tox.npz",
+    "bytes": 3558,
+    "sha256": "5373211cbf50eb356a52289bc4b12865ebf9fdf9a6e0fb5d7dcb758951685563"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_vis.json",
+    "bytes": 244,
+    "sha256": "344296205c0356d6acbad1d022f64987b99c6f7dff52d207d0d19a22ecc4b239"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/calibration_vis.npz",
+    "bytes": 121768,
+    "sha256": "fbcad7c6f274357476879d3660fcdfaf8f25b3581ad0b003f1fb6812802da9cd"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/fit_manifest_co2.json",
+    "bytes": 2212,
+    "sha256": "8ebfdaa0915a5c4398d6bd1f3dfc92bcf744829f42471eb10f348f058815da31"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/fit_manifest_tox.json",
+    "bytes": 2212,
+    "sha256": "7b59d219a91477c54e777d7d0144c4bad8d7b60c7bc437101a4d7b6870984fce"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/fit_manifest_vis.json",
+    "bytes": 2212,
+    "sha256": "a5a3b8f4afb5f35483f6c7cf464fb8f9ca8175812e1285126d1892927a1629dc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/metrics_co2.json",
+    "bytes": 387,
+    "sha256": "a78c912293180f61500e9d612246965a432b58ae9b60978ed531b5049fa6b739"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/metrics_tox.json",
+    "bytes": 392,
+    "sha256": "f663c13f8c9a129990083fa92b3f76303eec206b1b8a8d21a305217d81a3cc1a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/metrics_vis.json",
+    "bytes": 602,
+    "sha256": "f2e85f7fc3007644db6dc7d2c222265070f6a72e33f1530f5dd003e8f7757d27"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/models/model_co2.pkl",
+    "bytes": 94513,
+    "sha256": "8cc81e9ad1b47353e99680008cf60738a5eb4ddaff0b101776a12718b429831c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/models/model_tox.pkl",
+    "bytes": 91515,
+    "sha256": "833f2ea183acebcc7fe4fb42ffa7825bb61122d7fa8b482e00b620e4a79e5be0"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/models/model_vis.pkl",
+    "bytes": 97672,
+    "sha256": "a6068f2cdf661249782be0cfddcaaa41dad88fb0d5995d3cc895a6fc952239a7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_co2/hyperopt_trials.csv",
+    "bytes": 19313,
+    "sha256": "b446ca70a139d1f8cb64678c32971b796dd8be0168e79acfd21123501646d774"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_co2/search_checkpoint.pkl",
+    "bytes": 59045,
+    "sha256": "7e6fbe8a3293f88c255ddefab631d8b484b31790e68d58e45871b693997aaa7b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 543,
+    "sha256": "9cfec9c6458de7e8dbc3823c803334d7d9b830ff2437ddd89586d6cbe4ddaa6b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_tox/hyperopt_trials.csv",
+    "bytes": 15579,
+    "sha256": "c4670ae985c801cbdaeae64e82769e83755b6616d7cbf1022ba04d964f6adb54"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_tox/search_checkpoint.pkl",
+    "bytes": 51943,
+    "sha256": "06cb6c9110a07dbf1d392d5644aafdefaed493bf8bbd6c2ba9f9134526d8529b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 468,
+    "sha256": "cf62a6233d5e66c52b6ab8615d611efc1a75df3614411f665f709b505b3a9d07"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_vis/hyperopt_trials.csv",
+    "bytes": 14923,
+    "sha256": "01f278266582386d4905def77967fbe65d4702c6e6347f593d8092217ff9ead5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_vis/search_checkpoint.pkl",
+    "bytes": 48390,
+    "sha256": "adb6045691c214ad8736ae5a68b88a0bafe36a516d324ef5e4c29d66e37cbebb"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 547,
+    "sha256": "5d75700fb76b8da19e5ab143564d7e1102956f8bbe22bbfde641f2598d9eb22f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/selected_hyperparameters_co2.json",
+    "bytes": 503,
+    "sha256": "c0ffc7380178c760f003053ecbdacf63cffcbabd7c453881ec3f41f76b2d4997"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/selected_hyperparameters_tox.json",
+    "bytes": 438,
+    "sha256": "64e54b460d776141e807689e1ce1c838eee092f47bc20c12e7a8a59fbcb738dc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/selected_hyperparameters_vis.json",
+    "bytes": 516,
+    "sha256": "ea19d51c5ab230d06d224f1f6da2d281ead6e6090b8753eb46992d1d55c3ee1f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/test_predictions_co2.csv",
+    "bytes": 122085,
+    "sha256": "f75f90d54c1b3646e4fc4232bed150669c2a722f039617618a973fd6d01f99db"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/test_predictions_tox.csv",
+    "bytes": 3357,
+    "sha256": "8346c9e2e4fb9a5a950540913b81f2da90a236df80ae6de9985d6a7baa061999"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/additive_no_cross/test_predictions_vis.csv",
+    "bytes": 156673,
+    "sha256": "48348c56cb89b36275515e2ffa134fa3853a1f6bd2af7b3c0f3543b9f3026f0b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_co2.json",
+    "bytes": 260,
+    "sha256": "3cde529d7415a47d04737c14a3ac91815fffcb767c431c895cbe36383210839c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_co2.npz",
+    "bytes": 104713,
+    "sha256": "da7f78287a3bd4be004dbcec516998417116a1fa32407e86fedc2acadbfd7d00"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_tox.json",
+    "bytes": 245,
+    "sha256": "ee492f9aa3bf564d0094d5c7c74d9c1d2b98ef6eb83bc565fa1957de6934bd17"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_tox.npz",
+    "bytes": 3627,
+    "sha256": "5d9e4901407fed73b8f93d586f09453827ad45ed82cd1d64d7f050eba9ddd4cd"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_vis.json",
+    "bytes": 258,
+    "sha256": "83bf2d1350425bcf32fc0441a2e8ebed25919a0ee93d12f976ce953af76d6f20"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/calibration_vis.npz",
+    "bytes": 123942,
+    "sha256": "41869a0ec52c506d0e92c7a0ba8ad4ebbc395b0ce445f4def14934f66a3c5318"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/candidate_predictions_co2.npz",
+    "bytes": 1463718,
+    "sha256": "028ef039aaf93c5e2168a410958ea28cb349a96717bb39b1b6079bbfb25e5e4b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/candidate_predictions_tox.npz",
+    "bytes": 1188979,
+    "sha256": "18cbd03953f72a205d778807b132849fb5cf7ce6b8c01054a7935e060842b67e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/candidate_predictions_vis.npz",
+    "bytes": 1207823,
+    "sha256": "b4b1abd74289a74945e67203a005e6e8259cbc1c3ee5a87e36e322642696f541"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/fit_manifest_co2.json",
+    "bytes": 2308,
+    "sha256": "289cae20f7ca248bff41e83d840924d4504fb2e6e42c57b1dbd9b5511a8aa88d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/fit_manifest_tox.json",
+    "bytes": 2308,
+    "sha256": "0effbf30b655a471ac56e056896636edf843a09560d2f8128007201d1bd73bd7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/fit_manifest_vis.json",
+    "bytes": 2308,
+    "sha256": "7d7ba5abe171ab7d3e27fc70ee5b5ae118e957d7597c62eebd8e261a9c7dd495"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/metrics_co2.json",
+    "bytes": 400,
+    "sha256": "a0f9d6a2608786ff2aaa0f2d54e779dc1114eae0a02ba0d4b3945fcab2c3b586"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/metrics_tox.json",
+    "bytes": 375,
+    "sha256": "d6ae80fda00e42b82cd5dc041585a651b242e2e4257ae3111f3a42c7980440ea"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/metrics_vis.json",
+    "bytes": 615,
+    "sha256": "94eb39e2f8f6f4ff1a45fd9d77f342aa89a6e24643e91071c71af76c8b350f05"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/models/model_co2.pkl",
+    "bytes": 134876,
+    "sha256": "f41051c308882b1c28c031fae545caf9ba667ae1d9e6e2fb3fdd535906845d73"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/models/model_tox.pkl",
+    "bytes": 127519,
+    "sha256": "472792a8f81f85cfa8fec5dec04a7a014d27e72923712be9720be7f14abd7199"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/models/model_vis.pkl",
+    "bytes": 134876,
+    "sha256": "2ff62c03f04beeb61a019ab6829ecdbc81ae8b976360a96a1486535d9570631d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_co2/hyperopt_trials.csv",
+    "bytes": 30867,
+    "sha256": "e53562f34c6568af62ead1ff20fe2190fc690dbfc70007737d3df989bb1008c5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_co2/search_checkpoint.pkl",
+    "bytes": 86410,
+    "sha256": "2e52300c4e4dd4d0f11b3b1315a6b2b2eec83c0d291400d7f3df6c3ca6461978"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 597,
+    "sha256": "b83ce35887446c9be28d93541406419ed65d959a7eb405e6ef9b03aee433a9d9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_tox/hyperopt_trials.csv",
+    "bytes": 13465,
+    "sha256": "923d3c46fff6b0117420541d0deb48f62dc995eb80f40fee0b1b91b19a6a020b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_tox/search_checkpoint.pkl",
+    "bytes": 45165,
+    "sha256": "d2cdbc71d79d1d790da88d1b63e46663100e3e25e97054846d4714f859fddf39"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 504,
+    "sha256": "9abbe59caba600209016d02e4b3fbf0761182de27729ceef23b7705eba19bdb7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_vis/hyperopt_trials.csv",
+    "bytes": 23766,
+    "sha256": "5d57cf892749580ffa19831ba91b4f08340ae189d351ab44106c0a3793f224b7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_vis/search_checkpoint.pkl",
+    "bytes": 70349,
+    "sha256": "c1f9534b726d5cf9596ccf5cf03cd65ca1319e454162547fc17ff84a65e44a92"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 588,
+    "sha256": "ea6d29631b9faaaf2dd03ee2340ad097d6e80d9909a249e349c0c8502a712651"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/selected_hyperparameters_co2.json",
+    "bytes": 580,
+    "sha256": "9a943e741ad68e2f8803dd051ea1ca1d7e52c267415d995d76127ca8208689ad"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/selected_hyperparameters_tox.json",
+    "bytes": 473,
+    "sha256": "3b519378228b6ef0dd1b1ece665b68cb0f5f25214bbeafbe4d22675327d6211c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/selected_hyperparameters_vis.json",
+    "bytes": 573,
+    "sha256": "c254158286055080a41b88d41210d537afadd1b1f7aac6a965ce35082d67b17b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/test_predictions_co2.csv",
+    "bytes": 123215,
+    "sha256": "664765f0b3c7be98a4f385acf2cc7b15e75adf4ce5d8e0f0ce460f5e9e5eef0a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/test_predictions_tox.csv",
+    "bytes": 3352,
+    "sha256": "b8c101928013541b50eaac2dc64719690dc054772321f09fa19fd3047fa6e1c9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product/test_predictions_vis.csv",
+    "bytes": 158217,
+    "sha256": "35aeee86821094bac7f1d403a131f72bdfe30d4a6d40020b76c1ed3a4da1afa6"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_co2.json",
+    "bytes": 259,
+    "sha256": "ef7fc2f61668ab5d65482d5f0d17432b7467ce0008ab80d37bc37b8f1fbbcb6f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_co2.npz",
+    "bytes": 104832,
+    "sha256": "f9b1fc9982d500dce0ea32ed123631059b503d6d8d0b54fd223da49d7b587e5b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_tox.json",
+    "bytes": 248,
+    "sha256": "6ce8e3076a38a59bb00e2ee33e671f00eb08fa175e9be042f2344959d5e3bd01"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_tox.npz",
+    "bytes": 3614,
+    "sha256": "a792b41b78b4a0492d533575848c5ccf702e028e05e66ff8e1eb0f80576c85fc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_vis.json",
+    "bytes": 258,
+    "sha256": "315dcbfd70ead006e0a254841e53d9eae7c334ff15bd45e7666177dee7cf314c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/calibration_vis.npz",
+    "bytes": 120210,
+    "sha256": "8d5ddc85565ab92893f95bd3ffffb6de265cc6b0e6fea02be51e86bc0a64d6d6"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/fit_manifest_co2.json",
+    "bytes": 2211,
+    "sha256": "ad15fd7f13c959a260111a9e308c9ebb78c57ed4268d4d05e3c9d2efb50ace33"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/fit_manifest_tox.json",
+    "bytes": 2211,
+    "sha256": "7204bcfe464774bbf2b9e8c28f377de7d6e6e972ff0f302f5667578e4753fd9f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/fit_manifest_vis.json",
+    "bytes": 2211,
+    "sha256": "f208c4528c7ee9da749f929aaed9491483a6acf6e528fc51301a95e8b5010d5f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/metrics_co2.json",
+    "bytes": 399,
+    "sha256": "2b757017df7067530bf04dd62d82dd90f123592f06d0496e1eb269420d7824d2"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/metrics_tox.json",
+    "bytes": 379,
+    "sha256": "4a364aa1ac78278f9fb3fb09ef68e8ac4c41225f77d1895fdaf95c15ce48fbd6"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/metrics_vis.json",
+    "bytes": 614,
+    "sha256": "f693ed14384d096a84dca4de8e688496dd11e508522a6825ca3c390a2b31e93b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/models/model_co2.pkl",
+    "bytes": 97671,
+    "sha256": "353a96f3f1b1f350feb5f5249185db24e0d999e805b779cb3b56d124bf7714be"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/models/model_tox.pkl",
+    "bytes": 93583,
+    "sha256": "a4cc14315e2a908bc8900f2058f34473c1aa4d525ed6c66b76a78c491b63cc1e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/models/model_vis.pkl",
+    "bytes": 97671,
+    "sha256": "c2842c88607e33fc5aa893492dc88c5070f18e2b496a107d754351e23e95d1dc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_co2/hyperopt_trials.csv",
+    "bytes": 21351,
+    "sha256": "48d07387e5f4ee593ac64bd58638fe91a9a290a1051f7608d7f448c869cc6cfa"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_co2/search_checkpoint.pkl",
+    "bytes": 63485,
+    "sha256": "4d6007324bf64a345ce624e6e3db7062473c836f7bbe5aefdd05ddf9a8075d20"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 554,
+    "sha256": "c6a8fe40f5e0dec63b00221e52398015e272eb27c19166a54ddd62751a2eda07"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_tox/hyperopt_trials.csv",
+    "bytes": 14760,
+    "sha256": "10508a96be0384261ee3de8acd74654cd0a44b3455aa033c715d0b14cdfeb844"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_tox/search_checkpoint.pkl",
+    "bytes": 48625,
+    "sha256": "21077f1c89a0a040326c7ef95066f660f5868ef59e7fa42b7d28dbeefdcede5d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 477,
+    "sha256": "f72e18c56ba72a375b6ad44d8bbb16ee106164eb2e52b6113b8a7689fcdf606e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_vis/hyperopt_trials.csv",
+    "bytes": 21032,
+    "sha256": "8198f4c59221a64bbbcf5e8ee0dae3fbbb07fbc3c5f585b9fa90bee316c7eeee"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_vis/search_checkpoint.pkl",
+    "bytes": 63936,
+    "sha256": "590abf08fd56fd7a8d65bf9768b23a2169846f9501baa9c853a1e247e62ba40e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 553,
+    "sha256": "07ede7e412c1d6104d14c0a93b47860c7385b8b47c719d9bf71cf761866a30e5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/selected_hyperparameters_co2.json",
+    "bytes": 525,
+    "sha256": "f227fbbdb5960c2912374a480b58500f92d8b9221a3816026fe8b52a1ee49221"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/selected_hyperparameters_tox.json",
+    "bytes": 448,
+    "sha256": "8159aa82745ccb4ed1bd449cbcefa8b9d3810b3235b3bce3ccc1788bddad956d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/selected_hyperparameters_vis.json",
+    "bytes": 536,
+    "sha256": "f957fc399b5b3b39dfe87044077d1042e8747262a5ffd8004d280b6c380d3b04"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/test_predictions_co2.csv",
+    "bytes": 123275,
+    "sha256": "78fb6308ceed9a4f59ae104593b6e5f2eec5b91339c3ea30e147170f672fe77d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/test_predictions_tox.csv",
+    "bytes": 3370,
+    "sha256": "2ce02dced7a553980acff90f6e800b634d8b69672a3b3f1641338aa2581a6eac"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/product_no_cross/test_predictions_vis.csv",
+    "bytes": 158144,
+    "sha256": "648f3d12c093da27d3e9d8a7c794cfb0d739bd15cd18f48bfe6dce1f45a4330d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_co2.json",
+    "bytes": 258,
+    "sha256": "7d06f660a6bb68079fb99638ed977d40295a39b008b5472d788334a681b1ee02"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_co2.npz",
+    "bytes": 81108,
+    "sha256": "a5fa4d580ea9e130fd76a7540c40bd30f143b609d2465f00fe93f047bd5c6d33"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_tox.json",
+    "bytes": 248,
+    "sha256": "cbcb2df909df8a662a31ca42e6933c0925d2b84932c607b3932054d4730ecbd9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_tox.npz",
+    "bytes": 3119,
+    "sha256": "2f4c1d13bd3084db8de64e2e1b69e10327c9ce82900805feb096c5c46fd8011f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_vis.json",
+    "bytes": 258,
+    "sha256": "1843d9f82d6b985423e8d4ff773e42fb64ed18fbf1dd1f505ef8148bc34482e0"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/calibration_vis.npz",
+    "bytes": 98692,
+    "sha256": "cf49fe22d3dcb1cb39f4d85f205b6b94c01b62cf1b58bec2c0a53f9d564c4a73"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/fit_manifest_co2.json",
+    "bytes": 2203,
+    "sha256": "684ccb5a0a5334877b36603a463a4e944f9a814e4b752fdfc959300daa02005c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/fit_manifest_tox.json",
+    "bytes": 2203,
+    "sha256": "0cb1ebcff18d932c596bbd86f1f1c4b15b6bec46d45b78b63bed418d45542ac2"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/fit_manifest_vis.json",
+    "bytes": 2203,
+    "sha256": "4dc22b8a2e8317746ade2e7e14e93eb54b32624b4fc2b99ec87c0895ef0b6471"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/metrics_co2.json",
+    "bytes": 401,
+    "sha256": "8af62f8a2666de90fe6bcc3f22802ba020e7a18e088891a53cc69bf29d147fd5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/metrics_tox.json",
+    "bytes": 393,
+    "sha256": "e3b1dee56e0ce4758e721ad41acac42358e4377cff6c86847d13a81a8f27db6c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/metrics_vis.json",
+    "bytes": 616,
+    "sha256": "d08012bd3ffbc4413e1216c139e6021b6a8ba50d5d06454f09c49f52366a0d43"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/models/model_co2.pkl",
+    "bytes": 123410,
+    "sha256": "67cfc0206ea48fba94cd71a8c71fc3ffd6cb6a313d4c6c87d3ff681996ad19e8"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/models/model_tox.pkl",
+    "bytes": 123295,
+    "sha256": "5f5412a02ef51c8b6401f793e418d40912e76df11c46f0ca76ed875590fdb251"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/models/model_vis.pkl",
+    "bytes": 123410,
+    "sha256": "c40c543955463e3d0eae82cc3bdd5527d0bfb29babe5b36d57b389b0051369b4"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_co2/hyperopt_trials.csv",
+    "bytes": 5275641,
+    "sha256": "f1e03306dedf5419e75a1946ee9bd8ef6ceaaada4b453f01b039a30c75c7b431"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_co2/search_checkpoint.pkl",
+    "bytes": 16421157,
+    "sha256": "ca2f4778298482f8dc473906fc2abd4fbee8ae541274f0d55357c7384f74454e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 94863,
+    "sha256": "ec27dfcc41cd4af7bcfade68bb63f17ae087fcc925658cf15da8adeae56b68bb"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_tox/hyperopt_trials.csv",
+    "bytes": 2533652,
+    "sha256": "918a20bc5cbca108044125ecd485e49b82f045d22cf518e25f9db0c035ab06a1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_tox/search_checkpoint.pkl",
+    "bytes": 8277308,
+    "sha256": "43edfcf0bf6e57275bf528c516a40bedb6153cfe24d59375b41f37232de6561d"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 94775,
+    "sha256": "bf318728fb6701a076b9b8abd49ec3c34a20e01f99bf29857089c5ac5cedb369"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_vis/hyperopt_trials.csv",
+    "bytes": 6857416,
+    "sha256": "96ef32146701ad39222070a1cbc071ddb191caaed790f6ebcd470b4560e3bb44"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_vis/search_checkpoint.pkl",
+    "bytes": 21137617,
+    "sha256": "2132fc95afa3d94ab0827a1c3834ff98122b650e1cc3f659e674b3061bac8c12"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 94732,
+    "sha256": "c822f7828b5e92b1da758178ddc13e1b5853c3e140758111469e3c5e71ef7a85"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/selected_hyperparameters_co2.json",
+    "bytes": 94847,
+    "sha256": "52a78390abea0fbc2ed0fbe084f1d355f659512f38d65fbfd6131d663a4dfbc9"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/selected_hyperparameters_tox.json",
+    "bytes": 94746,
+    "sha256": "1fb6682db45a3dafb3b96f891f392351ccdc3ee007b59a6d267e3f3b69ba05e5"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/selected_hyperparameters_vis.json",
+    "bytes": 94715,
+    "sha256": "de37cec6ddc7da8ac5fc41ab2c94631124288fc5984aee021bfe17d94a65ce47"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/test_predictions_co2.csv",
+    "bytes": 121799,
+    "sha256": "a3bde9c0f29b9394c47f48e4938678105352f1047266f2e82198f706aef6dbb1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/test_predictions_tox.csv",
+    "bytes": 3323,
+    "sha256": "9757770c9f000eea613b7edd576ce190bbbe316ea66c7ac3a16188a067eca657"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/results/standard/test_predictions_vis.csv",
+    "bytes": 156821,
+    "sha256": "a10d7ae9030af79c09694b6b963ab635abcab67c9f3d1129866af0865e577f1c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/VOCABULARY_SUMMARY.json",
+    "bytes": 484,
+    "sha256": "c17a5fdc139c25f784c1995eefdca8fb5948acd0a64a1213a78d8fdd93ba03e9"
+  },
+  {
+    "path": "scripts/revision/collect_clean_results.py",
+    "bytes": 3875,
+    "sha256": "3569115cc5e601e2d00e2ac1ea23b06e3e3f0ab81bd5946096e217532692da30"
+  },
+  {
+    "path": "scripts/revision/prepare_clean_refit.py",
+    "bytes": 9208,
+    "sha256": "6ef7b385c60728191e4b0b4ceba075e2b3be72f9a93aa5e03b6338580ec4d1df"
   },
   {
     "path": "scripts/revision/restore_pubchem_corpus.py",
@@ -1056,47 +2071,82 @@
   },
   {
     "path": "scripts/revision/run_acquisition_analysis.py",
-    "bytes": 13681,
-    "sha256": "220432dd486d767fb2632be6213f63727d097bbb5fe9958b791d05e941021171"
+    "bytes": 15170,
+    "sha256": "2205121618d8e49432edc33a4b3c0759abb2f2b387acd4c62bbc384c26e6711e"
+  },
+  {
+    "path": "scripts/revision/run_clean_diagnostics.py",
+    "bytes": 7608,
+    "sha256": "6ba88397a121f8149f36ef7c39a9deca49559551fdfd69a6ea228738a6732a6b"
+  },
+  {
+    "path": "scripts/revision/run_clean_prediction_diagnostics.py",
+    "bytes": 3584,
+    "sha256": "754bd17e0bd6109588cc48861c7e153e952a65fb82f817bf3cce6a0065a7026a"
+  },
+  {
+    "path": "scripts/revision/run_clean_refit.py",
+    "bytes": 13916,
+    "sha256": "8aad51706392bcbc1f1475c3c18c028c02ab5b3dd1702488dc04012b1e3a6d00"
   },
   {
     "path": "scripts/revision/run_gru_ood_similarity.py",
-    "bytes": 5802,
-    "sha256": "b82ad1dbd67e6d41e39ec51f768e2c3fd33389533edcb42be765c4c798dbc53a"
+    "bytes": 7537,
+    "sha256": "1181c33f87ca5cf9431a93c07f4823018507a1ce81d8f527f1a2e1b085d77a12"
   },
   {
     "path": "scripts/revision/run_median_baseline.py",
-    "bytes": 4707,
-    "sha256": "c02365a7b0bae8797273ec65985b9a73c543cfcc5d6da8a4b6e5ae0dd146cb24"
+    "bytes": 5572,
+    "sha256": "778a0649e95361fb314380bf345056af4c8aca80f197466b1e497831fe82374c"
   },
   {
     "path": "scripts/revision/run_revision_models.py",
-    "bytes": 14547,
-    "sha256": "4bce8d059d391f3cb2278986d00c7959664c3f1ce5d4813042f9b8e8f070e0b4"
+    "bytes": 14661,
+    "sha256": "17255fa104dd58cdca5829345965a9687983cc4c9a210842a9317dfc5325179f"
   },
   {
     "path": "scripts/revision/run_stability_screening.py",
-    "bytes": 19054,
-    "sha256": "1a0efbeb914890374c2457294ae182429be410311f570d7c5162eefc9035efc7"
+    "bytes": 19568,
+    "sha256": "cfbc4aeb6925fee6e8b67d393ff097f5e15cef2c42f3244be76c9533defcc4f3"
   },
   {
-    "path": "scripts/revision/verify_public_data.py",
-    "bytes": 2338,
-    "sha256": "a85e932a55967a0a467c9306cb1ecf77611e81d7d2cd042febaace9983eafda7"
+    "path": "scripts/revision/summarize_clean_comparisons.py",
+    "bytes": 4312,
+    "sha256": "62896d6226f2e0f119b5a643671bb5ac07416e8e7f747ac1e96bb061239e1557"
   },
   {
-    "path": "scripts/revision/verify_restricted_data.py",
-    "bytes": 4013,
-    "sha256": "46a386edacda20ae4e9952d01b060b0a7baedcda4aede8bf09d21df04c5578cc"
+    "path": "scripts/revision/verify_clean_inputs.py",
+    "bytes": 3934,
+    "sha256": "1c607adddcfe40d7f7f0f68cf7949d4c52d41f17a1252e9dc27ba2a6a368454b"
   },
   {
-    "path": "tests/test_revision_methods.py",
-    "bytes": 1013,
-    "sha256": "e3b9582e78d98f298cea169347558a50566292e3067e3780f9dfd1b8c4986dde"
+    "path": "scripts/revision/verify_core_release.py",
+    "bytes": 1861,
+    "sha256": "f70d0cc89f6dfa1cf0d6a0bfcd1a67d62c11f04209fd235461c2f31d41cec66f"
   },
   {
-    "path": "tests/test_revision_methods_full.py",
-    "bytes": 4070,
-    "sha256": "919593f23101ae4da3c4c235d4af4e5b0f4970ecd70ee76f29fed0a521e3d0a9"
+    "path": "scripts/revision/verify_saved_models.py",
+    "bytes": 5486,
+    "sha256": "4249144a1ed6f3514d270d2d5d057b1c83d13cb2087f99db594cfc21ba7367ad"
+  },
+  {
+    "path": "tests/test_clean_refit.py",
+    "bytes": 4328,
+    "sha256": "484d38a9c450eb83be0987a9d873b980f8cff8ade74635426936b3f673d1c9f7"
+  },
+  {
+    "path": "tests/test_core_release.py",
+    "bytes": 2926,
+    "sha256": "5cef52f515ea3f9d900ed811f6505735f46d1c8ea8950bc87b5551f86b1c968a"
+  },
+  {
+    "path": "tests/test_ion_families.py",
+    "bytes": 1023,
+    "sha256": "3d98270cda0fc28c9e07c0b100aa448bc3a916273ea3d03992921691461597cd"
+  },
+  {
+    "path": "tests/test_numerical_methods.py",
+    "bytes": 1823,
+    "sha256": "5a020cf6835a2dae224d5d38add97ff4d46b0b93fb8954bbded4774c31f37e8e"
   }
 ]

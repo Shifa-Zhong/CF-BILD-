@@ -1,39 +1,32 @@
-# Python
 __pycache__/
 *.py[cod]
-*.so
+.venv/
+venv/
 *.egg-info/
 build/
 dist/
-
-# Environments and editors
-.venv/
-venv/
-env/
-.idea/
-.vscode/
-.ipynb_checkpoints/
-.DS_Store
-Thumbs.db
-
-# Restored large corpus (lossless compressed parts are versioned)
-data/Pubchem dataset.txt
-# Superseded large-transfer package retained only as a local backup.
-data/gru/pubchem_corpus/
-
-# Manuscript working files and local audit directories
 manuscript/
-legacy_invalidated/
+figures/
 _audit/
 release/
-
-# Keep authoring and graphical presentation outside the scientific code release.
-figures/
-TOC_text_revision.txt
-scripts/revision/build_revision_figures.py
-scripts/revision/publication_figures.py
+data/Pubchem dataset.txt
+data/gru/pubchem_corpus/
+legacy_invalidated/
+# Old artifacts can remain as recoverable local files, not the current release.
+output/
+config/
+data/*_group_*.csv
+data/restricted_data_manifest.json
+data/SPLIT_AUDIT.json
+data/PUBLIC_DATA_RELEASE.json
+scripts/revision/verify_restricted_data.py
+scripts/revision/verify_public_data.py
+tests/test_revision_methods.py
+tests/test_revision_methods_full.py
+# Keep local authoring and graphical-presentation code out of the release.
 scripts/revision/*document*.py
 scripts/revision/*typesetting*.py
 scripts/revision/*response*.py
 scripts/revision/*word*.py
+scripts/revision/*figure*.py
 scripts/revision/build_submission*.py

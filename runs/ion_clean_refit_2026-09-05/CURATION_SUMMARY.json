@@ -1,0 +1,147 @@
+{
+  "status": "cleaned_inputs_ready",
+  "properties": [
+    "co2",
+    "vis",
+    "tox"
+  ],
+  "policy": "parseable_connected_+1_-1_pairs",
+  "unverified_stoichiometry_exclusion_authorized": true,
+  "original_sources_modified": false,
+  "targets_modified": false,
+  "charges_inferred_or_repaired": false,
+  "held_out_partition_resampled": false,
+  "cv_policy": "modal original validation fold per canonical species; tie lowest fold",
+  "test_group_overlap": 0,
+  "cv_group_overlap": 0,
+  "validation_memberships_per_record": 1,
+  "partitions": {
+    "co2_non_test": {
+      "source_records": 12503,
+      "retained_records": 10867,
+      "excluded_records": 1636,
+      "retained_species": 158,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 1636
+      }
+    },
+    "co2_test": {
+      "source_records": 1306,
+      "retained_records": 1080,
+      "excluded_records": 226,
+      "retained_species": 17,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 226
+      }
+    },
+    "vis_non_test": {
+      "source_records": 12374,
+      "retained_records": 11101,
+      "excluded_records": 1273,
+      "retained_species": 683,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 1104,
+        "multivalent_salt_requires_explicit_stoichiometry": 169
+      }
+    },
+    "vis_test": {
+      "source_records": 1465,
+      "retained_records": 1344,
+      "excluded_records": 121,
+      "retained_species": 80,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 95,
+        "multivalent_salt_requires_explicit_stoichiometry": 26
+      }
+    },
+    "tox_non_test": {
+      "source_records": 302,
+      "retained_records": 300,
+      "excluded_records": 2,
+      "retained_species": 278,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 2
+      }
+    },
+    "tox_test": {
+      "source_records": 32,
+      "retained_records": 31,
+      "excluded_records": 1,
+      "retained_species": 31,
+      "exclusion_reasons_records": {
+        "neutral_component_or_incorrect_ion_role": 1
+      }
+    }
+  },
+  "fold_membership_change_count": 18,
+  "source_sha256": {
+    "train_1_group_co2.csv": "9ae12098c53dd1b37d8755f2f5a9cfef1651111bc1faf49ca2388b7270161fa3",
+    "val_1_group_co2.csv": "110e68af28610f4b908c8bb3d7660fa341bbfbdd64f8368b665a789b0093d42c",
+    "train_2_group_co2.csv": "33b7bda59918505da07be866d883b0c3e34a7b131336ff5cb72d8af20336bf2e",
+    "val_2_group_co2.csv": "669bfd97246d94f03880e94967ef13bbfef6f5cc0b4bcd00c4eca109923be7c5",
+    "train_3_group_co2.csv": "6c14a8c675da1a5cc58b77a838a3cf8c664b4beed2fe8cc0c9445e81f16aac86",
+    "val_3_group_co2.csv": "72e40b2069f49235bc325f3109679aba546bbeb818a25fa040774dde91ec79ad",
+    "train_4_group_co2.csv": "b81cfc0779095805c9675c3d9592291b9cb4d11e9589366ca5e94556c11eb190",
+    "val_4_group_co2.csv": "e742f5f30d57ca043ca2e1a9977710c1886458b5a3413b82fe5bc3d903478474",
+    "train_5_group_co2.csv": "66cb1f2dffc72f607db63000fb49a3d755c73cc6072a48c0c9431861a9e02d0b",
+    "val_5_group_co2.csv": "30a1396964f53f367dfa664fee1ed586e5b27157306aec2f32b201e4009cbeea",
+    "test_group_co2.csv": "49d3d05aa11ab515a3fa562b2abedef92c64473d1b7b6289dacd7eaaa08df118",
+    "train_1_group_vis.csv": "d3fe2540a3cc4e2ec165e8f06fbd1e793c9712f50e05179258db92c6aabba8d0",
+    "val_1_group_vis.csv": "24f6fee9f0a54ec6fd361eba3347ec7f613ac083281ba042463bc8fd45f6738f",
+    "train_2_group_vis.csv": "7ed714faa4e8e017c290225700d25eb46da07e7ca821a9841ae755c0459db7a9",
+    "val_2_group_vis.csv": "62211d9c749854afd7ab5197ca150b55fa44907827630a8102ac9dbc9c65fd6b",
+    "train_3_group_vis.csv": "08d98f320be164ed4419af9f248bfb6dc5064948884aae5802f31b2cb452417d",
+    "val_3_group_vis.csv": "7c8266e8a11aa857c00b0d72c2370826024353edff9450fb95997506b029452d",
+    "train_4_group_vis.csv": "ea40600099274ab05a03916c86eb270d53e67725cff02c292afd356e5120c021",
+    "val_4_group_vis.csv": "d408ec44b747654c0a40c446e252dc7d1629c51e7dd36a1f73da7831ccea0b90",
+    "train_5_group_vis.csv": "9fdb8ab624f01eefbaf2f9255c63538faade804dec019476745ab4ba774ce1ba",
+    "val_5_group_vis.csv": "1ddfadbca7d9c5b9e6e3a2bbb660eb30f5b3e60b8560aeb2157eaec5c5126696",
+    "test_group_vis.csv": "90fbdc3ef36a4c12d54d112b3cd99a96a9a82b2f23969c6b05f7fd70eb18242d",
+    "train_1_group_tox.csv": "6b46f9abc5cc3df2b4f3c42dd7644dc17a05847760e9791a9fe887340cfabdd9",
+    "val_1_group_tox.csv": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3",
+    "train_2_group_tox.csv": "174d726ee799dbe76690d6ab89d5576dbe1b12782da6a9012c613998dda9d487",
+    "val_2_group_tox.csv": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74",
+    "train_3_group_tox.csv": "01b0bcefad4b7babe4a208a971ab4ff67746423cda713b181e16e5f61ccffbbb",
+    "val_3_group_tox.csv": "dfdf846c128e288c01903092221ff40cae38ef1ba97037966f53b82108c2539b",
+    "train_4_group_tox.csv": "df92834034349291e8f5c480ee61231dc7926203231f71fe3224d43f14ba670f",
+    "val_4_group_tox.csv": "c8d64d2af7e7c43547270cff5463e5f604bc6f78f25f2478055c52118202d49e",
+    "train_5_group_tox.csv": "80ec1d0f68e4140cf40c296a92bca6fef89ee9647c0d95d8f37b056322ae5c36",
+    "val_5_group_tox.csv": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef",
+    "test_group_tox.csv": "039219af39baf0201200f23e9e189fcd304d99a9f215298369356b8463295470"
+  },
+  "cleaned_sha256": {
+    "train_1_group_co2.csv": "5858c059c29abccb777e249ba03ced9cc426645b5fcd84362728ea6a6bd8f36e",
+    "val_1_group_co2.csv": "b34c09dbb47356a76d143dcc03361121f9f5d21cdb9a9dad938d7742f1ce0dbc",
+    "train_2_group_co2.csv": "1ced4077b3cfbd41d3b84c5328731805306bad67a96e3dd321a5efb2c915d886",
+    "val_2_group_co2.csv": "5a537d34e38632a4a06bfa1d887f54a2d0f66ce6f92ed61af0b03c84ff07635b",
+    "train_3_group_co2.csv": "92695418efb0bdefadb368a8bc494caa12824fa5a810fd296ee761da42273433",
+    "val_3_group_co2.csv": "d15a0dc11e9127d442e5da341f0e6a09fa5e7a07e4f255735543cc19488888bf",
+    "train_4_group_co2.csv": "be59ef2f52f469dd5d9b16bd9ee283fbad422188a252ff7e3c76e2f0f2ff6215",
+    "val_4_group_co2.csv": "2c054255307f849a60900baf9aaeec48342c7d61f18454990800e87e91ce642c",
+    "train_5_group_co2.csv": "985056d931de53c77f9d325acbec5c2e80cc77939432d842e0777c521e1ec30c",
+    "val_5_group_co2.csv": "e708412eca967eaf192e84a6193f123ce679b72811e17d6be88093d7159886a2",
+    "test_group_co2.csv": "db866bd8c55fab9a55dae5f05424a3b437ec8d53f086477ee2f13664dd46b574",
+    "train_1_group_vis.csv": "fb4307098fc53261a117eedbbfa858afb54493da21131aca94405f8a5cb63dd7",
+    "val_1_group_vis.csv": "0e466303d68a56afe9fd25f1419ba7f585256279e9f6301ba4b72a9cbca3a722",
+    "train_2_group_vis.csv": "ff7bd824e8263d0a907c1ec8f7369d80a2ae987c2e6ad8e72ae4c3ef043119a9",
+    "val_2_group_vis.csv": "6a665440076dac793e180b89399c278a847ec7a3648b56009fd2bfae53d1c11f",
+    "train_3_group_vis.csv": "d9c0afe7cf56cf7b807a06d45d6efd1fcfcdac075656383200e134d3ab46d8c2",
+    "val_3_group_vis.csv": "6a32d4c7967e18767bf22f61c62c635e84874a7df3a3fd7ff2a7491d2b440303",
+    "train_4_group_vis.csv": "dd2d88da4819a73ef0aadd397d3854e57d74eda51443b705d8ca0ea9b9cff3db",
+    "val_4_group_vis.csv": "4feb6f55e0cf2d68cb93df2a7bf4580b4e5d6983a04e3e1b25d04f9806239b58",
+    "train_5_group_vis.csv": "811f69b6a154cb04461a8eb1f258c922ff40be0718936fb97276a4d6dccddc75",
+    "val_5_group_vis.csv": "5c2c24b05738f8c3b995b7e1c56e80c546e6b0f4fbe64ef7c2d3dc0176cee935",
+    "test_group_vis.csv": "00607ab5c85dc7bad044f018d56af8a8356aaeb9fb34b3877dbc9a8afb5a800a",
+    "train_1_group_tox.csv": "6c975476e325f8a29d9ffd74e7025ccabc1f9b3f16a6aaa9c2041e2c847f5fb1",
+    "val_1_group_tox.csv": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3",
+    "train_2_group_tox.csv": "756292a2d1ad0c41ea28cd49dfa2154af576db09bf83d0009e6516d6b12e235f",
+    "val_2_group_tox.csv": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74",
+    "train_3_group_tox.csv": "85fadd3cd88bf3de1af99053fee8b34ecf3e321d6c8ff02f962e4ab57aba0bfc",
+    "val_3_group_tox.csv": "9c251cf42c772565d926a0fda7425128d7b2f7cf293981a86bcc5338292b46ab",
+    "train_4_group_tox.csv": "c88134a080c6db963ba23319ce14d17fba884dc410396a640d2f549a9cbcfce1",
+    "val_4_group_tox.csv": "585147ead324893506d1919859fe0b81204ee981180d78472fe0b8ce3c91ddcb",
+    "train_5_group_tox.csv": "56f3c09e79572f9fce48bae41bbfc2b980fd5647d50fece93932742e52c57ac4",
+    "val_5_group_tox.csv": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef",
+    "test_group_tox.csv": "3fae129f06ae1040f2ebdc736c2b2cafc4d3104ae5357e59357a720b287c04ad"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "best_params": {
+    "kernel_name": "RationalQuadratic",
+    "kernel_variance": 0.6030331026536873,
+    "likelihood_noise_variance": 0.0008706641621113332,
+    "ls_an": 35.58862109587002,
+    "ls_cat": 46.8994532171926
+  },
+  "variance_scale": 57.972276572096966,
+  "effective_noise_variance": 0.0008706641621113332,
+  "environment_kernel": null,
+  "selection": "new five-fold species-disjoint CV on curated non-test records only"
+}

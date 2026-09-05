@@ -1,0 +1,52 @@
+{
+  "protocol": "Descriptive diagnostics of frozen primary product-GP held-out predictions",
+  "bootstrap_seed": 42,
+  "bootstrap_resamples": 10000,
+  "properties": {
+    "co2": {
+      "n_records": 1080,
+      "n_species": 17,
+      "species_averaged_r2": 0.822657263890609,
+      "species_averaged_rmse": 0.05395355599452474,
+      "species_bootstrap_r2_ci95": [
+        0.51389669280438,
+        0.9207375745944151
+      ],
+      "bootstrap_valid_resamples": 10000,
+      "miscalibration_area_101_levels": 0.057351851851851855,
+      "untruncated_negative_mean_count": 18,
+      "reported_negative_mean_count": 0,
+      "prediction_source_sha256": "664765f0b3c7be98a4f385acf2cc7b15e75adf4ce5d8e0f0ce460f5e9e5eef0a"
+    },
+    "vis": {
+      "n_records": 1344,
+      "n_species": 80,
+      "species_averaged_r2": 0.6862739851468516,
+      "species_averaged_rmse": 0.8424005916265683,
+      "species_bootstrap_r2_ci95": [
+        0.36576184232134773,
+        0.8522070099490918
+      ],
+      "bootstrap_valid_resamples": 10000,
+      "miscalibration_area_101_levels": 0.12750357142857144,
+      "untruncated_negative_mean_count": 1263,
+      "reported_negative_mean_count": 1263,
+      "prediction_source_sha256": "35aeee86821094bac7f1d403a131f72bdfe30d4a6d40020b76c1ed3a4da1afa6"
+    },
+    "tox": {
+      "n_records": 31,
+      "n_species": 31,
+      "species_averaged_r2": 0.7537279773159796,
+      "species_averaged_rmse": 0.4516074545684449,
+      "species_bootstrap_r2_ci95": [
+        0.5577577436853579,
+        0.8448381266428182
+      ],
+      "bootstrap_valid_resamples": 10000,
+      "miscalibration_area_101_levels": 0.1881806451612903,
+      "untruncated_negative_mean_count": 1,
+      "reported_negative_mean_count": 1,
+      "prediction_source_sha256": "b8c101928013541b50eaac2dc64719690dc054772321f09fa19fd3047fa6e1c9"
+    }
+  }
+}

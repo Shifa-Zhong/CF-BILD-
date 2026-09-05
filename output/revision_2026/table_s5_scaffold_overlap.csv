@@ -1,4 +1,0 @@
-level,train_val_unique,test_unique,overlap,test_only,overlap_pct,note
-cation_identity,86,18,9,9,50.0,Partial: 9 cations shared
-murcko_scaffold,12,7,6,1,85.7,Partial scaffold separation: 1 test-only scaffolds out of 7 test scaffolds
-generic_scaffold,8,5,4,1,80.0,Partial generic scaffold separation: 1 test-only generic scaffolds out of 5 test generic scaffolds

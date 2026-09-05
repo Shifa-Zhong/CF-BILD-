@@ -11,6 +11,7 @@ on target-driven hyperparameter optimization.
 from __future__ import annotations
 
 import json
+import argparse
 import pickle
 import sys
 from pathlib import Path
@@ -49,11 +50,13 @@ def median_positive_pairwise(block, seed=42, maximum=1500):
     return float(np.median(distances)), int(len(unique))
 
 
-def main():
+def main(data_directory=None, vocabulary_path=None, selected_directory=None, output_directory=None):
+    global OUTPUT_DIR
+    if output_directory is not None: OUTPUT_DIR = Path(output_directory).resolve()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    datasets = load_property_datasets(ROOT / 'data', n_folds=5)
+    datasets = load_property_datasets(data_directory or ROOT / 'data', n_folds=5)
     vocab = FragmentVocabulary()
-    vocab.load(ROOT / 'output' / 'fragment_vocab.pkl')
+    vocab.load(vocabulary_path or ROOT / 'output' / 'fragment_vocab.pkl')
     result = {
         'definition': (
             'Median positive pairwise distance among unique standardized '
@@ -76,8 +79,11 @@ def main():
         ls_cross, n_pair = median_positive_pairwise(
             x_train[:, :dim_cat + dim_an], seed=44
         )
-        with (ROOT / 'config/selected_hyperparameters.json').open(encoding='utf-8') as h:
-            selected = json.load(h)[property_name]['best_params']
+        if selected_directory is not None:
+            selected = json.loads((Path(selected_directory) / f'selected_hyperparameters_{property_name}.json').read_text())['best_params']
+        else:
+            with (ROOT / 'output' / f'model_{property_name}.pkl').open('rb') as h:
+                selected = pickle.load(h)['best_params']
         params = {
             'kernel_name': selected['kernel_name'],
             'ls_cat': ls_cat,
@@ -114,9 +120,9 @@ def main():
         metrics = regression_metrics(y_test, prediction)
         result['properties'][property_name] = {
             'parameters': params,
-            'unique_cations': n_cat,
-            'unique_anions': n_an,
-            'unique_ion_pairs': n_pair,
+            'unique_cation_feature_rows': n_cat,
+            'unique_anion_feature_rows': n_an,
+            'unique_pair_feature_rows': n_pair,
             'variance_scale': float(model.variance_scale_),
             'metrics': metrics,
         }
@@ -131,4 +137,10 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data-directory', type=Path)
+    parser.add_argument('--vocabulary-path', type=Path)
+    parser.add_argument('--selected-directory', type=Path)
+    parser.add_argument('--output-directory', type=Path)
+    args = parser.parse_args()
+    main(args.data_directory, args.vocabulary_path, args.selected_directory, args.output_directory)

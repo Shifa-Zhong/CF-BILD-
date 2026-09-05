@@ -1,0 +1,48 @@
+{
+  "co2": {
+    "best_params": {
+      "kernel_name": "RationalQuadratic",
+      "kernel_variance": 1.9739572479968804e-05,
+      "likelihood_noise_variance": 0.001449806046725865,
+      "ls_an": 0.02978512376037682,
+      "ls_cat": 17.272731280082432,
+      "ls_cross": 57.086670272827966,
+      "ls_env_0": 32.23607739848692,
+      "ls_env_1": 0.18036840589174472
+    },
+    "variance_scale": 1.1633034001015214,
+    "effective_noise_variance": 0.001449806046725865,
+    "environment_kernel": "RationalQuadratic",
+    "selection": "new five-fold species-disjoint CV on curated non-test records only"
+  },
+  "vis": {
+    "best_params": {
+      "kernel_name": "RationalQuadratic",
+      "kernel_variance": 0.006992942905914941,
+      "likelihood_noise_variance": 0.006383192158640166,
+      "ls_an": 7.223834427489242,
+      "ls_cat": 29.094627610873594,
+      "ls_cross": 65.64934868135529,
+      "ls_env_0": 5.229987089974931,
+      "ls_env_1": 0.7928071584182947
+    },
+    "variance_scale": 8.541221656185522,
+    "effective_noise_variance": 0.006383192158640166,
+    "environment_kernel": "RationalQuadratic",
+    "selection": "new five-fold species-disjoint CV on curated non-test records only"
+  },
+  "tox": {
+    "best_params": {
+      "kernel_name": "Matern52",
+      "kernel_variance": 0.03733912417460281,
+      "likelihood_noise_variance": 0.0006227590354490509,
+      "ls_an": 4.307796099089439,
+      "ls_cat": 30.50871143317087,
+      "ls_cross": 47.0122283511101
+    },
+    "variance_scale": 41.088477386745,
+    "effective_noise_variance": 0.0006227590354490509,
+    "environment_kernel": null,
+    "selection": "new five-fold species-disjoint CV on curated non-test records only"
+  }
+}

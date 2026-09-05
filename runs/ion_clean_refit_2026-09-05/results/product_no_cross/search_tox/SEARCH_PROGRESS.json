@@ -1,0 +1,17 @@
+{
+  "status": "selection_complete",
+  "n_trials": 110,
+  "max_evals": 3000,
+  "patience": 50,
+  "best_trial": 60,
+  "best_cv_rmse": 0.5158611064029118,
+  "best_params": {
+    "kernel_name": "RationalQuadratic",
+    "kernel_variance": 0.6030331026536873,
+    "likelihood_noise_variance": 0.0008706641621113332,
+    "ls_an": 35.58862109587002,
+    "ls_cat": 46.8994532171926
+  },
+  "process_elapsed_seconds": 8.661595821380615,
+  "test_used_in_selection": false
+}

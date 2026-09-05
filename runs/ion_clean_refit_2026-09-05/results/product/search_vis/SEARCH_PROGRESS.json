@@ -1,0 +1,20 @@
+{
+  "status": "selection_complete",
+  "n_trials": 124,
+  "max_evals": 3000,
+  "patience": 50,
+  "best_trial": 74,
+  "best_cv_rmse": 0.63464332367991,
+  "best_params": {
+    "kernel_name": "RationalQuadratic",
+    "kernel_variance": 0.006992942905914941,
+    "likelihood_noise_variance": 0.006383192158640166,
+    "ls_an": 7.223834427489242,
+    "ls_cat": 29.094627610873594,
+    "ls_cross": 65.64934868135529,
+    "ls_env_0": 5.229987089974931,
+    "ls_env_1": 0.7928071584182947
+  },
+  "process_elapsed_seconds": 211.84449005126953,
+  "test_used_in_selection": false
+}

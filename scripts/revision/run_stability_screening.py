@@ -23,10 +23,12 @@ import os
 import re
 import csv
 import json
+import argparse
 from collections import Counter
 
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors
+from cf_bild.ion_validation import require_valid_pairs
 
 # ---------------------------------------------------------------------------
 # Utility helpers
@@ -352,8 +354,8 @@ def classify(t1_flag, t2_flag, t3_flag):
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
-    result_dir = BASE_DIR / 'output' / 'revision_2026'
+def main(result_dir=None):
+    result_dir = Path(result_dir).resolve() if result_dir is not None else BASE_DIR / 'output' / 'revision_2026'
     input_path = result_dir / 'top_candidates_revision.csv'
     output_path = result_dir / 'stability_screening_revision.csv'
 
@@ -363,6 +365,12 @@ def main():
         candidates = list(reader)
 
     print(f"Loaded {len(candidates)} candidates from {input_path}\n")
+
+    # Refuse invalid inputs before writing any partially updated results.
+    require_valid_pairs(
+        ((row['cation'], row['anion']) for row in candidates),
+        context='stability-screening candidates',
+    )
 
     results = []
 
@@ -514,4 +522,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output-directory', type=Path)
+    main(parser.parse_args().output_directory)

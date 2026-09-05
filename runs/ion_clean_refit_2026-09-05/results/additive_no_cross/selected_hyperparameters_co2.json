@@ -1,0 +1,15 @@
+{
+  "best_params": {
+    "kernel_name": "Matern32",
+    "kernel_variance": 0.11060979470297208,
+    "likelihood_noise_variance": 0.038617071781209954,
+    "ls_an": 46.27401754882204,
+    "ls_cat": 41.94933789506241,
+    "ls_env_0": 2.767836451310826,
+    "ls_env_1": 0.2656305384489099
+  },
+  "variance_scale": 1.0,
+  "effective_noise_variance": 0.038617071781209954,
+  "environment_kernel": "Matern32",
+  "selection": "new five-fold species-disjoint CV on curated non-test records only"
+}

@@ -1,0 +1,14 @@
+{
+  "n_folds": 5,
+  "fold_record_counts": [
+    60,
+    60,
+    60,
+    57,
+    63
+  ],
+  "n_records": 300,
+  "target_coverage": 0.95,
+  "raw_standardized_residual_quantile": 6.723879819908398,
+  "variance_scale": 11.768679673201632
+}

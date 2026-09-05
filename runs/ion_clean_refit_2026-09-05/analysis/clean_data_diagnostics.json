@@ -1,0 +1,109 @@
+{
+  "sparsity_raw_counts": {
+    "cation": {
+      "n_features": 1242,
+      "mean_nonzero_positions": 21.804054054054053,
+      "mean_active_fraction": 0.017555599077338207,
+      "mean_total_environment_count": 35.916666666666664,
+      "feature_value_max": 37.0,
+      "binary": false
+    },
+    "anion": {
+      "n_features": 828,
+      "mean_nonzero_positions": 15.651315789473685,
+      "mean_active_fraction": 0.01890255530129672,
+      "mean_total_environment_count": 25.80263157894737,
+      "feature_value_max": 30.0,
+      "binary": false
+    }
+  },
+  "scaffold_overlap": {
+    "co2": {
+      "cations": {
+        "non_test_unique": 72,
+        "test_unique": 14,
+        "shared": 8,
+        "test_only": 6,
+        "shared_fraction_of_test": 0.5714285714285714
+      },
+      "murcko": {
+        "non_test_unique": 9,
+        "test_unique": 6,
+        "shared": 5,
+        "test_only": 1,
+        "shared_fraction_of_test": 0.8333333333333334
+      },
+      "generic": {
+        "non_test_unique": 6,
+        "test_unique": 5,
+        "shared": 4,
+        "test_only": 1,
+        "shared_fraction_of_test": 0.8
+      },
+      "acyclic_empty_murcko_bucket_included": true
+    },
+    "vis": {
+      "cations": {
+        "non_test_unique": 315,
+        "test_unique": 62,
+        "shared": 30,
+        "test_only": 32,
+        "shared_fraction_of_test": 0.4838709677419355
+      },
+      "murcko": {
+        "non_test_unique": 31,
+        "test_unique": 11,
+        "shared": 9,
+        "test_only": 2,
+        "shared_fraction_of_test": 0.8181818181818182
+      },
+      "generic": {
+        "non_test_unique": 14,
+        "test_unique": 6,
+        "shared": 5,
+        "test_only": 1,
+        "shared_fraction_of_test": 0.8333333333333334
+      },
+      "acyclic_empty_murcko_bucket_included": true
+    },
+    "tox": {
+      "cations": {
+        "non_test_unique": 134,
+        "test_unique": 23,
+        "shared": 18,
+        "test_only": 5,
+        "shared_fraction_of_test": 0.782608695652174
+      },
+      "murcko": {
+        "non_test_unique": 13,
+        "test_unique": 10,
+        "shared": 8,
+        "test_only": 2,
+        "shared_fraction_of_test": 0.8
+      },
+      "generic": {
+        "non_test_unique": 6,
+        "test_unique": 6,
+        "shared": 5,
+        "test_only": 1,
+        "shared_fraction_of_test": 0.8333333333333334
+      },
+      "acyclic_empty_murcko_bucket_included": true
+    }
+  },
+  "family_classification": "Ordered RDKit charged-ring/functional-group motif bins; see cf_bild/ion_families.py. These descriptive labels do not enter the GP or stability rules.",
+  "family_classifier_sha256": "587b081a728c80541c7df3eb1b9756f0c3125ecf2abf9882d354a181f81dbc4e",
+  "correlation_protocol": "Species means over all retained measurements and conditions; non-test and test included for descriptive associations only, never model selection",
+  "embedding": {
+    "separate_ion_spaces": true,
+    "PCA_components_max": 50,
+    "PCA_solver": "full",
+    "TSNE_seed": 42,
+    "TSNE_perplexity": 30,
+    "TSNE_initialization": "pca",
+    "TSNE_learning_rate": "auto",
+    "TSNE_iterations": 1000,
+    "cross_map_distances_meaningful": false
+  },
+  "input_curation_sha256": "36f8d0727d66c0d146a16c1937c0f1dc162562f57f90487cbabca5807bec3340"
+}

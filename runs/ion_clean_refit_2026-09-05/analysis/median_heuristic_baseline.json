@@ -1,0 +1,72 @@
+{
+  "definition": "Median positive pairwise distance among unique standardized inputs; variance=Var(y); noise=0.01*Var(y).",
+  "properties": {
+    "co2": {
+      "parameters": {
+        "kernel_name": "RationalQuadratic",
+        "ls_cat": 48.00441870466173,
+        "ls_an": 62.19373431810284,
+        "ls_cross": 47.246268769730605,
+        "kernel_variance": 0.055675882045559504,
+        "likelihood_noise_variance": 0.000556758820455595,
+        "ls_env_0": 1.129233204554841,
+        "ls_env_1": 0.39898688076869104
+      },
+      "variance_scale": 1.0,
+      "metrics": {
+        "r2": 0.45832982406211664,
+        "rmse": 0.13958323044736215,
+        "mae": 0.10447356958782644,
+        "coverage_95": 0.9657407407407408,
+        "nlpd_moment_matched": -0.5711250222337021
+      },
+      "unique_cation_feature_rows": 72,
+      "unique_anion_feature_rows": 52,
+      "unique_pair_feature_rows": 158
+    },
+    "vis": {
+      "parameters": {
+        "kernel_name": "RationalQuadratic",
+        "ls_cat": 79.80150326773474,
+        "ls_an": 85.48754935035643,
+        "ls_cross": 71.93923228189165,
+        "kernel_variance": 2.6802882803015713,
+        "likelihood_noise_variance": 0.026802882803015713,
+        "ls_env_0": 1.3016672650121317,
+        "ls_env_1": 1.2135406811232987
+      },
+      "variance_scale": 1.4339550652111719,
+      "metrics": {
+        "r2": 0.8889356243613205,
+        "rmse": 0.5443863123606066,
+        "mae": 0.32785866495649135,
+        "coverage_95": 0.9739583333333334,
+        "nlpd_moment_matched": 0.6719389010010527
+      },
+      "unique_cation_feature_rows": 314,
+      "unique_anion_feature_rows": 119,
+      "unique_pair_feature_rows": 682
+    },
+    "tox": {
+      "parameters": {
+        "kernel_name": "Matern52",
+        "ls_cat": 30.99794331178125,
+        "ls_an": 39.35938341915059,
+        "ls_cross": 33.95291103018141,
+        "kernel_variance": 1.1871228159454645,
+        "likelihood_noise_variance": 0.011871228159454645
+      },
+      "variance_scale": 3.6238642875901856,
+      "metrics": {
+        "r2": 0.8125253180105303,
+        "rmse": 0.39402599665170973,
+        "mae": 0.320904559509301,
+        "coverage_95": 1.0,
+        "nlpd_moment_matched": 0.7345664541467114
+      },
+      "unique_cation_feature_rows": 134,
+      "unique_anion_feature_rows": 44,
+      "unique_pair_feature_rows": 278
+    }
+  }
+}
