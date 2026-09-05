@@ -9,6 +9,12 @@ snapshot, not this data release.
 Direct source: Zhong et al., Environmental Science & Technology Letters 2024,
 11, 1193–1199, https://doi.org/10.1021/acs.estlett.4c00524.
 
+The source study's experimental-data workbook is archived as
+[ez4c00524_si_002.xlsx](https://doi.org/10.1021/acs.estlett.4c00524.s002).
+Its ACS Figshare record (article 26976310) specifies **CC BY-NC 4.0**.
+This repository distributes the project's processed inputs, not an assertion
+that every encoded row is a verbatim copy of the source workbook.
+
 Upstream: NIST ILThermo (SRD 147), https://ilthermo.boulder.nist.gov/, for CO2
 and viscosity; Wang et al., Processes 2021, 9, 65,
 https://doi.org/10.3390/pr9010065, for IPC-81 cytotoxicity.
@@ -55,5 +61,7 @@ PubChem corpus and GRU source/sample are separate from the three property
 datasets reused from Zhong et al. The fixed sample in data/gru/generate_result.csv
 is the reproducible input to the reported support comparison.
 
-Software is MIT-licensed; retain source attribution and applicable provider
-terms for reused data. Public access does not imply chemical validation.
+Software is MIT-licensed. The property-data source workbook carries the
+separate CC BY-NC 4.0 notice above; retain attribution and applicable upstream
+terms for reused data. That notice is not a license for the separate PubChem
+corpus. Public access does not imply chemical validation.

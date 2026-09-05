@@ -3,6 +3,14 @@
   "original_records_or_splits_modified": false,
   "model_fitting_or_screening_rerun": false,
   "property_dataset_citation": "https://doi.org/10.1021/acs.estlett.4c00524",
+  "property_source_workbook": {
+    "doi": "https://doi.org/10.1021/acs.estlett.4c00524.s002",
+    "file": "ez4c00524_si_002.xlsx",
+    "figshare_article_id": 26976310,
+    "publisher_md5": "952314282a22b4e8e309c6511f3b1a75",
+    "publisher_license": "CC BY-NC 4.0",
+    "scope": "Source workbook for processed property datasets; not the separate PubChem corpus"
+  },
   "toxicity_upstream_citation": "https://doi.org/10.3390/pr9010065",
   "artifacts": [
     {

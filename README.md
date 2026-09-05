@@ -30,6 +30,10 @@ Absorption Using Representation Uncertainty-Based Machine Learning*,
 Environmental Science & Technology Letters **2024**, 11, 1193–1199.
 https://doi.org/10.1021/acs.estlett.4c00524
 
+The study's [experimental-data workbook](https://doi.org/10.1021/acs.estlett.4c00524.s002)
+is archived by ACS Figshare with a CC BY-NC 4.0 notice. These are processed
+property inputs; the software's MIT license does not replace that data notice.
+
 That study collected CO2 and viscosity records from NIST ILThermo and obtained
 IPC-81 cytotoxicity data from Wang, Song, and Zhou, Processes **2021**, 9, 65,
 https://doi.org/10.3390/pr9010065. Toxicity is **not** a Vibrio fischeri

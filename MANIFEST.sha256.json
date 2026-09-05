@@ -16,8 +16,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 5568,
-    "sha256": "dc6d00b1cecbf3a0918435037a5efc942ac59ad3670e412f80c3ec4039e2311c"
+    "bytes": 5815,
+    "sha256": "cf24c841a1cbd7810b74bda17f837191836ad2eaf2ddeb0ff7346b890b37214a"
   },
   {
     "path": "TOC_text_revision.txt",
@@ -56,13 +56,13 @@
   },
   {
     "path": "data/DATA_ACCESS.md",
-    "bytes": 2892,
-    "sha256": "4e577997245c43c7dd630f6c60043706735c89acf670ce8cf2d0c7bfaf4a5cfe"
+    "bytes": 3380,
+    "sha256": "c9f2ce3d0e52034319e20d77da411ef3a6d9bc5c06a3a1480eb03b260701b6ca"
   },
   {
     "path": "data/PUBLIC_DATA_RELEASE.json",
-    "bytes": 30083,
-    "sha256": "860d9f1dc2352852d2afb20d81b0c358f33c4f2224a8076a46b9182af2570e61"
+    "bytes": 30451,
+    "sha256": "76f6605b0c8148b1fc9fcc81a0da7879881c51062dcacd82c1ea9a71155e7fb1"
   },
   {
     "path": "data/SPLIT_AUDIT.json",
