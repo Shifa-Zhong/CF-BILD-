@@ -26,3 +26,14 @@ manuscript/
 legacy_invalidated/
 _audit/
 release/
+
+# Keep authoring and graphical presentation outside the scientific code release.
+figures/
+TOC_text_revision.txt
+scripts/revision/build_revision_figures.py
+scripts/revision/publication_figures.py
+scripts/revision/*document*.py
+scripts/revision/*typesetting*.py
+scripts/revision/*response*.py
+scripts/revision/*word*.py
+scripts/revision/build_submission*.py

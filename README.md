@@ -38,8 +38,10 @@ That study collected CO2 and viscosity records from NIST ILThermo and obtained
 IPC-81 cytotoxicity data from Wang, Song, and Zhou, Processes **2021**, 9, 65,
 https://doi.org/10.3390/pr9010065. Toxicity is **not** a Vibrio fischeri
 bioluminescence endpoint. The supplied logEC50 numbers are unchanged. The
-concentration unit and logarithm base require source confirmation; do not
-exponentiate or relabel them as ln values without that evidence.
+source's notation, logEC50, is retained without another logarithm or a
+concentration-unit conversion. Wang et al.'s main text, official Table S1,
+and data README do not explicitly specify the base or concentration unit.
+See [the checked target convention](data/TOXICITY_TARGET.md).
 
 PubChem is the source of the separate GRU corpus, not of the CF-BILD ion
 vocabulary and not a dataset attributed to the EST Letters study.
@@ -70,17 +72,19 @@ It explicitly reports the known viscosity CV warning. Use --strict-splits to
 make any training/validation overlap a failure. Passing byte-integrity tests
 does not certify chemical identity or remove the CV warning.
 
-## Reproduce figures and downstream analyses
+## Reproduce numerical screening analyses
 
-    python scripts/revision/build_revision_figures.py
     python scripts/revision/run_acquisition_analysis.py
     python scripts/revision/run_gru_ood_similarity.py
     python scripts/revision/run_stability_screening.py
 
-Figure 3 can now be rebuilt from the distributed test-prediction/experimental
-tables; no private inputs are needed for the figure command. Figure 4b shows
-each property's uncertainty as a ratio to the corresponding EHVI mean,
-without averaging quantities on different target scales.
+The repository contains the core GP models, training and prediction,
+acquisition functions, screening and scientific comparison code, with exact
+inputs, numerical outputs, environments and verification tests. Manuscript
+generation, response-letter preparation, Word typesetting, graphical
+presentation scripts, and final publication images are maintained separately
+and are not part of the current code release. The record-level predictions
+and numerical tables underlying the figures remain public.
 
 The downstream commands reproduce the archived encoded-input analysis.
 They are not a new chemical validation. Existing numerical headline values

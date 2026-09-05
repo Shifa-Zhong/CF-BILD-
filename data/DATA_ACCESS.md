@@ -31,8 +31,11 @@ these exact deposited inputs are the reproducible starting point.
 | Viscosity | 12374 | 1465 | ln(viscosity / (Pa s)) |
 | Toxicity | 302 | 32 | supplied IPC-81 logEC50 |
 
-The toxicity base/unit have not been independently confirmed. Values are
-preserved without applying another logarithm or concentration conversion.
+Toxicity retains the source dataset's logEC50 notation and numerical scale.
+The main article, official Table S1, and author data README do not explicitly
+state a logarithm base or concentration unit. No unit is inferred and no
+additional logarithm or concentration conversion is applied. See
+[TOXICITY_TARGET.md](TOXICITY_TARGET.md) for the checked sources.
 
 ## Exact-input and split checks
 
