@@ -1,0 +1,198 @@
+{
+  "scope": "Post hoc descriptive sensitivity analyses of frozen main-model predictions; no test-driven model replacement",
+  "source_sha256": {
+    "candidate_predictions.npz": "f74d7da7fc20de66c3589d154a65dbdc4741b3e7ce6bac0551f9b0ee1f64ab5d",
+    "candidate_pairs.csv": "19ae84bd79ca59617370db427a43477b578d638c1693b139c1a22ec97e47cbe4",
+    "acquisition_inputs_revision.json": "cb13da2a78ff6b72d20df3f9a0976cd3c9e8fdeb63558e1a23564efed0fdc7af",
+    "acquisition_analysis_revision.json": "aa90d6c8e6195156daa14ea393c977b88a2391465a981b0176d2a5060d7472e0",
+    "top_candidates_revision.csv": "783cce68e275f6ef3bf7200066f9f703b3adb5e41615204e81b927befd47d5a8"
+  },
+  "reference": [
+    0.0,
+    -9.210340372,
+    -0.240332155
+  ],
+  "thresholds": [
+    0.5033479814999999,
+    3.727412404,
+    3.815
+  ],
+  "non_test_target_iqrs": [
+    0.37734798149999993,
+    2.045403799,
+    1.0519637309999998
+  ],
+  "weight_cases": [
+    {
+      "case": "Original",
+      "co2_weight": 1,
+      "vis_weight": 1,
+      "tox_weight": 1,
+      "top100_overlap": 100,
+      "top100_jaccard": 1.0,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015701106956050818
+    },
+    {
+      "case": "CO2 x0.5",
+      "co2_weight": 0.5,
+      "vis_weight": 1,
+      "tox_weight": 1,
+      "top100_overlap": 100,
+      "top100_jaccard": 1.0,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015701106956050818
+    },
+    {
+      "case": "CO2 x2",
+      "co2_weight": 2,
+      "vis_weight": 1,
+      "tox_weight": 1,
+      "top100_overlap": 99,
+      "top100_jaccard": 0.9801980198019802,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015706483995313453
+    },
+    {
+      "case": "Viscosity x0.5",
+      "co2_weight": 1,
+      "vis_weight": 0.5,
+      "tox_weight": 1,
+      "top100_overlap": 98,
+      "top100_jaccard": 0.9607843137254902,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015711923439596313
+    },
+    {
+      "case": "Viscosity x2",
+      "co2_weight": 1,
+      "vis_weight": 2,
+      "tox_weight": 1,
+      "top100_overlap": 99,
+      "top100_jaccard": 0.9801980198019802,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015699527184095587
+    },
+    {
+      "case": "Toxicity x0.5",
+      "co2_weight": 1,
+      "vis_weight": 1,
+      "tox_weight": 0.5,
+      "top100_overlap": 99,
+      "top100_jaccard": 0.9801980198019802,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015699527184095587
+    },
+    {
+      "case": "Toxicity x2",
+      "co2_weight": 1,
+      "vis_weight": 1,
+      "tox_weight": 2,
+      "top100_overlap": 98,
+      "top100_jaccard": 0.9607843137254902,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.01569742183199211
+    },
+    {
+      "case": "CO2 percentage scale",
+      "co2_weight": 100,
+      "vis_weight": 1,
+      "tox_weight": 1,
+      "top100_overlap": 90,
+      "top100_jaccard": 0.8181818181818182,
+      "top10_overlap": 9,
+      "mean_joint_feasibility": 0.015631525440755432
+    },
+    {
+      "case": "Non-test IQR normalization",
+      "co2_weight": 2.6500738019715633,
+      "vis_weight": 0.4889010182189459,
+      "tox_weight": 0.9506031154224271,
+      "top100_overlap": 97,
+      "top100_jaccard": 0.941747572815534,
+      "top10_overlap": 10,
+      "mean_joint_feasibility": 0.015712087329445127
+    }
+  ],
+  "methods": [
+    {
+      "method": "FW-AEI",
+      "n_selected_per_run": 100,
+      "n_runs": 1,
+      "mean_joint_feasibility": 0.015701106956050818,
+      "joint_feasibility_mean_se": 0.0,
+      "mean_co2_above_one_probability": 4.197644241581987e-05,
+      "mean_co2_feasibility": 0.20587128046812242,
+      "mean_co2_additive_ei_share": 0.022946177621101425,
+      "mean_vis_feasibility": 0.2835549093437683,
+      "mean_vis_additive_ei_share": 0.7395624973835758,
+      "mean_tox_feasibility": 0.45561031742548563,
+      "mean_tox_additive_ei_share": 0.23749132499532272
+    },
+    {
+      "method": "Additive EI",
+      "n_selected_per_run": 100,
+      "n_runs": 1,
+      "mean_joint_feasibility": 0.003185869796439394,
+      "joint_feasibility_mean_se": 0.0,
+      "mean_co2_above_one_probability": 1.132143429173211e-06,
+      "mean_co2_feasibility": 0.00762201786078913,
+      "mean_co2_additive_ei_share": 0.007128062397074889,
+      "mean_vis_feasibility": 0.9355082901768662,
+      "mean_vis_additive_ei_share": 0.7759542709050118,
+      "mean_tox_feasibility": 0.48461675579239505,
+      "mean_tox_additive_ei_share": 0.21691766669791343
+    },
+    {
+      "method": "Analytical q=1 EHVI",
+      "n_selected_per_run": 100,
+      "n_runs": 1,
+      "mean_joint_feasibility": 0.012559405299156829,
+      "joint_feasibility_mean_se": 0.0,
+      "mean_co2_above_one_probability": 7.670568647981118e-05,
+      "mean_co2_feasibility": 0.3198324066662941,
+      "mean_co2_additive_ei_share": 0.02840473446399551,
+      "mean_vis_feasibility": 0.09880506991681372,
+      "mean_vis_additive_ei_share": 0.7057825745487395,
+      "mean_tox_feasibility": 0.4940977380678831,
+      "mean_tox_additive_ei_share": 0.2658126909872651
+    },
+    {
+      "method": "Random (5 seeds)",
+      "n_selected_per_run": 100,
+      "n_runs": 5,
+      "mean_joint_feasibility": 3.388786275175901e-05,
+      "joint_feasibility_mean_se": 1.1260510805216658e-05,
+      "mean_co2_above_one_probability": 2.1190626548125287e-06,
+      "mean_co2_feasibility": 0.011632071459867702,
+      "mean_co2_additive_ei_share": 0.011276273229059578,
+      "mean_vis_feasibility": 0.018382857787830144,
+      "mean_vis_additive_ei_share": 0.7315057698343815,
+      "mean_tox_feasibility": 0.38640435867287076,
+      "mean_tox_additive_ei_share": 0.25721795693655897
+    }
+  ],
+  "upper_support": {
+    "all_candidates": {
+      "mean_probability": 1.1298163590862505e-06,
+      "maximum_probability": 0.00028705531662926966,
+      "count_above_1pct_probability": 0,
+      "n_candidates": 67488
+    },
+    "FW_AEI_top100": {
+      "mean_probability": 4.197644241581987e-05,
+      "maximum_probability": 0.00017114252727453062,
+      "count_above_1pct_probability": 0,
+      "n_candidates": 100
+    }
+  },
+  "interpretation": "Probabilities are model-based satisfaction of data-defined preferences, not empirical process success. EI shares are score arithmetic, not physical or causal importance.",
+  "scale_note": "Only positive objective scales are varied; applying the same transform to each mean, sigma, reference and threshold leaves feasibility unchanged and multiplies its EI. IQRs use non-test targets only.",
+  "random_seeds": [
+    42,
+    123,
+    7,
+    2024,
+    31415
+  ]
+}

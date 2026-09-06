@@ -14,6 +14,8 @@ RUN=ROOT/'runs/ion_clean_refit_2026-09-05'
 
 
 def main():
+    for name in ['test_shared_kernel_baseline.py','test_ranking_diagnostics.py']:
+        runpy.run_path(str(ROOT/'tests'/name))['main']()
     numerical=runpy.run_path(str(ROOT/'tests/test_numerical_methods.py'))
     for name in ['test_zero_truncated_moments_match_scipy','test_co2_prediction_is_strictly_nonnegative',
                  'test_analytic_ehvi_matches_vectorized_monte_carlo','test_fw_aei_is_finite_and_nonnegative']:

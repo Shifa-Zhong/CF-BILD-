@@ -1,0 +1,15 @@
+{
+  "r2": 0.8063816818809958,
+  "rmse": 0.40043016405001886,
+  "mae": 0.32174551875061425,
+  "coverage_95": 1.0,
+  "nlpd_moment_matched": 0.8150283121260375,
+  "nlpd": 0.8150283121260375,
+  "n_refit": 300,
+  "n_test": 31,
+  "variance_scale": 97.49875783317619,
+  "n_search_trials": 89,
+  "best_cv_rmse": 0.5139995921964776,
+  "elapsed_seconds": 5.8695666790008545,
+  "continuous_parameters": 3
+}

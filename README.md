@@ -147,6 +147,56 @@ For the GRU, restore the losslessly compressed 453,620,552-byte corpus with
 95,285-pair output defines the fixed 20,000-pair support comparison. Fresh
 stochastic training is not claimed to regenerate identical SMILES.
 
+## Additional model and frozen-ranking diagnostics
+
+CF-BILD denotes Compositional Fragment-Based Ionic Liquid Design. The
+18 tuned fits comprise the 15 original architecture/property fits and three
+new low-parameter single-structural-kernel comparators; three median-distance
+baselines are supplied separately. The primary models and screening list
+remain frozen. The additional comparator uses one shared structural scale,
+the same separate environmental-kernel construction, three/five continuous
+parameters, and unchanged CV/search/calibration/full-pool fitting procedures.
+It is not exactly parameter-count matched to the compositional model.
+Its held-out R2 values are 0.910, 0.885 and 0.806, so compositional structure
+is not claimed necessary for accurate prediction on these data.
+
+The additions are stored separately under:
+
+- `runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/`
+- `runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/`
+
+Manuscript Table 1 combines the original six rows in
+`analysis/model_comparison_clean.csv` with the three property metric records
+`extensions/low_parameter_2026-09-06/metrics_<property>.json` for the shared-scale
+row. The original CSV is preserved; the extension records supply the new row.
+
+Reproduction commands (use a separate copy when regenerating audit/timing files):
+
+```powershell
+python scripts/revision/run_shared_kernel_baseline.py --run-directory runs/ion_clean_refit_2026-09-05
+python scripts/revision/run_shared_kernel_baseline.py --run-directory runs/ion_clean_refit_2026-09-05 --verify-only
+python scripts/revision/run_ranking_diagnostics.py --run-directory runs/ion_clean_refit_2026-09-05 --timing-repeats 3
+```
+
+The baseline command resumes only hash-compatible searches and skips verified
+completed fits. The verifier loads trusted pickle states after integrity checks;
+never load untrusted pickle files. It reconstructs all three saved comparator
+test predictions without retuning. Use the same commands with `runs/new_run`
+after the fresh-run procedure above for isolated end-to-end recomputation.
+
+The ranking diagnostics document positive-weight/scale sensitivity, marginal
+score shares, modeled threshold probabilities, residual upper-support tails,
+and scoring times with one warm-up plus three order-rotated repetitions.
+Halving/doubling one weight preserves 98–100 top-100 members; non-test IQR
+scaling preserves 97, and CO2 percentage units preserve 90. This is local set
+stability, not scale invariance. Mean joint probabilities are 1.570% (FW-AEI),
+0.319% (additive EI) and 1.256% (EHVI), all low in absolute terms. These are
+model-defined preference probabilities, not validated process success rates.
+Arithmetic EI shares do not measure chemical importance. FW-AEI is a heuristic
+product of expectations, not a conditional improvement identity for constraints
+on the same uncertain properties. Timings compare these implementations and
+exclude model fitting/prediction; they are not universal speed guarantees.
+
 ## Release boundary and archiving
 
 This repository contains core scientific code, data, model/search artifacts,

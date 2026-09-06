@@ -45,6 +45,11 @@
     "sha256": "80c5be86017b03acaeb3cae0a4035cc18ed4675e5e3d8c8daec998eb23e34a51"
   },
   {
+    "path": "cf_bild/shared_kernel_baseline.py",
+    "bytes": 1747,
+    "sha256": "28d6e2b578ed12dd5d3045e9f3e25c223644faafde0e5196d819f97340b36608"
+  },
+  {
     "path": "data/DATA_ACCESS.md",
     "bytes": 1801,
     "sha256": "cdd6efebb822278f56ddc56efe071b0d9bdd6f7db639c8295e65894e88ef0354"
@@ -676,8 +681,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 9174,
-    "sha256": "85aed2511caf2ac6a6e573c60329765d6be57aebe3266186d05ee45a7a9bd8eb"
+    "bytes": 12207,
+    "sha256": "69313fcfe01e86c47e6d8753a27116dac122c28238965f33c5f5a9023d055450"
   },
   {
     "path": "requirements-revision-lock.txt",
@@ -1103,6 +1108,206 @@
     "path": "runs/ion_clean_refit_2026-09-05/excluded_records.csv",
     "bytes": 578544,
     "sha256": "b1e32b836fc5855350b99c2d127b68552b4fd8c7c0a048b54cb0973663e2ba34"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_co2.json",
+    "bytes": 258,
+    "sha256": "25f95cda4de87e931b14725d153c6e3e74f99244ead4127b4b9409611529fe3b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_co2.npz",
+    "bytes": 104533,
+    "sha256": "6d381600beb9474850b69fa64ad44daf1dd6e5b95a0df9a23f615e07610ed76e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_tox.json",
+    "bytes": 247,
+    "sha256": "dd1c0045c0fd6c84cd70bcf36f884423adbf758fd7b0778922a0f0588a39f499"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_tox.npz",
+    "bytes": 3614,
+    "sha256": "41a0e349b6950ed2b7acd35e2ef03a9012751c702bee4a197f60488ecfc276f4"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_vis.json",
+    "bytes": 260,
+    "sha256": "153b5d66098890865eddb1b0711aefaef67dae8345ee3cbe4f0e8f759339d331"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/calibration_vis.npz",
+    "bytes": 124999,
+    "sha256": "7ccb0e6be968fd023f89b76acadf01cbcb12eb98a56d5db227384bb78f5cf449"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/COMPUTATIONAL_ENVIRONMENT.json",
+    "bytes": 351,
+    "sha256": "c0eca8677fe5daa9bbc2ce3d3a36ef9c71f81af53569fb0d79196fec263145a1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/fit_manifest_co2.json",
+    "bytes": 2730,
+    "sha256": "1f26934c9f48b0009aab8b5477f4090fa43f3494281dbd3ef7f5a2ded0757e36"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/fit_manifest_tox.json",
+    "bytes": 2730,
+    "sha256": "60963cb6ff7bfbd21fd1e0be7c8b6b82d644ff38583cd4521d46071e4c24a37a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/fit_manifest_vis.json",
+    "bytes": 2730,
+    "sha256": "98e834d39cc70048b03e76a3bae2f9b066ee546a89a3a5b535d3e98d4b79a437"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/metrics_co2.json",
+    "bytes": 430,
+    "sha256": "41701caa78e4bca841ff76915b0de1e5a7f3275516eb57c6e14246add77815c1"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/metrics_tox.json",
+    "bytes": 409,
+    "sha256": "a4a9e1c77e9019c50327b41f13b3f1b409d8b323967a706c18ff02f848d19241"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/metrics_vis.json",
+    "bytes": 650,
+    "sha256": "e743d379fefeab6bf46b55259f5336cb2b9c7d358915a9a2d4e98dc5b49a5f37"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/models/model_co2.pkl",
+    "bytes": 91430,
+    "sha256": "628b76ef991d00bee71315089c2a8f59e2327edbe754aae002653c9615af72a7"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/models/model_tox.pkl",
+    "bytes": 88513,
+    "sha256": "4d4fc303cc6293399e1d38cb3b371141370b6b07ec44583d75fdff58fa9ffa60"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/models/model_vis.pkl",
+    "bytes": 91430,
+    "sha256": "cce11f0ee5323c1a61f0c3e35fc6ed04f1946c3e9fc3304d43e3773539aae1fc"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/RECONSTRUCTION_co2.json",
+    "bytes": 493,
+    "sha256": "3b2bc04fb3ccd663b9128f194732c9dcc63b7c1078a5b907c72569e39dd4c7ff"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/RECONSTRUCTION_tox.json",
+    "bytes": 479,
+    "sha256": "4f8238b932aa459461db902c0bebf390a9df18203efaf91fc6415dc4c1b0c5ce"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/RECONSTRUCTION_vis.json",
+    "bytes": 496,
+    "sha256": "9cdac8c9614968be96932db1b0b8199fde1688952cbb79c7feba5de08e28d831"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_co2/hyperopt_trials.csv",
+    "bytes": 11713,
+    "sha256": "df993c3b2d028469db1b7c028b00bb47e9f1df1e964c6f48626daa8c2a20742b"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_co2/search_checkpoint.pkl",
+    "bytes": 40375,
+    "sha256": "253f08857da46acd6d809567e6f37f0b8aac60a72f817f03dafbfb6ba314e453"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_co2/SEARCH_PROGRESS.json",
+    "bytes": 518,
+    "sha256": "6f47520955589ab4d5436fbf7c4e3f1d4cee22a6f616edd1376e1048cba55b95"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_tox/hyperopt_trials.csv",
+    "bytes": 10001,
+    "sha256": "4dca41f4f0faf28cbf581ba8ee39fcb4b269b5d8ee24896192b575703b315d5e"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_tox/search_checkpoint.pkl",
+    "bytes": 37428,
+    "sha256": "4fbcb00076da5b1730c0ccac59f346c6401475fc4e964a22ec4d315cdb60643f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_tox/SEARCH_PROGRESS.json",
+    "bytes": 441,
+    "sha256": "168435ff0311901493938e61795936b78e8a20f87f15d1493b32b5dc00e2e2bd"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_vis/hyperopt_trials.csv",
+    "bytes": 19460,
+    "sha256": "a3e2127de164842465373e71b43ff36ba568409d569b258e736b0488bd71985c"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_vis/search_checkpoint.pkl",
+    "bytes": 61656,
+    "sha256": "d4ee7391aae8d4fe0d5df47a499da0da79aac68263b29552521fdddb518b483f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/search_vis/SEARCH_PROGRESS.json",
+    "bytes": 516,
+    "sha256": "bcebaf07777e327ce1e2861c2e9a21174554f30ebad3b0e0eec5f22f918b21ba"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/selected_hyperparameters_co2.json",
+    "bytes": 316,
+    "sha256": "08d3fab3d91e5e533996c3b7dd3642a4d08bc0b7210931a503553585b78d6444"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/selected_hyperparameters_tox.json",
+    "bytes": 241,
+    "sha256": "13b84de9685e3c98c1a32c5e0f4f58fe17646eaf184eecacae3d260371c5e0b3"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/selected_hyperparameters_vis.json",
+    "bytes": 315,
+    "sha256": "4af0d2fd18eee02cedf9386e321fd107da12a0396a0f0dfd4a1643265aadf861"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/test_predictions_co2.csv",
+    "bytes": 123216,
+    "sha256": "6dd6b52c8d305697b356b702f5622d4e089b9485b6f3c9a7af437cca434e1d89"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/test_predictions_tox.csv",
+    "bytes": 3352,
+    "sha256": "8c278b189272e6f8c34cf092124d18cb1e94eab15c11849e2e66c3d81ae9e5b4"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/low_parameter_2026-09-06/test_predictions_vis.csv",
+    "bytes": 158251,
+    "sha256": "1e160adc982438b61995997ad588fce4ca4065c95b8184ad540df9e55ab4b73f"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/candidate_diagnostics.npz",
+    "bytes": 3910260,
+    "sha256": "ec0f20ad6bdec4f0ae27b72cce0895c5fe084e87ce2832540a1c62072054fe65"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/method_preference_probabilities.csv",
+    "bytes": 1027,
+    "sha256": "306eb7dd3253b1d5f92ad24094946469c1d95f71109df23acc926f72bebe5628"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/RANKING_DIAGNOSTICS.json",
+    "bytes": 6798,
+    "sha256": "76c581d706f3580fb75263598c71546681dce2e302656db8496e199a27c3fa15"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/SCORING_TIMINGS.json",
+    "bytes": 1411,
+    "sha256": "7467ffb0b9fd57d8100441695490e39b55811aab27dd8bbdc1a00b3cbe345631"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/weight_selection_indices.csv",
+    "bytes": 21538,
+    "sha256": "7beae1f7a1af10e21efab736eebbafb117da77e12a306d5e846fd68bd1b2c23a"
+  },
+  {
+    "path": "runs/ion_clean_refit_2026-09-05/extensions/ranking_diagnostics_2026-09-06/weight_sensitivity.csv",
+    "bytes": 780,
+    "sha256": "e167288600fc9c208771b8d655a9a1d872463ab2375381bf72a725d6df6d2e3a"
   },
   {
     "path": "runs/ion_clean_refit_2026-09-05/fold_membership_changes.csv",
@@ -2100,9 +2305,19 @@
     "sha256": "778a0649e95361fb314380bf345056af4c8aca80f197466b1e497831fe82374c"
   },
   {
+    "path": "scripts/revision/run_ranking_diagnostics.py",
+    "bytes": 8413,
+    "sha256": "e956f2655de5579c823cd7c7d0212a1055911e1d87f5d360e87bb3b79b5a9801"
+  },
+  {
     "path": "scripts/revision/run_revision_models.py",
     "bytes": 14661,
     "sha256": "17255fa104dd58cdca5829345965a9687983cc4c9a210842a9317dfc5325179f"
+  },
+  {
+    "path": "scripts/revision/run_shared_kernel_baseline.py",
+    "bytes": 7605,
+    "sha256": "2cd863111aa9cbbfe75d194420618d278bd286c3e7ff5918dee27fb779a253a0"
   },
   {
     "path": "scripts/revision/run_stability_screening.py",
@@ -2121,8 +2336,8 @@
   },
   {
     "path": "scripts/revision/verify_core_release.py",
-    "bytes": 1861,
-    "sha256": "f70d0cc89f6dfa1cf0d6a0bfcd1a67d62c11f04209fd235461c2f31d41cec66f"
+    "bytes": 3187,
+    "sha256": "69e55d05da37a0cf9065f0c3ae718a073246e65511013d05d0f41478298b0925"
   },
   {
     "path": "scripts/revision/verify_saved_models.py",
@@ -2136,8 +2351,8 @@
   },
   {
     "path": "tests/test_core_release.py",
-    "bytes": 2926,
-    "sha256": "5cef52f515ea3f9d900ed811f6505735f46d1c8ea8950bc87b5551f86b1c968a"
+    "bytes": 3065,
+    "sha256": "91c6bc1a2478ece50104c55ccbfb81443804f3ffff4eae863b8ad472b9f10426"
   },
   {
     "path": "tests/test_ion_families.py",
@@ -2148,5 +2363,15 @@
     "path": "tests/test_numerical_methods.py",
     "bytes": 1823,
     "sha256": "5a020cf6835a2dae224d5d38add97ff4d46b0b93fb8954bbded4774c31f37e8e"
+  },
+  {
+    "path": "tests/test_ranking_diagnostics.py",
+    "bytes": 1197,
+    "sha256": "0b14958489697db2c629916b166cdd68092618adf02a7a77fd34766831223497"
+  },
+  {
+    "path": "tests/test_shared_kernel_baseline.py",
+    "bytes": 1632,
+    "sha256": "47d94596aad37bdf8657264c0ee016c1b5bf35e30f096cefa9590e68dc357916"
   }
 ]

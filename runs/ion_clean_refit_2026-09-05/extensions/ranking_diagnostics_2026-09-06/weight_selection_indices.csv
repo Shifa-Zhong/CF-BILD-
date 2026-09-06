@@ -1,0 +1,901 @@
+case,rank,candidate_index
+Original,1,58692
+Original,2,57932
+Original,3,49724
+Original,4,62796
+Original,5,49876
+Original,6,58996
+Original,7,48964
+Original,8,47140
+Original,9,58540
+Original,10,50788
+Original,11,58001
+Original,12,45924
+Original,13,58761
+Original,14,49958
+Original,15,47222
+Original,16,49046
+Original,17,49793
+Original,18,38172
+Original,19,62865
+Original,20,62878
+Original,21,67204
+Original,22,50870
+Original,23,38254
+Original,24,47292
+Original,25,19476
+Original,26,49945
+Original,27,46684
+Original,28,47209
+Original,29,59078
+Original,30,47374
+Original,31,66444
+Original,32,49033
+Original,33,49806
+Original,34,57945
+Original,35,41212
+Original,36,58705
+Original,37,58774
+Original,38,57918
+Original,39,476
+Original,40,37564
+Original,41,59065
+Original,42,58622
+Original,43,38241
+Original,44,45316
+Original,45,3972
+Original,46,35740
+Original,47,50857
+Original,48,45993
+Original,49,58706
+Original,50,30572
+Original,51,58704
+Original,52,19545
+Original,53,24188
+Original,54,30654
+Original,55,57934
+Original,56,58023
+Original,57,49737
+Original,58,37868
+Original,59,20
+Original,60,42428
+Original,61,58553
+Original,62,37716
+Original,63,45468
+Original,64,46753
+Original,65,57943
+Original,66,62809
+Original,67,46766
+Original,68,37785
+Original,69,58783
+Original,70,44708
+Original,71,50028
+Original,72,58678
+Original,73,46532
+Original,74,58709
+Original,75,780
+Original,76,58084
+Original,77,628
+Original,78,4428
+Original,79,19489
+Original,80,58554
+Original,81,57946
+Original,82,46006
+Original,83,45385
+Original,84,37633
+Original,85,57944
+Original,86,58552
+Original,87,62808
+Original,88,44480
+Original,89,27760
+Original,90,54284
+Original,91,12636
+Original,92,19462
+Original,93,4580
+Original,94,48812
+Original,95,4510
+Original,96,44462
+Original,97,58703
+Original,98,33004
+Original,99,58526
+Original,100,41281
+CO2 x0.5,1,58692
+CO2 x0.5,2,57932
+CO2 x0.5,3,49724
+CO2 x0.5,4,62796
+CO2 x0.5,5,49876
+CO2 x0.5,6,58996
+CO2 x0.5,7,48964
+CO2 x0.5,8,47140
+CO2 x0.5,9,58540
+CO2 x0.5,10,50788
+CO2 x0.5,11,58001
+CO2 x0.5,12,45924
+CO2 x0.5,13,58761
+CO2 x0.5,14,49958
+CO2 x0.5,15,47222
+CO2 x0.5,16,49046
+CO2 x0.5,17,49793
+CO2 x0.5,18,38172
+CO2 x0.5,19,62865
+CO2 x0.5,20,62878
+CO2 x0.5,21,67204
+CO2 x0.5,22,50870
+CO2 x0.5,23,38254
+CO2 x0.5,24,47292
+CO2 x0.5,25,19476
+CO2 x0.5,26,49945
+CO2 x0.5,27,46684
+CO2 x0.5,28,47209
+CO2 x0.5,29,59078
+CO2 x0.5,30,47374
+CO2 x0.5,31,66444
+CO2 x0.5,32,49033
+CO2 x0.5,33,49806
+CO2 x0.5,34,57945
+CO2 x0.5,35,41212
+CO2 x0.5,36,58705
+CO2 x0.5,37,58774
+CO2 x0.5,38,57918
+CO2 x0.5,39,476
+CO2 x0.5,40,37564
+CO2 x0.5,41,59065
+CO2 x0.5,42,58622
+CO2 x0.5,43,38241
+CO2 x0.5,44,45316
+CO2 x0.5,45,3972
+CO2 x0.5,46,35740
+CO2 x0.5,47,50857
+CO2 x0.5,48,45993
+CO2 x0.5,49,58706
+CO2 x0.5,50,30572
+CO2 x0.5,51,58704
+CO2 x0.5,52,19545
+CO2 x0.5,53,24188
+CO2 x0.5,54,30654
+CO2 x0.5,55,57934
+CO2 x0.5,56,58023
+CO2 x0.5,57,49737
+CO2 x0.5,58,37868
+CO2 x0.5,59,58553
+CO2 x0.5,60,20
+CO2 x0.5,61,42428
+CO2 x0.5,62,37716
+CO2 x0.5,63,45468
+CO2 x0.5,64,57943
+CO2 x0.5,65,62809
+CO2 x0.5,66,46753
+CO2 x0.5,67,46766
+CO2 x0.5,68,58783
+CO2 x0.5,69,37785
+CO2 x0.5,70,44708
+CO2 x0.5,71,50028
+CO2 x0.5,72,58678
+CO2 x0.5,73,46532
+CO2 x0.5,74,58709
+CO2 x0.5,75,780
+CO2 x0.5,76,58084
+CO2 x0.5,77,628
+CO2 x0.5,78,19489
+CO2 x0.5,79,58554
+CO2 x0.5,80,4428
+CO2 x0.5,81,57946
+CO2 x0.5,82,46006
+CO2 x0.5,83,57944
+CO2 x0.5,84,45385
+CO2 x0.5,85,37633
+CO2 x0.5,86,58552
+CO2 x0.5,87,62808
+CO2 x0.5,88,44480
+CO2 x0.5,89,27760
+CO2 x0.5,90,54284
+CO2 x0.5,91,19462
+CO2 x0.5,92,12636
+CO2 x0.5,93,4580
+CO2 x0.5,94,48812
+CO2 x0.5,95,58703
+CO2 x0.5,96,44462
+CO2 x0.5,97,4510
+CO2 x0.5,98,58526
+CO2 x0.5,99,33004
+CO2 x0.5,100,41281
+CO2 x2,1,58692
+CO2 x2,2,57932
+CO2 x2,3,49724
+CO2 x2,4,62796
+CO2 x2,5,49876
+CO2 x2,6,58996
+CO2 x2,7,48964
+CO2 x2,8,47140
+CO2 x2,9,58540
+CO2 x2,10,50788
+CO2 x2,11,58001
+CO2 x2,12,45924
+CO2 x2,13,58761
+CO2 x2,14,49958
+CO2 x2,15,47222
+CO2 x2,16,49046
+CO2 x2,17,49793
+CO2 x2,18,38172
+CO2 x2,19,62865
+CO2 x2,20,62878
+CO2 x2,21,67204
+CO2 x2,22,50870
+CO2 x2,23,38254
+CO2 x2,24,47292
+CO2 x2,25,19476
+CO2 x2,26,49945
+CO2 x2,27,46684
+CO2 x2,28,47209
+CO2 x2,29,59078
+CO2 x2,30,47374
+CO2 x2,31,66444
+CO2 x2,32,49033
+CO2 x2,33,49806
+CO2 x2,34,57945
+CO2 x2,35,41212
+CO2 x2,36,58774
+CO2 x2,37,58705
+CO2 x2,38,37564
+CO2 x2,39,476
+CO2 x2,40,57918
+CO2 x2,41,59065
+CO2 x2,42,58622
+CO2 x2,43,38241
+CO2 x2,44,45316
+CO2 x2,45,3972
+CO2 x2,46,35740
+CO2 x2,47,50857
+CO2 x2,48,45993
+CO2 x2,49,30572
+CO2 x2,50,58706
+CO2 x2,51,19545
+CO2 x2,52,24188
+CO2 x2,53,58704
+CO2 x2,54,30654
+CO2 x2,55,57934
+CO2 x2,56,58023
+CO2 x2,57,49737
+CO2 x2,58,37868
+CO2 x2,59,20
+CO2 x2,60,42428
+CO2 x2,61,37716
+CO2 x2,62,45468
+CO2 x2,63,58553
+CO2 x2,64,46753
+CO2 x2,65,57943
+CO2 x2,66,46766
+CO2 x2,67,62809
+CO2 x2,68,37785
+CO2 x2,69,44708
+CO2 x2,70,58783
+CO2 x2,71,50028
+CO2 x2,72,46532
+CO2 x2,73,58678
+CO2 x2,74,780
+CO2 x2,75,58709
+CO2 x2,76,58084
+CO2 x2,77,628
+CO2 x2,78,4428
+CO2 x2,79,19489
+CO2 x2,80,58554
+CO2 x2,81,46006
+CO2 x2,82,45385
+CO2 x2,83,57946
+CO2 x2,84,37633
+CO2 x2,85,57944
+CO2 x2,86,58552
+CO2 x2,87,62808
+CO2 x2,88,27760
+CO2 x2,89,44480
+CO2 x2,90,54284
+CO2 x2,91,12636
+CO2 x2,92,19462
+CO2 x2,93,4580
+CO2 x2,94,48812
+CO2 x2,95,4510
+CO2 x2,96,44462
+CO2 x2,97,58703
+CO2 x2,98,33004
+CO2 x2,99,41281
+CO2 x2,100,41972
+Viscosity x0.5,1,58692
+Viscosity x0.5,2,57932
+Viscosity x0.5,3,49724
+Viscosity x0.5,4,62796
+Viscosity x0.5,5,49876
+Viscosity x0.5,6,58996
+Viscosity x0.5,7,48964
+Viscosity x0.5,8,47140
+Viscosity x0.5,9,50788
+Viscosity x0.5,10,58540
+Viscosity x0.5,11,58001
+Viscosity x0.5,12,45924
+Viscosity x0.5,13,49958
+Viscosity x0.5,14,47222
+Viscosity x0.5,15,58761
+Viscosity x0.5,16,49046
+Viscosity x0.5,17,49793
+Viscosity x0.5,18,38172
+Viscosity x0.5,19,62865
+Viscosity x0.5,20,62878
+Viscosity x0.5,21,67204
+Viscosity x0.5,22,50870
+Viscosity x0.5,23,38254
+Viscosity x0.5,24,47292
+Viscosity x0.5,25,19476
+Viscosity x0.5,26,49945
+Viscosity x0.5,27,46684
+Viscosity x0.5,28,47209
+Viscosity x0.5,29,59078
+Viscosity x0.5,30,47374
+Viscosity x0.5,31,66444
+Viscosity x0.5,32,49806
+Viscosity x0.5,33,49033
+Viscosity x0.5,34,41212
+Viscosity x0.5,35,57945
+Viscosity x0.5,36,58774
+Viscosity x0.5,37,58705
+Viscosity x0.5,38,476
+Viscosity x0.5,39,37564
+Viscosity x0.5,40,57918
+Viscosity x0.5,41,59065
+Viscosity x0.5,42,58622
+Viscosity x0.5,43,38241
+Viscosity x0.5,44,45316
+Viscosity x0.5,45,3972
+Viscosity x0.5,46,35740
+Viscosity x0.5,47,50857
+Viscosity x0.5,48,45993
+Viscosity x0.5,49,30572
+Viscosity x0.5,50,24188
+Viscosity x0.5,51,58706
+Viscosity x0.5,52,58704
+Viscosity x0.5,53,19545
+Viscosity x0.5,54,30654
+Viscosity x0.5,55,57934
+Viscosity x0.5,56,20
+Viscosity x0.5,57,49737
+Viscosity x0.5,58,37868
+Viscosity x0.5,59,58023
+Viscosity x0.5,60,42428
+Viscosity x0.5,61,45468
+Viscosity x0.5,62,37716
+Viscosity x0.5,63,46753
+Viscosity x0.5,64,58553
+Viscosity x0.5,65,46766
+Viscosity x0.5,66,37785
+Viscosity x0.5,67,62809
+Viscosity x0.5,68,57943
+Viscosity x0.5,69,50028
+Viscosity x0.5,70,44708
+Viscosity x0.5,71,58783
+Viscosity x0.5,72,46532
+Viscosity x0.5,73,780
+Viscosity x0.5,74,58678
+Viscosity x0.5,75,58709
+Viscosity x0.5,76,58084
+Viscosity x0.5,77,4428
+Viscosity x0.5,78,628
+Viscosity x0.5,79,46006
+Viscosity x0.5,80,45385
+Viscosity x0.5,81,37633
+Viscosity x0.5,82,58554
+Viscosity x0.5,83,57944
+Viscosity x0.5,84,54284
+Viscosity x0.5,85,58552
+Viscosity x0.5,86,62808
+Viscosity x0.5,87,57946
+Viscosity x0.5,88,27760
+Viscosity x0.5,89,44480
+Viscosity x0.5,90,19489
+Viscosity x0.5,91,48812
+Viscosity x0.5,92,4580
+Viscosity x0.5,93,4510
+Viscosity x0.5,94,33004
+Viscosity x0.5,95,19462
+Viscosity x0.5,96,41281
+Viscosity x0.5,97,44462
+Viscosity x0.5,98,51174
+Viscosity x0.5,99,41972
+Viscosity x0.5,100,12636
+Viscosity x2,1,58692
+Viscosity x2,2,57932
+Viscosity x2,3,49724
+Viscosity x2,4,62796
+Viscosity x2,5,49876
+Viscosity x2,6,58996
+Viscosity x2,7,48964
+Viscosity x2,8,47140
+Viscosity x2,9,58540
+Viscosity x2,10,50788
+Viscosity x2,11,58001
+Viscosity x2,12,45924
+Viscosity x2,13,58761
+Viscosity x2,14,49958
+Viscosity x2,15,47222
+Viscosity x2,16,49046
+Viscosity x2,17,49793
+Viscosity x2,18,38172
+Viscosity x2,19,62865
+Viscosity x2,20,62878
+Viscosity x2,21,67204
+Viscosity x2,22,50870
+Viscosity x2,23,38254
+Viscosity x2,24,47292
+Viscosity x2,25,19476
+Viscosity x2,26,49945
+Viscosity x2,27,46684
+Viscosity x2,28,47209
+Viscosity x2,29,47374
+Viscosity x2,30,59078
+Viscosity x2,31,66444
+Viscosity x2,32,49033
+Viscosity x2,33,57945
+Viscosity x2,34,49806
+Viscosity x2,35,41212
+Viscosity x2,36,58705
+Viscosity x2,37,57918
+Viscosity x2,38,58774
+Viscosity x2,39,476
+Viscosity x2,40,37564
+Viscosity x2,41,59065
+Viscosity x2,42,58622
+Viscosity x2,43,38241
+Viscosity x2,44,45316
+Viscosity x2,45,3972
+Viscosity x2,46,35740
+Viscosity x2,47,50857
+Viscosity x2,48,58706
+Viscosity x2,49,45993
+Viscosity x2,50,19545
+Viscosity x2,51,30572
+Viscosity x2,52,58704
+Viscosity x2,53,24188
+Viscosity x2,54,58023
+Viscosity x2,55,57934
+Viscosity x2,56,49737
+Viscosity x2,57,30654
+Viscosity x2,58,58553
+Viscosity x2,59,37868
+Viscosity x2,60,57943
+Viscosity x2,61,42428
+Viscosity x2,62,62809
+Viscosity x2,63,20
+Viscosity x2,64,37716
+Viscosity x2,65,45468
+Viscosity x2,66,46753
+Viscosity x2,67,58783
+Viscosity x2,68,46766
+Viscosity x2,69,37785
+Viscosity x2,70,44708
+Viscosity x2,71,58678
+Viscosity x2,72,50028
+Viscosity x2,73,58709
+Viscosity x2,74,46532
+Viscosity x2,75,780
+Viscosity x2,76,19489
+Viscosity x2,77,58084
+Viscosity x2,78,58554
+Viscosity x2,79,57946
+Viscosity x2,80,628
+Viscosity x2,81,12636
+Viscosity x2,82,57944
+Viscosity x2,83,4428
+Viscosity x2,84,62808
+Viscosity x2,85,19462
+Viscosity x2,86,58552
+Viscosity x2,87,44480
+Viscosity x2,88,27760
+Viscosity x2,89,37633
+Viscosity x2,90,46006
+Viscosity x2,91,45385
+Viscosity x2,92,54284
+Viscosity x2,93,58703
+Viscosity x2,94,4580
+Viscosity x2,95,44462
+Viscosity x2,96,48812
+Viscosity x2,97,19478
+Viscosity x2,98,58526
+Viscosity x2,99,4510
+Viscosity x2,100,33004
+Toxicity x0.5,1,58692
+Toxicity x0.5,2,57932
+Toxicity x0.5,3,49724
+Toxicity x0.5,4,62796
+Toxicity x0.5,5,49876
+Toxicity x0.5,6,58996
+Toxicity x0.5,7,48964
+Toxicity x0.5,8,47140
+Toxicity x0.5,9,58540
+Toxicity x0.5,10,50788
+Toxicity x0.5,11,58001
+Toxicity x0.5,12,45924
+Toxicity x0.5,13,58761
+Toxicity x0.5,14,49958
+Toxicity x0.5,15,47222
+Toxicity x0.5,16,49046
+Toxicity x0.5,17,49793
+Toxicity x0.5,18,38172
+Toxicity x0.5,19,62865
+Toxicity x0.5,20,62878
+Toxicity x0.5,21,67204
+Toxicity x0.5,22,50870
+Toxicity x0.5,23,38254
+Toxicity x0.5,24,19476
+Toxicity x0.5,25,47292
+Toxicity x0.5,26,49945
+Toxicity x0.5,27,46684
+Toxicity x0.5,28,47209
+Toxicity x0.5,29,59078
+Toxicity x0.5,30,47374
+Toxicity x0.5,31,66444
+Toxicity x0.5,32,49033
+Toxicity x0.5,33,57945
+Toxicity x0.5,34,49806
+Toxicity x0.5,35,41212
+Toxicity x0.5,36,58705
+Toxicity x0.5,37,58774
+Toxicity x0.5,38,57918
+Toxicity x0.5,39,37564
+Toxicity x0.5,40,476
+Toxicity x0.5,41,59065
+Toxicity x0.5,42,58622
+Toxicity x0.5,43,38241
+Toxicity x0.5,44,45316
+Toxicity x0.5,45,3972
+Toxicity x0.5,46,35740
+Toxicity x0.5,47,50857
+Toxicity x0.5,48,45993
+Toxicity x0.5,49,58706
+Toxicity x0.5,50,19545
+Toxicity x0.5,51,30572
+Toxicity x0.5,52,58704
+Toxicity x0.5,53,24188
+Toxicity x0.5,54,58023
+Toxicity x0.5,55,57934
+Toxicity x0.5,56,30654
+Toxicity x0.5,57,49737
+Toxicity x0.5,58,58553
+Toxicity x0.5,59,37868
+Toxicity x0.5,60,42428
+Toxicity x0.5,61,57943
+Toxicity x0.5,62,62809
+Toxicity x0.5,63,20
+Toxicity x0.5,64,37716
+Toxicity x0.5,65,45468
+Toxicity x0.5,66,46753
+Toxicity x0.5,67,58783
+Toxicity x0.5,68,46766
+Toxicity x0.5,69,37785
+Toxicity x0.5,70,44708
+Toxicity x0.5,71,50028
+Toxicity x0.5,72,58678
+Toxicity x0.5,73,58709
+Toxicity x0.5,74,46532
+Toxicity x0.5,75,780
+Toxicity x0.5,76,19489
+Toxicity x0.5,77,58084
+Toxicity x0.5,78,58554
+Toxicity x0.5,79,57946
+Toxicity x0.5,80,628
+Toxicity x0.5,81,12636
+Toxicity x0.5,82,4428
+Toxicity x0.5,83,57944
+Toxicity x0.5,84,46006
+Toxicity x0.5,85,37633
+Toxicity x0.5,86,62808
+Toxicity x0.5,87,45385
+Toxicity x0.5,88,58552
+Toxicity x0.5,89,19462
+Toxicity x0.5,90,44480
+Toxicity x0.5,91,27760
+Toxicity x0.5,92,54284
+Toxicity x0.5,93,4580
+Toxicity x0.5,94,58703
+Toxicity x0.5,95,48812
+Toxicity x0.5,96,44462
+Toxicity x0.5,97,19478
+Toxicity x0.5,98,4510
+Toxicity x0.5,99,58526
+Toxicity x0.5,100,33004
+Toxicity x2,1,58692
+Toxicity x2,2,57932
+Toxicity x2,3,49724
+Toxicity x2,4,62796
+Toxicity x2,5,49876
+Toxicity x2,6,58996
+Toxicity x2,7,48964
+Toxicity x2,8,47140
+Toxicity x2,9,58540
+Toxicity x2,10,50788
+Toxicity x2,11,58001
+Toxicity x2,12,45924
+Toxicity x2,13,49958
+Toxicity x2,14,47222
+Toxicity x2,15,58761
+Toxicity x2,16,49046
+Toxicity x2,17,49793
+Toxicity x2,18,38172
+Toxicity x2,19,62865
+Toxicity x2,20,62878
+Toxicity x2,21,67204
+Toxicity x2,22,50870
+Toxicity x2,23,38254
+Toxicity x2,24,47292
+Toxicity x2,25,19476
+Toxicity x2,26,49945
+Toxicity x2,27,46684
+Toxicity x2,28,47209
+Toxicity x2,29,59078
+Toxicity x2,30,47374
+Toxicity x2,31,66444
+Toxicity x2,32,49806
+Toxicity x2,33,49033
+Toxicity x2,34,41212
+Toxicity x2,35,57945
+Toxicity x2,36,58774
+Toxicity x2,37,58705
+Toxicity x2,38,476
+Toxicity x2,39,37564
+Toxicity x2,40,57918
+Toxicity x2,41,59065
+Toxicity x2,42,58622
+Toxicity x2,43,38241
+Toxicity x2,44,45316
+Toxicity x2,45,3972
+Toxicity x2,46,35740
+Toxicity x2,47,50857
+Toxicity x2,48,45993
+Toxicity x2,49,30572
+Toxicity x2,50,58706
+Toxicity x2,51,24188
+Toxicity x2,52,58704
+Toxicity x2,53,19545
+Toxicity x2,54,30654
+Toxicity x2,55,57934
+Toxicity x2,56,49737
+Toxicity x2,57,58023
+Toxicity x2,58,20
+Toxicity x2,59,37868
+Toxicity x2,60,42428
+Toxicity x2,61,45468
+Toxicity x2,62,37716
+Toxicity x2,63,58553
+Toxicity x2,64,46753
+Toxicity x2,65,46766
+Toxicity x2,66,37785
+Toxicity x2,67,62809
+Toxicity x2,68,57943
+Toxicity x2,69,50028
+Toxicity x2,70,44708
+Toxicity x2,71,58783
+Toxicity x2,72,46532
+Toxicity x2,73,58678
+Toxicity x2,74,780
+Toxicity x2,75,58709
+Toxicity x2,76,58084
+Toxicity x2,77,4428
+Toxicity x2,78,628
+Toxicity x2,79,46006
+Toxicity x2,80,45385
+Toxicity x2,81,37633
+Toxicity x2,82,58554
+Toxicity x2,83,57944
+Toxicity x2,84,58552
+Toxicity x2,85,54284
+Toxicity x2,86,62808
+Toxicity x2,87,57946
+Toxicity x2,88,27760
+Toxicity x2,89,44480
+Toxicity x2,90,19489
+Toxicity x2,91,48812
+Toxicity x2,92,4580
+Toxicity x2,93,4510
+Toxicity x2,94,19462
+Toxicity x2,95,33004
+Toxicity x2,96,41281
+Toxicity x2,97,44462
+Toxicity x2,98,51174
+Toxicity x2,99,41972
+Toxicity x2,100,58703
+CO2 percentage scale,1,58692
+CO2 percentage scale,2,57932
+CO2 percentage scale,3,49724
+CO2 percentage scale,4,62796
+CO2 percentage scale,5,49876
+CO2 percentage scale,6,58996
+CO2 percentage scale,7,48964
+CO2 percentage scale,8,47140
+CO2 percentage scale,9,50788
+CO2 percentage scale,10,45924
+CO2 percentage scale,11,58001
+CO2 percentage scale,12,58540
+CO2 percentage scale,13,49958
+CO2 percentage scale,14,47222
+CO2 percentage scale,15,49046
+CO2 percentage scale,16,38172
+CO2 percentage scale,17,49793
+CO2 percentage scale,18,58761
+CO2 percentage scale,19,62865
+CO2 percentage scale,20,62878
+CO2 percentage scale,21,38254
+CO2 percentage scale,22,50870
+CO2 percentage scale,23,67204
+CO2 percentage scale,24,19476
+CO2 percentage scale,25,46684
+CO2 percentage scale,26,47292
+CO2 percentage scale,27,49945
+CO2 percentage scale,28,47209
+CO2 percentage scale,29,59078
+CO2 percentage scale,30,49806
+CO2 percentage scale,31,66444
+CO2 percentage scale,32,49033
+CO2 percentage scale,33,47374
+CO2 percentage scale,34,41212
+CO2 percentage scale,35,58774
+CO2 percentage scale,36,37564
+CO2 percentage scale,37,35740
+CO2 percentage scale,38,45316
+CO2 percentage scale,39,38241
+CO2 percentage scale,40,3972
+CO2 percentage scale,41,476
+CO2 percentage scale,42,59065
+CO2 percentage scale,43,58622
+CO2 percentage scale,44,30572
+CO2 percentage scale,45,19545
+CO2 percentage scale,46,30654
+CO2 percentage scale,47,24188
+CO2 percentage scale,48,50857
+CO2 percentage scale,49,45993
+CO2 percentage scale,50,57945
+CO2 percentage scale,51,37868
+CO2 percentage scale,52,46766
+CO2 percentage scale,53,42428
+CO2 percentage scale,54,20
+CO2 percentage scale,55,37785
+CO2 percentage scale,56,45468
+CO2 percentage scale,57,37716
+CO2 percentage scale,58,57918
+CO2 percentage scale,59,46753
+CO2 percentage scale,60,58705
+CO2 percentage scale,61,44708
+CO2 percentage scale,62,50028
+CO2 percentage scale,63,46532
+CO2 percentage scale,64,58084
+CO2 percentage scale,65,4428
+CO2 percentage scale,66,46006
+CO2 percentage scale,67,12636
+CO2 percentage scale,68,780
+CO2 percentage scale,69,58706
+CO2 percentage scale,70,45385
+CO2 percentage scale,71,58704
+CO2 percentage scale,72,37633
+CO2 percentage scale,73,48812
+CO2 percentage scale,74,4510
+CO2 percentage scale,75,33004
+CO2 percentage scale,76,4580
+CO2 percentage scale,77,59148
+CO2 percentage scale,78,54284
+CO2 percentage scale,79,41972
+CO2 percentage scale,80,628
+CO2 percentage scale,81,41281
+CO2 percentage scale,82,51174
+CO2 percentage scale,83,54588
+CO2 percentage scale,84,48894
+CO2 percentage scale,85,57934
+CO2 percentage scale,86,49737
+CO2 percentage scale,87,58553
+CO2 percentage scale,88,58023
+CO2 percentage scale,89,62809
+CO2 percentage scale,90,35822
+CO2 percentage scale,91,46380
+CO2 percentage scale,92,57943
+CO2 percentage scale,93,51092
+CO2 percentage scale,94,40300
+CO2 percentage scale,95,58554
+CO2 percentage scale,96,58709
+CO2 percentage scale,97,37937
+CO2 percentage scale,98,57944
+CO2 percentage scale,99,57946
+CO2 percentage scale,100,58552
+Non-test IQR normalization,1,58692
+Non-test IQR normalization,2,57932
+Non-test IQR normalization,3,49724
+Non-test IQR normalization,4,62796
+Non-test IQR normalization,5,49876
+Non-test IQR normalization,6,58996
+Non-test IQR normalization,7,48964
+Non-test IQR normalization,8,47140
+Non-test IQR normalization,9,50788
+Non-test IQR normalization,10,58540
+Non-test IQR normalization,11,58001
+Non-test IQR normalization,12,45924
+Non-test IQR normalization,13,49958
+Non-test IQR normalization,14,47222
+Non-test IQR normalization,15,49046
+Non-test IQR normalization,16,58761
+Non-test IQR normalization,17,49793
+Non-test IQR normalization,18,38172
+Non-test IQR normalization,19,62865
+Non-test IQR normalization,20,62878
+Non-test IQR normalization,21,67204
+Non-test IQR normalization,22,38254
+Non-test IQR normalization,23,50870
+Non-test IQR normalization,24,47292
+Non-test IQR normalization,25,19476
+Non-test IQR normalization,26,49945
+Non-test IQR normalization,27,46684
+Non-test IQR normalization,28,47209
+Non-test IQR normalization,29,59078
+Non-test IQR normalization,30,47374
+Non-test IQR normalization,31,66444
+Non-test IQR normalization,32,49806
+Non-test IQR normalization,33,49033
+Non-test IQR normalization,34,41212
+Non-test IQR normalization,35,58774
+Non-test IQR normalization,36,57945
+Non-test IQR normalization,37,37564
+Non-test IQR normalization,38,476
+Non-test IQR normalization,39,58705
+Non-test IQR normalization,40,59065
+Non-test IQR normalization,41,57918
+Non-test IQR normalization,42,38241
+Non-test IQR normalization,43,58622
+Non-test IQR normalization,44,45316
+Non-test IQR normalization,45,3972
+Non-test IQR normalization,46,35740
+Non-test IQR normalization,47,50857
+Non-test IQR normalization,48,45993
+Non-test IQR normalization,49,30572
+Non-test IQR normalization,50,24188
+Non-test IQR normalization,51,58706
+Non-test IQR normalization,52,19545
+Non-test IQR normalization,53,58704
+Non-test IQR normalization,54,30654
+Non-test IQR normalization,55,20
+Non-test IQR normalization,56,37868
+Non-test IQR normalization,57,42428
+Non-test IQR normalization,58,45468
+Non-test IQR normalization,59,37716
+Non-test IQR normalization,60,57934
+Non-test IQR normalization,61,49737
+Non-test IQR normalization,62,46753
+Non-test IQR normalization,63,58023
+Non-test IQR normalization,64,46766
+Non-test IQR normalization,65,37785
+Non-test IQR normalization,66,58553
+Non-test IQR normalization,67,50028
+Non-test IQR normalization,68,44708
+Non-test IQR normalization,69,62809
+Non-test IQR normalization,70,57943
+Non-test IQR normalization,71,46532
+Non-test IQR normalization,72,780
+Non-test IQR normalization,73,58783
+Non-test IQR normalization,74,58084
+Non-test IQR normalization,75,58678
+Non-test IQR normalization,76,4428
+Non-test IQR normalization,77,58709
+Non-test IQR normalization,78,46006
+Non-test IQR normalization,79,628
+Non-test IQR normalization,80,45385
+Non-test IQR normalization,81,37633
+Non-test IQR normalization,82,54284
+Non-test IQR normalization,83,58554
+Non-test IQR normalization,84,57944
+Non-test IQR normalization,85,48812
+Non-test IQR normalization,86,58552
+Non-test IQR normalization,87,62808
+Non-test IQR normalization,88,57946
+Non-test IQR normalization,89,4580
+Non-test IQR normalization,90,4510
+Non-test IQR normalization,91,27760
+Non-test IQR normalization,92,44480
+Non-test IQR normalization,93,19489
+Non-test IQR normalization,94,33004
+Non-test IQR normalization,95,12636
+Non-test IQR normalization,96,41281
+Non-test IQR normalization,97,19462
+Non-test IQR normalization,98,41972
+Non-test IQR normalization,99,51174
+Non-test IQR normalization,100,59148

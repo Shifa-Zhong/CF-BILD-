@@ -1,0 +1,44 @@
+{
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.8",
+  "n_candidates": 67488,
+  "n_incumbent_pareto": 31,
+  "n_hypercells": 928,
+  "repeats": 3,
+  "includes": "full-pool acquisition evaluation; EHVI includes front partitioning",
+  "excludes": "GP fitting/prediction, input/output, Pareto assessment and stability filtering",
+  "warning": "Wall time depends on this implementation, hardware and incumbent front; not a general algorithmic speed guarantee.",
+  "methods": {
+    "FW-AEI": {
+      "seconds": [
+        0.04587520001223311,
+        0.03836589999264106,
+        0.05699860001914203
+      ],
+      "median_seconds": 0.04587520001223311,
+      "min_seconds": 0.03836589999264106,
+      "max_seconds": 0.05699860001914203
+    },
+    "Additive EI": {
+      "seconds": [
+        0.026156699983403087,
+        0.03440319997025654,
+        0.030986999976448715
+      ],
+      "median_seconds": 0.030986999976448715,
+      "min_seconds": 0.026156699983403087,
+      "max_seconds": 0.03440319997025654
+    },
+    "Analytical q=1 EHVI": {
+      "seconds": [
+        55.07819029997336,
+        54.88638609996997,
+        55.264277199981734
+      ],
+      "median_seconds": 55.07819029997336,
+      "min_seconds": 54.88638609996997,
+      "max_seconds": 55.264277199981734
+    }
+  }
+}

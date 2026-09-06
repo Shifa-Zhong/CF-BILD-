@@ -1,0 +1,15 @@
+{
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "scikit-learn": "1.7.2",
+  "torch": "2.10.0+cu128",
+  "gpytorch": "1.15.2",
+  "botorch": "0.16.1",
+  "hyperopt": "0.2.7",
+  "rdkit-pypi": "2022.9.5",
+  "bit-collision-free-mf": "1.0.0",
+  "python": "3.10.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5090"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "rtol": 1e-05,
+  "atol": 1e-06,
+  "maximum_absolute_differences": {
+    "source_record_id": 0.0,
+    "y_true": 0.0,
+    "latent_mu": 2.950439448312636e-08,
+    "latent_std": 6.491851806122995e-09,
+    "pred_mean": 9.71445146547012e-17,
+    "pred_std": 9.71445146547012e-17,
+    "lower_95": 9.8879238130678e-17,
+    "upper_95": 1.1102230246251565e-16
+  },
+  "test_predictions_sha256": "6dd6b52c8d305697b356b702f5622d4e089b9485b6f3c9a7af437cca434e1d89"
+}

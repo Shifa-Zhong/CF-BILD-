@@ -1,0 +1,11 @@
+{
+  "best_params": {
+    "kernel_name": "Matern52",
+    "kernel_variance": 1.3421833778321082,
+    "likelihood_noise_variance": 0.008667083705578038,
+    "ls_env_0": 1.9917809349528368,
+    "ls_env_1": 0.7208863520412806,
+    "ls_structure": 80.40213095965187
+  },
+  "variance_scale": 2.5075010174810175
+}

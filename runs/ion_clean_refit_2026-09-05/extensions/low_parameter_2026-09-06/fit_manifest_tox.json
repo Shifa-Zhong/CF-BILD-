@@ -1,0 +1,41 @@
+{
+  "signature": {
+    "inputs": {
+      "test_group_tox.csv": "3fae129f06ae1040f2ebdc736c2b2cafc4d3104ae5357e59357a720b287c04ad",
+      "train_1_group_tox.csv": "6c975476e325f8a29d9ffd74e7025ccabc1f9b3f16a6aaa9c2041e2c847f5fb1",
+      "train_2_group_tox.csv": "756292a2d1ad0c41ea28cd49dfa2154af576db09bf83d0009e6516d6b12e235f",
+      "train_3_group_tox.csv": "85fadd3cd88bf3de1af99053fee8b34ecf3e321d6c8ff02f962e4ab57aba0bfc",
+      "train_4_group_tox.csv": "c88134a080c6db963ba23319ce14d17fba884dc410396a640d2f549a9cbcfce1",
+      "train_5_group_tox.csv": "56f3c09e79572f9fce48bae41bbfc2b980fd5647d50fece93932742e52c57ac4",
+      "val_1_group_tox.csv": "f4851d11fd9a1bb478e8d5fcc8d84e152fc502e37fa7eae278cde22baba7baf3",
+      "val_2_group_tox.csv": "ebc080b135fbfe4dfd88e4fedf1dde5fce9bcf54197c93ce9f4e61b4ca1a8f74",
+      "val_3_group_tox.csv": "9c251cf42c772565d926a0fda7425128d7b2f7cf293981a86bcc5338292b46ab",
+      "val_4_group_tox.csv": "585147ead324893506d1919859fe0b81204ee981180d78472fe0b8ce3c91ddcb",
+      "val_5_group_tox.csv": "c9a5fc09e176a8a31249fc706fe5e15158b8ff3882b4045e4dc333a6650571ef"
+    },
+    "vocabulary": "b4febfe816ef6e72ca406538ca417d135a0700e851980e47fab8cba8533829e9",
+    "form": "single_structural_shared",
+    "max_evals": 3000,
+    "patience": 50,
+    "seed": 42,
+    "code": {
+      "cf_bild/gp_cvloss.py": "c7a4badad895db47bc5c950afc128550d7e04505315872195ad3d281fc4ae3ab",
+      "cf_bild/shared_kernel_baseline.py": "28d6e2b578ed12dd5d3045e9f3e25c223644faafde0e5196d819f97340b36608",
+      "cf_bild/fragment_vocab.py": "1b11f5b5cfe74a7f1763b715431a8fda06c89f77c0b0abdf51cbfddf1c549060",
+      "scripts/revision/run_clean_refit.py": "8aad51706392bcbc1f1475c3c18c028c02ab5b3dd1702488dc04012b1e3a6d00",
+      "scripts/revision/run_shared_kernel_baseline.py": "2cd863111aa9cbbfe75d194420618d278bd286c3e7ff5918dee27fb779a253a0"
+    },
+    "continuous_parameters": 3,
+    "screening_models_changed": false,
+    "test_used_in_selection": false
+  },
+  "artifacts_sha256": {
+    "metrics_tox.json": "a4a9e1c77e9019c50327b41f13b3f1b409d8b323967a706c18ff02f848d19241",
+    "test_predictions_tox.csv": "8c278b189272e6f8c34cf092124d18cb1e94eab15c11849e2e66c3d81ae9e5b4",
+    "selected_hyperparameters_tox.json": "13b84de9685e3c98c1a32c5e0f4f58fe17646eaf184eecacae3d260371c5e0b3",
+    "calibration_tox.json": "dd1c0045c0fd6c84cd70bcf36f884423adbf758fd7b0778922a0f0588a39f499",
+    "calibration_tox.npz": "41a0e349b6950ed2b7acd35e2ef03a9012751c702bee4a197f60488ecfc276f4",
+    "models/model_tox.pkl": "4d4fc303cc6293399e1d38cb3b371141370b6b07ec44583d75fdff58fa9ffa60"
+  },
+  "checkpoint_sha256": "4fbcb00076da5b1730c0ccac59f346c6401475fc4e964a22ec4d315cdb60643f"
+}
