@@ -51,8 +51,8 @@
   },
   {
     "path": "data/DATA_ACCESS.md",
-    "bytes": 1801,
-    "sha256": "cdd6efebb822278f56ddc56efe071b0d9bdd6f7db639c8295e65894e88ef0354"
+    "bytes": 2218,
+    "sha256": "fab297ab317da3d2f1cc2509c42cc48c28ef31b94f50bf639b0b1efea374d1d4"
   },
   {
     "path": "data/gru/generate_result.csv",
@@ -681,8 +681,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 12207,
-    "sha256": "69313fcfe01e86c47e6d8753a27116dac122c28238965f33c5f5a9023d055450"
+    "bytes": 13133,
+    "sha256": "9fe19c915e8342dd8a575fa5d55baf13f5973581f04ad9047587e73c71212fa0"
   },
   {
     "path": "requirements-revision-lock.txt",
@@ -2373,5 +2373,15 @@
     "path": "tests/test_shared_kernel_baseline.py",
     "bytes": 1632,
     "sha256": "47d94596aad37bdf8657264c0ee016c1b5bf35e30f096cefa9590e68dc357916"
+  },
+  {
+    "path": "CITATION.cff",
+    "bytes": 569,
+    "sha256": "0589f7b1d4399d7636ba6781439ac17e2bc29722247fe383ed6d94e048897ceb"
+  },
+  {
+    "path": "DATA_LICENSES.md",
+    "bytes": 1960,
+    "sha256": "1b70f5609b21f94143f7e87a4ee40915986f70a83630150013eb4a07e2a55214"
   }
 ]

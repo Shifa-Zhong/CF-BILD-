@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this archived software version and the companion dataset DOI listed in the README when using CF-BILD."
+type: software
+title: "CF-BILD: Core code for fragment-constrained ionic-liquid screening"
+authors:
+  - family-names: Wu
+    given-names: Zeting
+  - family-names: Li
+    given-names: Haoyang
+  - family-names: Zhong
+    given-names: Shifa
+version: "0.3.0"
+date-released: 2026-09-06
+doi: 10.5281/zenodo.22509332
+url: https://doi.org/10.5281/zenodo.22509332
+repository-code: https://github.com/Shifa-Zhong/CF-BILD-
+license: MIT

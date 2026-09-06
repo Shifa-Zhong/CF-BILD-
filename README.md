@@ -205,6 +205,22 @@ generation, Word typesetting, plotting scripts, and publication graphics are
 maintained separately and are intentionally not uploaded.
 
 Canonical repository: https://github.com/Shifa-Zhong/CF-BILD-.
-Zenodo software-version/concept and dataset DOIs are deferred until the
-final version is frozen and will be provided by acceptance. No DOI is invented
-or implied by this provisional archival status.
+
+Version 0.3.0 is archived as two companion records:
+
+- [Core software](https://doi.org/10.5281/zenodo.22509332).
+- [Curated data, model/search artifacts and numerical results](https://doi.org/10.5281/zenodo.22508776).
+
+For the Zenodo distribution, extract both ZIP files into the same parent
+directory. Their shared `CF-BILD-v0.3.0/` folder reconstructs the layout used
+by the commands above. The fixed scientific source is commit
+`da2f56eed419fd651f951c4a9e46d7659783ca1e`; subsequent DOI/citation metadata
+updates do not change the archived code, measurements, models or predictions.
+The supplied DOIs identify the archived versions; no concept DOI is inferred.
+
+Software remains MIT-licensed. Author-generated model parameters, predictions
+and analysis contributions use CC BY 4.0. Reused property data retain CC BY-NC
+4.0, and PubChem/provider terms remain applicable. These are scoped licenses,
+not interchangeable whole-compendium licenses; see [DATA_LICENSES.md](DATA_LICENSES.md).
+Use [CITATION.cff](CITATION.cff) for the software and cite the companion dataset
+DOI when using the data or saved numerical artifacts.

@@ -25,7 +25,13 @@ ILThermo and Wang et al., Processes 2021, 9, 65,
 [10.3390/pr9010065](https://doi.org/10.3390/pr9010065).
 
 The authors authorized data publication and the stated derived curation.
-MIT software licensing does not supersede upstream data terms. No new archive
-DOI has been issued; final-version Zenodo archiving is deferred until freezing.
+MIT software licensing does not supersede upstream data terms. Curated data,
+model/search artifacts and numerical results are archived at
+https://doi.org/10.5281/zenodo.22508776; the companion core software is at
+https://doi.org/10.5281/zenodo.22509332. Extract both Zenodo ZIP files into the
+same parent directory for the complete runnable compendium. The authors'
+newly generated model parameters, predictions and analysis contributions
+use CC BY 4.0; reused property records retain CC BY-NC 4.0. See
+[the scoped license notice](../DATA_LICENSES.md) for source exceptions.
 The separate PubChem corpus is under `data/gru/`, not attributed to the property
 compilation and not used to construct the CF-BILD vocabulary.
